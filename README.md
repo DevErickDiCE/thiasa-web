@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sitio Web de Reformas THASA
 
-## Getting Started
+Este es el sitio web oficial para la empresa de reformas "THASA", construido con [Next.js](https://nextjs.org), Tailwind CSS y TypeScript.
 
-First, run the development server:
+## Características
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Diseño Moderno y Responsivo**: Adaptado a móviles, tablets y escritorio.
+- **Enfoque en Conversión**: Integración directa con WhatsApp para solicitudes de presupuesto.
+- **Alto Rendimiento**: Optimizado para carga rápida y SEO.
+- **Galería de Proyectos**: Visualización atractiva de trabajos realizados.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Requisitos Previos
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Node.js 18.17 o superior
+- npm (o yarn/pnpm/bun)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Instalación y Desarrollo
 
-## Learn More
+1.  **Instalar dependencias**:
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    npm install
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2.  **Iniciar servidor de desarrollo**:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash
+    npm run dev
+    ```
 
-## Deploy on Vercel
+    Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el resultado.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Estructura del Proyecto
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/app`: Rutas y layouts principales (App Router).
+- `src/components`: Componentes reutilizables (Navbar, Hero, Servicios, etc.).
+- `public`: Imágenes y activos estáticos.
+
+## Despliegue
+
+La forma más sencilla de desplegar este proyecto es utilizando la [Plataforma Vercel](https://vercel.com).
+
+1. Sube tu código a un repositorio Git (GitHub/GitLab/Bitbucket).
+2. Importa el proyecto en Vercel.
+3. Vercel detectará automáticamente Next.js y configurará el despliegue.
+
+## Personalización
+
+- **WhatsApp**: Para cambiar el número de teléfono, edita la variable `whatsappUrl` en los componentes `src/components/navbar.tsx`, `src/components/hero.tsx`, `src/components/services.tsx`, `src/components/project-gallery.tsx` y `src/components/contact.tsx`.
+- **Imágenes**: Reemplaza las imágenes en la carpeta `public/` con fotos reales de los proyectos.
+
+---
+Creado con ❤️ para THASA.
