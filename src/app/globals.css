@@ -1,26 +1,46 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F2F1ED;
+  --foreground: #1D1D1D;
+  --primary-blue: #004AAD;
+  --accent-blue: #38B6FF;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary-blue);
+  --color-accent: var(--accent-blue);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure headings have proper contrast */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-blue);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+/* Button styles for consistency */
+button,
+a[class*="btn"] {
+  font-weight: 600;
+  transition: all 0.3s ease;
 }

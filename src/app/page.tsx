@@ -6,6 +6,7 @@ import { WhyChooseUs } from "@/components/why-choose-us";
 import { ProjectGallery } from "@/components/project-gallery";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
+import { ConvertSection } from "@/components/convert-section";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <TrustIndicators />
       <Services />
+      <ConvertSection />
       <WhyChooseUs />
       <ProjectGallery />
       <Contact />

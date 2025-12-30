@@ -139,11 +139,11 @@ export function ProjectGallery() {
         <section id="projects" className="py-24 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
-                        Proyectos Recientes
+                    <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6 tracking-tight">
+                        Nuestros Últimos Proyectos
                     </h2>
-                    <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-                        Descubre la calidad de nuestros acabados. Resultados reales para clientes exigentes.
+                    <p className="text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
+                        Reformas integrales de calidad. Trabajos reales que demuestran nuestro compromiso con la excelencia y el detalle.
                     </p>
                 </div>
 
@@ -162,21 +162,21 @@ export function ProjectGallery() {
                                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
                                 {/* Overlay with Zoom Icon */}
-                                <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/40 transition-colors duration-300 flex items-center justify-center">
-                                    <div className="bg-white/90 text-slate-900 px-6 py-3 rounded-full font-semibold opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 flex items-center shadow-lg">
+                                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/40 transition-colors duration-300 flex items-center justify-center">
+                                    <div className="bg-white/90 text-primary px-6 py-3 rounded-full font-semibold opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 flex items-center shadow-lg">
                                         <ZoomIn className="w-5 h-5 mr-2" />
                                         Ver proyecto
                                     </div>
                                 </div>
-                                {/* Gradient for text readability */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent pointer-events-none" />
+                                {/* Darker gradient for better text readability */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none" />
                             </div>
 
-                            <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                                <span className="inline-block px-3 py-1 bg-blue-600 text-xs font-bold uppercase tracking-wider rounded-lg mb-3 shadow-md">
+                            <div className="absolute bottom-0 left-0 right-0 p-8 text-white z-10">
+                                <span className="inline-block px-3 py-1 bg-accent text-xs font-bold uppercase tracking-wider rounded-lg mb-3 shadow-xl text-white">
                                     {project.category}
                                 </span>
-                                <h3 className="text-2xl font-bold mb-1 leading-tight group-hover:text-blue-200 transition-colors">
+                                <h3 className="text-2xl font-bold mb-1 leading-tight group-hover:text-accent transition-colors" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.9)' }}>
                                     {project.title}
                                 </h3>
                             </div>
@@ -184,11 +184,32 @@ export function ProjectGallery() {
                     ))}
                 </div>
 
+
+
+                {/* Section CTA */}
+                <div className="mt-16 text-center">
+                    <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+                        ¿Tu hogar merece esta calidad?
+                    </h3>
+                    <p className="text-slate-600 mb-8 max-w-2xl mx-auto">
+                        Cada reforma es única. Cuéntanos tu idea y te asesoramos sin compromiso sobre las mejores opciones para tu proyecto.
+                    </p>
+                    <a
+                        href="https://wa.me/34604154746?text=Hola, he visto vuestros trabajos y me gustaría pedir presupuesto."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center px-8 py-4 bg-accent hover:bg-primary text-white font-bold rounded-xl transition-all shadow-lg shadow-accent/30 hover:shadow-accent/50 transform hover:-translate-y-1"
+                    >
+                        <MessageCircle className="w-5 h-5 mr-2" />
+                        Contactar por WhatsApp
+                    </a>
+                </div>
+
                 {/* Modal Overlay */}
                 {selectedProject && (
                     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
                         <div
-                            className="absolute inset-0 bg-slate-900/90 backdrop-blur-sm transition-opacity"
+                            className="absolute inset-0 bg-primary/90 backdrop-blur-sm transition-opacity"
                             onClick={closeModal}
                         />
 
@@ -240,25 +261,25 @@ export function ProjectGallery() {
 
                             {/* Content Side */}
                             <div className="flex flex-col p-8 md:p-10 md:w-2/5 overflow-y-auto">
-                                <span className="text-blue-600 font-bold text-sm uppercase tracking-widest mb-2">
+                                <span className="text-accent font-bold text-sm uppercase tracking-widest mb-2">
                                     {selectedProject.category}
                                 </span>
-                                <h3 className="text-3xl font-bold text-slate-900 mb-6 leading-tight">
+                                <h3 className="text-3xl font-bold text-primary mb-6 leading-tight">
                                     {selectedProject.title}
                                 </h3>
 
-                                <p className="text-slate-600 leading-relaxed mb-8">
+                                <p className="text-foreground/70 leading-relaxed mb-8">
                                     {selectedProject.description}
                                 </p>
 
-                                <h4 className="font-bold text-slate-900 mb-4 uppercase text-sm tracking-wide border-b border-slate-100 pb-2">
+                                <h4 className="font-bold text-primary mb-4 uppercase text-sm tracking-wide border-b border-slate-100 pb-2">
                                     Detalles del Proyecto
                                 </h4>
                                 <ul className="space-y-3 mb-10">
                                     {selectedProject.details.map((detail, index) => (
                                         <li key={index} className="flex items-start text-slate-600">
-                                            <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" />
-                                            <span className="text-sm">{detail}</span>
+                                            <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2 mr-3 flex-shrink-0" />
+                                            <span className="text-sm text-foreground/70">{detail}</span>
                                         </li>
                                     ))}
                                 </ul>
@@ -268,7 +289,7 @@ export function ProjectGallery() {
                                         href={`https://wa.me/34604154746?text=Hola, he visto el proyecto "${selectedProject.title}" y me gustaría solicitar un presupuesto similar.`}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex w-full items-center justify-center px-6 py-4 bg-green-600 hover:bg-green-700 text-white rounded-xl font-bold transition-all shadow-lg hover:shadow-green-600/30 group"
+                                        className="flex w-full items-center justify-center px-6 py-4 bg-accent hover:bg-primary text-white rounded-xl font-bold transition-all shadow-lg hover:shadow-accent/30 group"
                                     >
                                         <MessageCircle className="w-5 h-5 mr-2" />
                                         Pedir presupuesto similar
@@ -283,6 +304,6 @@ export function ProjectGallery() {
                     </div>
                 )}
             </div>
-        </section>
+        </section >
     );
 }
