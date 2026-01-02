@@ -1,0 +1,257 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { Paintbrush, CheckCircle2, Phone, ArrowLeft } from "lucide-react";
+
+export const metadata: Metadata = {
+    title: "Pintura, Pladur y Albañilería Madrid | THIASA - Acabados Profesionales",
+    description: "Servicios de pintura, instalación de Pladur y trabajos de albañilería en Madrid. Alicatados, solados, tabiques. ✓ Presupuesto gratis ✓ Acabados impecables.",
+    keywords: "pintura Madrid, pladur Madrid, albañilería, alicatados, solados, tabiques, pintura interior exterior, alisado paredes"
+};
+
+export default function PinturaPladurAlbanileria() {
+    const services = [
+        "Pintura interior y exterior",
+        "Alisado de paredes y gotelé",
+        "Instalación y montaje de Pladur",
+        "Tabiques y trasdosados",
+        "Alicatados de baños y cocinas",
+        "Solados cerámicos y porcelánicos",
+        "Trabajos de albañilería en general",
+        "Reparaciones y mantenimiento"
+    ];
+
+    return (
+        <main>
+            <section className="relative bg-[#1D1D1D] min-h-[500px] flex items-center pt-32 pb-20 overflow-hidden">
+                <div className="absolute inset-0">
+                    <Image src="/hero-bg.png" alt="Pintura, Pladur y Albañilería Madrid - THIASA" fill className="object-cover opacity-30" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#1D1D1D]/95 via-[#1D1D1D]/80 to-[#1D1D1D]/60" />
+                </div>
+
+                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                    <Link href="/#services" className="inline-flex items-center text-accent hover:text-primary transition-colors mb-6">
+                        <ArrowLeft className="w-5 h-5 mr-2" />
+                        Volver a servicios
+                    </Link>
+
+                    <div className="max-w-3xl">
+                        <div className="flex items-center gap-3 mb-6">
+                            <div className="p-3 bg-accent/20 rounded-xl border border-accent/30">
+                                <Paintbrush className="w-10 h-10 text-accent" />
+                            </div>
+                            <h1 className="text-4xl md:text-5xl font-extrabold text-white">
+                                Pintura, Pladur y Albañilería en Madrid
+                            </h1>
+                        </div>
+
+                        <p className="text-xl text-white/80 mb-8 leading-relaxed">
+                            Servicios profesionales de pintura interior y exterior, instalación de Pladur y trabajos de albañilería en Madrid. Alicatados, solados, tabiques y acabados impecables. Presupuesto gratuito.
+                        </p>
+
+                        <a
+                            href="https://wa.me/34604154746?text=Hola, necesito información sobre pintura/pladur/albañilería"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center px-8 py-4 bg-accent hover:bg-primary text-white font-bold rounded-xl transition-all shadow-lg shadow-accent/50"
+                        >
+                            <Phone className="w-5 h-5 mr-2" />
+                            Solicitar Presupuesto Gratis
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section className="py-20 bg-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-8">Nuestros Servicios</h2>
+                    <div className="grid lg:grid-cols-2 gap-8">
+                        <div className="space-y-3">
+                            {services.map((service, i) => (
+                                <div key={i} className="flex items-start gap-3">
+                                    <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
+                                    <span className="text-slate-700">{service}</span>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg">
+                            <Image src="/project-living-1.jpg" alt="Trabajos de pintura y acabados profesionales en Madrid" fill className="object-cover" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Detailed Services Section */}
+            <section className="py-20 bg-slate-50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
+                            Servicios Especializados
+                        </h2>
+                        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                            Acabados profesionales con garantía en cada trabajo
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-8">
+                        {/* Pintura */}
+                        <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                            <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
+                                <Paintbrush className="w-8 h-8 text-accent" />
+                            </div>
+                            <h3 className="text-2xl font-bold text-slate-900 mb-4">Pintura Profesional</h3>
+                            <ul className="space-y-3 text-slate-600">
+                                <li className="flex items-start gap-2">
+                                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                                    <span>Pintura plástica interior de alta calidad</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                                    <span>Esmalte sintético y al agua</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                                    <span>Pintura exterior fachadas</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                                    <span>Alisado de paredes y techos</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                                    <span>Eliminación de gotelé</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                                    <span>Lacado de puertas y muebles</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        {/* Pladur */}
+                        <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                            <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                                <Paintbrush className="w-8 h-8 text-primary" />
+                            </div>
+                            <h3 className="text-2xl font-bold text-slate-900 mb-4">Instalación de Pladur</h3>
+                            <ul className="space-y-3 text-slate-600">
+                                <li className="flex items-start gap-2">
+                                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                                    <span>Tabiques divisorios de Pladur</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                                    <span>Trasdosados para aislamiento</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                                    <span>Techos continuos y registrables</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                                    <span>Falsos techos con iluminación LED</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                                    <span>Muebles de obra de Pladur</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                                    <span>Pladur resistente al fuego y humedad</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        {/* Albañilería */}
+                        <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                            <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
+                                <Paintbrush className="w-8 h-8 text-accent" />
+                            </div>
+                            <h3 className="text-2xl font-bold text-slate-900 mb-4">Trabajos de Albañilería</h3>
+                            <ul className="space-y-3 text-slate-600">
+                                <li className="flex items-start gap-2">
+                                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                                    <span>Alicatados de baños y cocinas</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                                    <span>Solados cerámicos y porcelánicos</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                                    <span>Enfoscados y enfoscados impermeables</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                                    <span>Apertura y cierre de rozas</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                                    <span>Reparaciones localizadas</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                                    <span>Pequeñas obras de reforma</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Enhanced CTA Section */}
+            <section className="relative py-24 bg-gradient-to-br from-slate-900 via-[#0D1117] to-slate-900 overflow-hidden">
+                {/* Decorative elements */}
+                <div className="absolute inset-0 opacity-10">
+                    <div className="absolute top-20 left-20 w-72 h-72 bg-accent rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-20 right-20 w-96 h-96 bg-primary rounded-full blur-3xl"></div>
+                </div>
+
+                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    {/* Main CTA */}
+                    <div className="text-center">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/20 text-accent font-bold rounded-full text-sm uppercase tracking-wide mb-6 border border-accent/30">
+                            <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse"></span>
+                            Disponibles Ahora
+                        </div>
+
+                        <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
+                            ¿Necesitas pintar o hacer obra?
+                        </h2>
+
+                        <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto">
+                            Presupuesto detallado sin compromiso en 24 horas.
+                        </p>
+
+                        {/* CTA Buttons */}
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                            <a
+                                href="https://wa.me/34604154746?text=Hola, necesito información sobre pintura/pladur/albañilería"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group inline-flex items-center px-10 py-5 bg-gradient-to-r from-accent to-primary text-white text-lg font-bold rounded-xl shadow-2xl shadow-accent/50 hover:shadow-accent/70 hover:scale-105 transition-all"
+                            >
+                                <Phone className="w-6 h-6 mr-3 group-hover:rotate-12 transition-transform" />
+                                Contactar por WhatsApp
+                            </a>
+
+                            <a
+                                href="tel:+34604154746"
+                                className="inline-flex items-center px-10 py-5 bg-white/10 backdrop-blur-sm text-white text-lg font-bold rounded-xl border-2 border-white/20 hover:bg-white/20 hover:border-accent transition-all"
+                            >
+                                <Phone className="w-6 h-6 mr-3" />
+                                604 154 746
+                            </a>
+                        </div>
+
+                        {/* Trust Badge */}
+                        <div className="mt-8 inline-flex items-center gap-2 text-white/50 text-sm">
+                            <CheckCircle2 className="w-5 h-5 text-accent" />
+                            <span>Sin compromiso • Presupuesto gratuito • Respuesta inmediata</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    );
+}

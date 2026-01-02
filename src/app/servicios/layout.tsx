@@ -1,4 +1,4 @@
-import { Navbar } from "@/components/navbar";
+import { ServiciosNavbar } from "@/components/servicios-navbar";
 import { Footer } from "@/components/footer";
 
 export default function ServiciosLayout({
@@ -8,7 +8,7 @@ export default function ServiciosLayout({
 }) {
     return (
         <>
-            <Navbar />
+            <ServiciosNavbar />
             {children}
             <Footer />
         </>

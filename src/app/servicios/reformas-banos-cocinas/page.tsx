@@ -3,9 +3,9 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Home, CheckCircle2, Phone, ArrowLeft, Clock, Award, Wrench, Users, ChevronLeft, ChevronRight } from "lucide-react";
+import { Bath, CheckCircle2, Phone, ArrowLeft, Droplets, Sparkles, Shield, ChevronLeft, ChevronRight } from "lucide-react";
 
-export default function ReformasIntegrales() {
+export default function ReformasBanosCocinas() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isPlaying, setIsPlaying] = useState(true);
     const [progress, setProgress] = useState(0);
@@ -14,69 +14,64 @@ export default function ReformasIntegrales() {
     const progressInterval = useRef<NodeJS.Timeout | null>(null);
 
     const benefits = [
-        "Gestión completa del proyecto desde el diseño hasta la entrega",
-        "Coordinación de todos los gremios: electricistas, fontaneros, carpinteros",
-        "Demolición selectiva y gestión legal de escombros",
-        "Nueva distribución optimizada según tus necesidades",
-        "Instalaciones eléctricas y fontanería certificadas",
-        "Carpintería de calidad: suelos, puertas y armarios",
-        "Pintura con acabados profesionales y garantía",
-        "Cumplimiento estricto de plazos por contrato"
+        "Diseño 3D previo de tu reforma de baño o cocina",
+        "Alicatados y solados de alta calidad según normativa",
+        "Fontanería certificada y grifería de primeras marcas",
+        "Sanitarios suspendidos y platos de ducha a medida",
+        "Muebles de cocina y baño personalizados",
+        "Iluminación LED empotrada y regulable",
+        "Impermeabilizaciones con garantía de 10 años",
+        "Optimización de espacios pequeños"
     ];
 
-    const process = [
+    const features = [
         {
-            icon: <Users className="w-8 h-8" />,
-            title: "1. Visita y Consulta",
-            description: "Visitamos tu vivienda en Madrid para evaluar la reforma integral"
+            icon: <Droplets className="w-8 h-8" />,
+            title: "Reforma de Baños Completa",
+            description: "Especialistas en reforma de baños en Madrid. Platos de ducha, mamparas, sanitarios de diseño y alicatados premium con acabados impecables."
         },
         {
-            icon: <Wrench className="w-8 h-8" />,
-            title: "2. Proyecto y Presupuesto",
-            description: "Diseño 3D de la reforma y presupuesto detallado sin sorpresas"
+            icon: <Sparkles className="w-8 h-8" />,
+            title: "Reforma de Cocinas Integrales",
+            description: "Reforma de cocinas con muebles a medida, encimeras de Silestone o cuarzo, electrodomésticos integrados y distribución optimizada."
         },
         {
-            icon: <Award className="w-8 h-8" />,
-            title: "3. Ejecución Total",
-            description: "Realizamos la reforma integral con acabados de máxima calidad"
-        },
-        {
-            icon: <Clock className="w-8 h-8" />,
-            title: "4. Entrega Puntual",
-            description: "Tu vivienda reformada en la fecha acordada con garantía"
+            icon: <Shield className="w-8 h-8" />,
+            title: "Garantía y Calidad",
+            description: "Todas nuestras reformas de baños y cocinas incluyen garantía por escrito. Trabajamos con Roca, Grohe, Silestone y Santos."
         }
     ];
 
     const gallery = [
         {
-            image: "/project-living-2.jpg",
-            alt: "Reforma integral de salón en Madrid con iluminación LED",
-            description: "Reforma integral: salón moderno con iluminación LED integrada"
-        },
-        {
-            image: "/project-living-1.jpg",
-            alt: "Salón completamente reformado en vivienda Madrid",
-            description: "Reforma completa de salón comedor con suelos y pintura"
+            image: "/project-bathroom-1.jpg",
+            alt: "Reforma completa de baño en Madrid con suelo hidráulico",
+            description: "Reforma de baño completo: plato de ducha, sanitarios suspendidos y alicatados"
         },
         {
             image: "/project-kitchen-1.jpg",
-            alt: "Cocina reforma integral Madrid con electrodomésticos",
-            description: "Reforma integral incluye cocina nueva con muebles a medida"
+            alt: "Reforma integral de cocina moderna con muebles a medida",
+            description: "Reforma de cocina con muebles Santos y electrodomésticos Bosch integrados"
         },
         {
             image: "/project-kitchen-2.jpg",
-            alt: "Reforma integral vivienda con cocina funcional",
-            description: "Cocina reformada con distribución optimizada"
+            alt: "Reforma de cocina con isla central y zona de lavado",
+            description: "Reforma de cocina funcional con isla central y almacenaje optimizado"
         },
         {
             image: "/project-bathroom-1.jpg",
-            alt: "Baño renovado en reforma integral Madrid",
-            description: "Reforma integral: baño completo con alicatados premium"
+            alt: "Reforma de baño pequeño aprovechando el espacio",
+            description: "Reforma de baño pequeño con ducha, mueble suspendido y espejo retroiluminado"
         },
         {
-            image: "/hero-bg.png",
-            alt: "Obra de reforma integral en ejecución Madrid",
-            description: "Proceso de reforma integral de vivienda en Madrid"
+            image: "/project-kitchen-1.jpg",
+            alt: "Alicatado de cocina premium en reforma integral",
+            description: "Reforma de cocina: alicatados hasta el techo y encimera de Silestone"
+        },
+        {
+            image: "/project-kitchen-2.jpg",
+            alt: "Muebles de cocina a medida en reforma completa",
+            description: "Reforma de cocina con mobiliario lacado y sistema de extracción integrado"
         }
     ];
 
@@ -92,7 +87,7 @@ export default function ReformasIntegrales() {
                     setCurrentSlide((current) => (current + 1) % gallery.length);
                     return 0;
                 }
-                return prev + (100 / 40); // 4000ms / 100 steps
+                return prev + (100 / 40);
             });
         }, 100);
 
@@ -114,10 +109,6 @@ export default function ReformasIntegrales() {
     const goToSlide = (index: number) => {
         setCurrentSlide(index);
         setProgress(0);
-    };
-
-    const togglePlayPause = () => {
-        setIsPlaying(!isPlaying);
     };
 
     // Touch handlers for mobile swipe
@@ -153,8 +144,8 @@ export default function ReformasIntegrales() {
             <section className="relative bg-[#1D1D1D] min-h-[500px] flex items-center pt-32 pb-20 overflow-hidden">
                 <div className="absolute inset-0">
                     <Image
-                        src="/project-living-2.jpg"
-                        alt="Empresa de reformas integrales de viviendas en Madrid"
+                        src="/project-kitchen-1.jpg"
+                        alt="Empresa de reforma de baños y cocinas en Madrid"
                         fill
                         className="object-cover opacity-30"
                     />
@@ -170,20 +161,20 @@ export default function ReformasIntegrales() {
                     <div className="max-w-3xl">
                         <div className="flex items-center gap-3 mb-6">
                             <div className="p-3 bg-accent/20 rounded-xl border border-accent/30">
-                                <Home className="w-10 h-10 text-accent" />
+                                <Bath className="w-10 h-10 text-accent" />
                             </div>
                             <h1 className="text-4xl md:text-5xl font-extrabold text-white">
-                                Reformas Integrales de Viviendas en Madrid
+                                Reforma de Baños y Cocinas en Madrid
                             </h1>
                         </div>
 
                         <p className="text-xl text-white/80 mb-8 leading-relaxed">
-                            Especialistas en reformas integrales de pisos y casas en Madrid. Gestión completa: demolición, instalaciones, carpintería, pintura y acabados. Más de 15 años transformando viviendas.
+                            Especialistas en reforma de baños y cocinas en Madrid. Diseño, alicatados, fontanería, muebles a medida y electrodomésticos. Más de 15 años transformando espacios.
                         </p>
 
                         <div className="flex flex-wrap gap-4">
                             <a
-                                href="https://wa.me/34604154746?text=Hola, quiero presupuesto para reforma integral"
+                                href="https://wa.me/34604154746?text=Hola, quiero presupuesto para reforma de baño/cocina"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center px-8 py-4 bg-accent hover:bg-primary text-white font-bold rounded-xl transition-all shadow-lg shadow-accent/50"
@@ -201,10 +192,10 @@ export default function ReformasIntegrales() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
-                            Nuestras Reformas Integrales
+                            Reformas de Baños y Cocinas
                         </h2>
                         <p className="text-lg text-slate-600">
-                            Ejemplos reales de viviendas transformadas por nuestro equipo profesional.
+                            Proyectos reales que reflejan nuestra calidad y atención al detalle.
                         </p>
                     </div>
 
@@ -301,10 +292,10 @@ export default function ReformasIntegrales() {
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
                             <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">
-                                ¿Qué incluye una Reforma Integral?
+                                Baños y Cocinas que Enamoran
                             </h2>
                             <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                                Una reforma integral es la transformación completa de tu vivienda. En THIASA nos encargamos de coordinar todos los trabajos necesarios para que solo tengas que preocuparte de disfrutar del resultado.
+                                La reforma de baños y cocinas requiere experiencia y atención al detalle. En THIASA combinamos funcionalidad con estética para crear espacios que mejoren tu día a día.
                             </p>
 
                             <div className="space-y-3 mb-8">
@@ -318,15 +309,15 @@ export default function ReformasIntegrales() {
 
                             <div className="bg-white border-l-4 border-accent p-6 rounded-r-xl shadow-md">
                                 <p className="text-slate-700 font-medium">
-                                    <strong className="text-slate-900">Garantía Total:</strong> Todos nuestros trabajos cuentan con garantía por escrito. Tu tranquilidad es nuestra prioridad.
+                                    <strong className="text-slate-900">Trabajamos con las mejores marcas:</strong> Roca, Grohe, Silestone, Santos y más. Calidad garantizada.
                                 </p>
                             </div>
                         </div>
 
                         <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                             <Image
-                                src="/project-living-1.jpg"
-                                alt="Ejemplo de reforma integral completada"
+                                src="/project-bathroom-1.jpg"
+                                alt="Ejemplo de reforma de baño completada"
                                 fill
                                 className="object-cover"
                             />
@@ -335,26 +326,23 @@ export default function ReformasIntegrales() {
                 </div>
             </section>
 
-            {/* Proceso */}
+            {/* Features */}
             <section className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
-                            ¿Cómo Trabajamos?
+                            ¿Qué Hacemos Diferente?
                         </h2>
-                        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                            Un proceso claro y transparente para que sepas qué esperar en cada fase de tu reforma.
-                        </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {process.map((step, index) => (
-                            <div key={index} className="bg-slate-50 p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow">
+                    <div className="grid md:grid-cols-3 gap-8">
+                        {features.map((feature, index) => (
+                            <div key={index} className="bg-slate-50 p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow">
                                 <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-4 text-accent">
-                                    {step.icon}
+                                    {feature.icon}
                                 </div>
-                                <h3 className="text-xl font-bold text-slate-900 mb-2">{step.title}</h3>
-                                <p className="text-slate-600">{step.description}</p>
+                                <h3 className="text-xl font-bold text-slate-900 mb-2">{feature.title}</h3>
+                                <p className="text-slate-600">{feature.description}</p>
                             </div>
                         ))}
                     </div>
@@ -378,17 +366,17 @@ export default function ReformasIntegrales() {
                         </div>
 
                         <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
-                            ¿Listo para transformar tu vivienda?
+                            ¿Quieres renovar tu baño o cocina?
                         </h2>
 
                         <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto">
-                            Te damos un presupuesto detallado en 24 horas. Sin compromiso.
+                            Diseño personalizado y presupuesto sin compromiso en 24 horas.
                         </p>
 
                         {/* CTA Buttons */}
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                             <a
-                                href="https://wa.me/34604154746?text=Hola, quiero presupuesto para reforma integral"
+                                href="https://wa.me/34604154746?text=Hola, quiero presupuesto para reforma de baño/cocina"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group inline-flex items-center px-10 py-5 bg-gradient-to-r from-accent to-primary text-white text-lg font-bold rounded-xl shadow-2xl shadow-accent/50 hover:shadow-accent/70 hover:scale-105 transition-all"

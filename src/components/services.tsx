@@ -6,38 +6,38 @@ export function Services() {
     const services = [
         {
             icon: <Home className="w-10 h-10" />,
-            title: "Reformas Integrales",
+            title: "Reformas Integrales de Viviendas",
             description: "Transformación completa de tu vivienda. Incluye demolición, distribución, instalaciones eléctricas, fontanería, carpintería y acabados premium.",
             gradient: "from-blue-500/20 to-primary/20",
             slug: "reformas-integrales"
         },
         {
             icon: <Bath className="w-10 h-10" />,
-            title: "Baños y Cocinas",
+            title: "Reformas de Baños y Cocinas",
             description: "Renovación completa de baños y cocinas. Alicatados, sanitarios, fontanería, muebles de cocina a medida y electrodomésticos.",
             gradient: "from-accent/20 to-blue-500/20",
-            slug: "banos-cocinas"
+            slug: "reformas-banos-cocinas"
         },
         {
             icon: <ChefHat className="w-10 h-10" />,
-            title: "Instalaciones Eléctricas y Fontanería",
+            title: "Instalaciones Eléctricas y Fontanería Madrid",
             description: "Instalaciones nuevas y reparaciones. Aire acondicionado, suelo radiante, cuadros eléctricos, fontanería general y calefacción.",
             gradient: "from-primary/20 to-accent/20",
             slug: "instalaciones-electricas-fontaneria"
         },
         {
             icon: <Hammer className="w-10 h-10" />,
-            title: "Carpintería de Madera y Aluminio",
+            title: "Carpintería de Madera y Aluminio Madrid",
             description: "Suelos flotantes, puertas, armarios, muebles a medida. Carpintería de aluminio y PVC: ventanas y puertas correderas.",
             gradient: "from-accent/20 to-primary/20",
-            slug: "carpinteria"
+            slug: "carpinteria-madera-aluminio"
         },
         {
             icon: <Paintbrush className="w-10 h-10" />,
-            title: "Pintura, Pladur y Albañilería",
+            title: "Pintura, Pladur y Albañilería Madrid",
             description: "Pintura interior y exterior, instalación de Pladur, tabiques, alicatados, solados y todo tipo de trabajos de albañilería.",
             gradient: "from-blue-500/20 to-accent/20",
-            slug: "pintura-albanileria"
+            slug: "pintura-pladur-albanileria"
         }
     ];
 

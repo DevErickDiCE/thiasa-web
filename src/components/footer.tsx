@@ -28,10 +28,11 @@ export function Footer() {
                     <div className="flex flex-col items-center md:items-start order-2 space-y-4">
                         <h3 className="text-white font-semibold text-lg hidden md:block">Servicios</h3>
                         <ul className="space-y-3 text-center md:text-left">
-                            <li><Link href="#services" className="text-white/70 hover:text-accent transition-colors text-sm">Reformas Integrales</Link></li>
-                            <li><Link href="#services" className="text-white/70 hover:text-accent transition-colors text-sm">Baños y Cocinas</Link></li>
-                            <li><Link href="#services" className="text-white/70 hover:text-accent transition-colors text-sm">Pintura y Albañilería</Link></li>
-                            <li><Link href="#services" className="text-white/70 hover:text-accent transition-colors text-sm">Obra Nueva</Link></li>
+                            <li><Link href="/servicios/reformas-integrales" className="text-white/70 hover:text-accent transition-colors text-sm">Reformas Integrales</Link></li>
+                            <li><Link href="/servicios/reformas-banos-cocinas" className="text-white/70 hover:text-accent transition-colors text-sm">Baños y Cocinas</Link></li>
+                            <li><Link href="/servicios/instalaciones-electricas-fontaneria" className="text-white/70 hover:text-accent transition-colors text-sm">Instalaciones</Link></li>
+                            <li><Link href="/servicios/carpinteria-madera-aluminio" className="text-white/70 hover:text-accent transition-colors text-sm">Carpintería</Link></li>
+                            <li><Link href="/servicios/pintura-pladur-albanileria" className="text-white/70 hover:text-accent transition-colors text-sm">Pintura y Albañilería</Link></li>
                         </ul>
                     </div>
 
