@@ -23,40 +23,35 @@ export default function InstalacionesElectricasFontaneria() {
 
     return (
         <main>
-            <section className="relative bg-[#1D1D1D] min-h-[500px] flex items-center pt-32 pb-20 overflow-hidden">
+            <section className="relative bg-[#1D1D1D] min-h-[550px] flex items-center pt-32 pb-20 overflow-hidden">
                 <div className="absolute inset-0">
-                    <Image src="/hero-bg.png" alt="Instalaciones eléctricas y fontanería" fill className="object-cover opacity-30" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#1D1D1D]/95 via-[#1D1D1D]/80 to-[#1D1D1D]/60" />
+                    <Image src="/hero-bg.png" alt="Instalaciones eléctricas y fontanería" fill className="object-cover opacity-40" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#1D1D1D]/90 via-[#1D1D1D]/75 to-[#1D1D1D]/60" />
                 </div>
 
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-                    <Link href="/#services" className="inline-flex items-center text-accent hover:text-primary transition-colors mb-6">
+                    <Link href="/#services" className="inline-flex items-center text-accent hover:text-primary transition-colors mb-8">
                         <ArrowLeft className="w-5 h-5 mr-2" />
                         Volver a servicios
                     </Link>
 
-                    <div className="max-w-3xl">
-                        <div className="flex items-center gap-3 mb-6">
-                            <div className="p-3 bg-accent/20 rounded-xl border border-accent/30">
-                                <Zap className="w-10 h-10 text-accent" />
-                            </div>
-                            <h1 className="text-4xl md:text-5xl font-extrabold text-white">
-                                Instalaciones Eléctricas y Fontanería
-                            </h1>
-                        </div>
+                    <div className="max-w-4xl">
+                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
+                            Instalaciones Eléctricas y Fontanería
+                        </h1>
 
-                        <p className="text-xl text-white/80 mb-8 leading-relaxed">
-                            Electricistas y fontaneros certificados. Instalaciones nuevas, reparaciones y mantenimiento con garantía profesional.
+                        <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl">
+                            Electricistas y fontaneros certificados en Madrid. Instalaciones seguras y garantizadas.
                         </p>
 
                         <a
                             href="https://wa.me/34604154746?text=Hola, necesito información sobre instalaciones"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center px-8 py-4 bg-accent hover:bg-primary text-white font-bold rounded-xl transition-all shadow-lg shadow-accent/50"
+                            className="inline-flex items-center px-8 py-4 bg-accent hover:bg-primary text-white text-base font-bold rounded-xl transition-all shadow-lg shadow-accent/50 hover:shadow-xl hover:scale-105"
                         >
                             <Phone className="w-5 h-5 mr-2" />
-                            Solicitar Presupuesto Gratis
+                            Presupuesto Gratis en 24h
                         </a>
                     </div>
                 </div>

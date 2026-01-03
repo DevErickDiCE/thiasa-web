@@ -44,34 +44,34 @@ export default function ReformasBanosCocinas() {
 
     const gallery = [
         {
+            image: "/project-kitchen-3.jpg",
+            alt: "Reforma completa de cocina en Madrid con barra americana",
+            description: "Reforma de cocina con barra, ladrillo visto y muebles blancos modernos"
+        },
+        {
+            image: "/project-kitchen-4.jpg",
+            alt: "Reforma integral de cocina moderna con papel decorativo",
+            description: "Reforma de cocina con papel pintado floral y elementos de diseño"
+        },
+        {
+            image: "/project-kitchen-5.jpg",
+            alt: "Reforma de cocina con isla central vista completa",
+            description: "Cocina reformada con barra americana, ladrillo y distribución óptima"
+        },
+        {
+            image: "/project-bathroom-2.jpg",
+            alt: "Reforma de baño pequeño con espejo LED circular",
+            description: "Reforma de baño con espejo LED, suelo hidráulico y radiador toallero"
+        },
+        {
             image: "/project-bathroom-1.jpg",
-            alt: "Reforma completa de baño en Madrid con suelo hidráulico",
-            description: "Reforma de baño completo: plato de ducha, sanitarios suspendidos y alicatados"
+            alt: "Reforma completa de baño en Madrid suelo hidráulico",
+            description: "Baño reformado con ladrillo visto, sanitarios y acabados premium"
         },
         {
-            image: "/project-kitchen-1.jpg",
-            alt: "Reforma integral de cocina moderna con muebles a medida",
-            description: "Reforma de cocina con muebles Santos y electrodomésticos Bosch integrados"
-        },
-        {
-            image: "/project-kitchen-2.jpg",
-            alt: "Reforma de cocina con isla central y zona de lavado",
-            description: "Reforma de cocina funcional con isla central y almacenaje optimizado"
-        },
-        {
-            image: "/project-bathroom-1.jpg",
-            alt: "Reforma de baño pequeño aprovechando el espacio",
-            description: "Reforma de baño pequeño con ducha, mueble suspendido y espejo retroiluminado"
-        },
-        {
-            image: "/project-kitchen-1.jpg",
-            alt: "Alicatado de cocina premium en reforma integral",
-            description: "Reforma de cocina: alicatados hasta el techo y encimera de Silestone"
-        },
-        {
-            image: "/project-kitchen-2.jpg",
-            alt: "Muebles de cocina a medida en reforma completa",
-            description: "Reforma de cocina con mobiliario lacado y sistema de extracción integrado"
+            image: "/project-kitchen-3.jpg",
+            alt: "Alicatado de cocina premium en reforma integral vista lateral",
+            description: "Reforma de cocina: alicatado gris, barra blanca y lámparas colgantes"
         }
     ];
 
@@ -141,48 +141,41 @@ export default function ReformasBanosCocinas() {
     return (
         <main>
             {/* Hero Section */}
-            <section className="relative bg-[#1D1D1D] min-h-[500px] flex items-center pt-32 pb-20 overflow-hidden">
+            <section className="relative bg-[#1D1D1D] min-h-[550px] flex items-center pt-32 pb-20 overflow-hidden">
                 <div className="absolute inset-0">
                     <Image
                         src="/project-kitchen-1.jpg"
                         alt="Empresa de reforma de baños y cocinas en Madrid"
                         fill
-                        className="object-cover opacity-30"
+                        className="object-cover opacity-40"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#1D1D1D]/95 via-[#1D1D1D]/80 to-[#1D1D1D]/60" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#1D1D1D]/90 via-[#1D1D1D]/75 to-[#1D1D1D]/60" />
                 </div>
 
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-                    <Link href="/#services" className="inline-flex items-center text-accent hover:text-primary transition-colors mb-6">
+                    <Link href="/#services" className="inline-flex items-center text-accent hover:text-primary transition-colors mb-8">
                         <ArrowLeft className="w-5 h-5 mr-2" />
                         Volver a servicios
                     </Link>
 
-                    <div className="max-w-3xl">
-                        <div className="flex items-center gap-3 mb-6">
-                            <div className="p-3 bg-accent/20 rounded-xl border border-accent/30">
-                                <Bath className="w-10 h-10 text-accent" />
-                            </div>
-                            <h1 className="text-4xl md:text-5xl font-extrabold text-white">
-                                Reforma de Baños y Cocinas en Madrid
-                            </h1>
-                        </div>
+                    <div className="max-w-4xl">
+                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
+                            Reforma de Baños y Cocinas en Madrid
+                        </h1>
 
-                        <p className="text-xl text-white/80 mb-8 leading-relaxed">
-                            Especialistas en reforma de baños y cocinas en Madrid. Diseño, alicatados, fontanería, muebles a medida y electrodomésticos. Más de 15 años transformando espacios.
+                        <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl">
+                            Diseño, reforma y acabados premium. Tu baño o cocina soñados en Madrid.
                         </p>
 
-                        <div className="flex flex-wrap gap-4">
-                            <a
-                                href="https://wa.me/34604154746?text=Hola, quiero presupuesto para reforma de baño/cocina"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center px-8 py-4 bg-accent hover:bg-primary text-white font-bold rounded-xl transition-all shadow-lg shadow-accent/50"
-                            >
-                                <Phone className="w-5 h-5 mr-2" />
-                                Presupuesto Gratis en 24h
-                            </a>
-                        </div>
+                        <a
+                            href="https://wa.me/34604154746?text=Hola, quiero presupuesto para reforma de baño/cocina"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center px-8 py-4 bg-accent hover:bg-primary text-white text-base font-bold rounded-xl transition-all shadow-lg shadow-accent/50 hover:shadow-xl hover:scale-105"
+                        >
+                            <Phone className="w-5 h-5 mr-2" />
+                            Presupuesto Gratis en 24h
+                        </a>
                     </div>
                 </div>
             </section>

@@ -21,7 +21,23 @@ export const metadata: Metadata = {
     description: "Reformas de viviendas, baños y cocinas con garantía profesional. Instalaciones, carpintería y acabados premium.",
     type: "website",
     locale: "es_ES",
-  }
+    url: "https://reformas-theta.vercel.app",
+    siteName: "THIASA - Reformas Integrales",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "THIASA - Empresa de Reformas Integrales en Madrid",
+      }
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "THIASA - Reformas Integrales en Madrid",
+    description: "Reformas de viviendas, baños y cocinas con garantía profesional. Instalaciones, carpintería y acabados premium.",
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({

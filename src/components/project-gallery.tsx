@@ -30,86 +30,86 @@ export function ProjectGallery() {
     const projects: Project[] = [
         {
             id: 1,
-            title: "Reforma Integral de Cocina",
-            category: "Cocina",
-            image: "/project-kitchen-1.jpg",
-            gallery: ["/project-kitchen-1.jpg", "/project-kitchen-2.jpg"],
-            description: "Transformación total de cocina cerrada a concepto abierto. Diseño moderno con isla central, encimeras de cuarzo y acabados premium.",
+            title: "Reforma Integral Salón LED",
+            category: "Reforma Integral",
+            image: "/project-living-3.jpg",
+            gallery: ["/project-living-3.jpg", "/project-living-4.jpg", "/project-living-5.jpg"],
+            description: "Reforma integral de salón con iluminación LED perimetral indirecta. Suelo de madera natural, muebles a medida y distribución óptima del espacio.",
             details: [
-                "Demolición y nueva distribución",
-                "Mobiliario a medida con isla",
-                "Iluminación LED integrada",
-                "Fontanería y electricidad nueva"
+                "Falso techo con iluminación LED perimetral",
+                "Instalación suelo tarima roble",
+                "Muebles blancos a medida",
+                "Climatización y domótica"
             ]
         },
         {
             id: 2,
-            title: "Baño con Suelo Hidráulico",
-            category: "Baño",
-            image: "/project-bathroom-1.jpg",
-            gallery: ["/project-bathroom-1.jpg"],
-            description: "Renovación de baño con un toque clásico y moderno. Instalación de suelo hidráulico, pared de ladrillo visto y grifería negra mate.",
+            title: "Cocina con Barra Americana",
+            category: "Cocina",
+            image: "/project-kitchen-3.jpg",
+            gallery: ["/project-kitchen-3.jpg", "/project-kitchen-4.jpg", "/project-kitchen-5.jpg"],
+            description: "Cocina moderna con barra americana y pared de ladrillo visto original. Muebles en blanco mate, encimera de cuarzo y electrodomésticos integrados.",
             details: [
-                "Alicatado parcial y ladrillo visto",
-                "Suelo hidráulico geométrico",
-                "Mueble suspendido blanco",
-                "Radiador toallero de diseño"
+                "Pared de ladrillo caravista restaurada",
+                "Barra americana con iluminación colgante",
+                "Encimera cuarzo blanco nieves",
+                "Alicatado gris perla satinado"
             ]
         },
         {
             id: 3,
-            title: "Rehabilitación Salón Comedor",
-            category: "Reforma Integral",
-            image: "/project-living-2.jpg",
-            gallery: ["/project-living-2.jpg", "/project-living-1.jpg"],
-            description: "Reforma integral de zona de estar. Iluminación indirecta con foseado LED, restauración de elementos originales y distribución diáfana.",
+            title: "Baño con Espejo LED",
+            category: "Baño",
+            image: "/project-bathroom-2.jpg",
+            gallery: ["/project-bathroom-2.jpg", "/project-bathroom-1.jpg"],
+            description: "Baño moderno con espejo circular retroiluminado LED. Suelo hidráulico geométrico, radiador toallero blanco y acabados premium.",
             details: [
-                "Falsos techos con luz indirecta",
-                "Alisado de paredes",
-                "Suelo laminado roble",
-                "Climatización split"
+                "Espejo LED circular de diseño",
+                "Suelo hidráulico decorativo",
+                "Radiador toallero moderno",
+                "Mueble suspendido con cajones"
             ]
         },
         {
             id: 4,
-            title: "Cocina con Zona de Lavado",
-            category: "Cocina",
-            image: "/project-kitchen-2.jpg",
-            gallery: ["/project-kitchen-2.jpg", "/project-kitchen-1.jpg"],
-            description: "Optimización máxima del espacio incluyendo zona de lavado integrada. Alicatado tipo metro en color agua marina y muebles blancos.",
+            title: "Dormitorio con Papel Pintado",
+            category: "Reforma Integral",
+            image: "/project-bedroom-2.jpg",
+            gallery: ["/project-bedroom-2.jpg", "/project-bedroom-1.jpg"],
+            description: "Habitación elegante con papel pintado decorativo en cabecero. Lámpara de diseño, suelo de madera y ambiente acogedor.",
             details: [
-                "Mobiliario blanco brillo",
-                "Alicatado color texturizado",
-                "Zona de lavado oculta",
-                "Encimera resistente"
+                "Papel pintado vinílico de diseño",
+                "Lámpara colgante de diseño moderno",
+                "Suelo laminado tono natural",
+                "Molduras decorativas en techo"
             ]
         },
         {
             id: 5,
-            title: "Detalles que Marcan Diferencia",
-            category: "Baño",
-            image: "/project-bathroom-1.jpg",
-            gallery: ["/project-bathroom-1.jpg"],
-            description: "Cuidamos cada acabado. En este baño combinamos texturas naturales como el ladrillo con líneas modernas y limpias.",
+            title: "Pasillo con Iluminación LED",
+            category: "Reforma Integral",
+            image: "/project-hallway-1.jpg",
+            gallery: ["/project-hallway-1.jpg"],
+            description: "Distribuidor empapelado y reforma completa con LED integrado en techo. Aprovechamiento máximo del espacio con muebles a medida.",
             details: [
-                "Recuperación de pared original",
-                "Espejo circular de diseño",
-                "Iluminación cálida",
-                "Acabados en negro mate"
+                "Falso techo con ranuras LED",
+                "Papel decorativo en paredes",
+                "Suelo continuo de madera",
+                "Muebles TV suspendidos"
             ]
         },
         {
             id: 6,
-            title: "Espacios Luminosos",
-            category: "Reforma Integral",
-            image: "/project-living-1.jpg",
-            gallery: ["/project-living-1.jpg", "/project-living-2.jpg"],
-            description: "Aprovechamiento de la luz natural. Espacios conectados visualmente pero bien definidos para una vida cómoda y moderna.",
+            title: "Cocina con Papel Decorativo",
+            category: "Cocina",
+            image: "/project-kitchen-4.jpg",
+            gallery: ["/project-kitchen-4.jpg", "/project-kitchen-5.jpg"],
+            description: "Diseño único con barra y papel pintado decorativo floral. Combinación de ladrillo visto con elementos modernos y funcionales.",
             details: [
-                "Ventanales y cerramientos",
-                "Decoración minimalista",
-                "Iluminación focalizada",
-                "Suelos continuos"
+                "Papel pintado vinílico lavable",
+                "Barra lacada blanco brillo",
+                "Pared ladrillo caravista",
+                "Lámparas colgantes de diseño"
             ]
         }
     ];

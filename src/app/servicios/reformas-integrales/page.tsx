@@ -49,34 +49,34 @@ export default function ReformasIntegrales() {
 
     const gallery = [
         {
-            image: "/project-living-2.jpg",
-            alt: "Reforma integral de salón en Madrid con iluminación LED",
-            description: "Reforma integral: salón moderno con iluminación LED integrada"
+            image: "/project-living-3.jpg",
+            alt: "Reforma integral de salón en Madrid con iluminación LED perimetral",
+            description: "Reforma integral: salón moderno con iluminación LED indirecta"
         },
         {
-            image: "/project-living-1.jpg",
-            alt: "Salón completamente reformado en vivienda Madrid",
-            description: "Reforma completa de salón comedor con suelos y pintura"
+            image: "/project-living-4.jpg",
+            alt: "Salón completamente reformado con LED en vivienda Madrid",
+            description: "Reforma completa de salón comedor con falso techo LED"
         },
         {
-            image: "/project-kitchen-1.jpg",
-            alt: "Cocina reforma integral Madrid con electrodomésticos",
-            description: "Reforma integral incluye cocina nueva con muebles a medida"
+            image: "/project-living-5.jpg",
+            alt: "Reforma integral salón diáfano Madrid LED",
+            description: "Vista alternativa del salón con distribución moderna"
         },
         {
-            image: "/project-kitchen-2.jpg",
-            alt: "Reforma integral vivienda con cocina funcional",
-            description: "Cocina reformada con distribución optimizada"
+            image: "/project-bedroom-2.jpg",
+            alt: "Dormitorio reforma integral Madrid con papel pintado",
+            description: "Reforma integral incluye habitaciones con acabados premium"
         },
         {
-            image: "/project-bathroom-1.jpg",
-            alt: "Baño renovado en reforma integral Madrid",
-            description: "Reforma integral: baño completo con alicatados premium"
+            image: "/project-hallway-1.jpg",
+            alt: "Pasillo reformado con iluminación LED Madrid",
+            description: "Distribuidor con techo LED y papel decorativo"
         },
         {
-            image: "/hero-bg.png",
-            alt: "Obra de reforma integral en ejecución Madrid",
-            description: "Proceso de reforma integral de vivienda en Madrid"
+            image: "/project-bathroom-2.jpg",
+            alt: "Baño renovado en reforma integral con espejo LED Madrid",
+            description: "Reforma integral: baño completo con espejo LED circular"
         }
     ];
 
@@ -149,49 +149,42 @@ export default function ReformasIntegrales() {
 
     return (
         <main>
-            {/* Hero Section */}
-            <section className="relative bg-[#1D1D1D] min-h-[500px] flex items-center pt-32 pb-20 overflow-hidden">
+            {/* Hero Section - Minimalist */}
+            <section className="relative bg-[#1D1D1D] min-h-[550px] flex items-center pt-32 pb-20 overflow-hidden">
                 <div className="absolute inset-0">
                     <Image
                         src="/project-living-2.jpg"
                         alt="Empresa de reformas integrales de viviendas en Madrid"
                         fill
-                        className="object-cover opacity-30"
+                        className="object-cover opacity-40"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#1D1D1D]/95 via-[#1D1D1D]/80 to-[#1D1D1D]/60" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#1D1D1D]/90 via-[#1D1D1D]/75 to-[#1D1D1D]/60" />
                 </div>
 
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-                    <Link href="/#services" className="inline-flex items-center text-accent hover:text-primary transition-colors mb-6">
+                    <Link href="/#services" className="inline-flex items-center text-accent hover:text-primary transition-colors mb-8">
                         <ArrowLeft className="w-5 h-5 mr-2" />
                         Volver a servicios
                     </Link>
 
-                    <div className="max-w-3xl">
-                        <div className="flex items-center gap-3 mb-6">
-                            <div className="p-3 bg-accent/20 rounded-xl border border-accent/30">
-                                <Home className="w-10 h-10 text-accent" />
-                            </div>
-                            <h1 className="text-4xl md:text-5xl font-extrabold text-white">
-                                Reformas Integrales de Viviendas en Madrid
-                            </h1>
-                        </div>
+                    <div className="max-w-4xl">
+                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
+                            Reformas Integrales de Viviendas en Madrid
+                        </h1>
 
-                        <p className="text-xl text-white/80 mb-8 leading-relaxed">
-                            Especialistas en reformas integrales de pisos y casas en Madrid. Gestión completa: demolición, instalaciones, carpintería, pintura y acabados. Más de 15 años transformando viviendas.
+                        <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl">
+                            Transformamos tu vivienda de principio a fin. Gestión completa y garantizada.
                         </p>
 
-                        <div className="flex flex-wrap gap-4">
-                            <a
-                                href="https://wa.me/34604154746?text=Hola, quiero presupuesto para reforma integral"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center px-8 py-4 bg-accent hover:bg-primary text-white font-bold rounded-xl transition-all shadow-lg shadow-accent/50"
-                            >
-                                <Phone className="w-5 h-5 mr-2" />
-                                Presupuesto Gratis en 24h
-                            </a>
-                        </div>
+                        <a
+                            href="https://wa.me/34604154746?text=Hola, quiero presupuesto para reforma integral"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center px-8 py-4 bg-accent hover:bg-primary text-white text-base font-bold rounded-xl transition-all shadow-lg shadow-accent/50 hover:shadow-xl hover:scale-105"
+                        >
+                            <Phone className="w-5 h-5 mr-2" />
+                            Presupuesto Gratis en 24h
+                        </a>
                     </div>
                 </div>
             </section>
