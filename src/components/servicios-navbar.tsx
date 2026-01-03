@@ -35,9 +35,9 @@ export function ServiciosNavbar() {
     return (
         <nav className="bg-[#1D1D1D] fixed w-full z-50 top-0 shadow-lg border-b border-white/10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-22 py-2">
-                    {/* Logo */}
-                    <Link href="/" className="flex-shrink-0 flex items-center">
+                <div className="flex justify-end md:justify-between items-center h-22 py-2 relative">
+                    {/* Logo - Centered on mobile, left on desktop */}
+                    <Link href="/" className="absolute left-1/2 transform -translate-x-1/2 md:relative md:left-auto md:transform-none flex-shrink-0 flex items-center">
                         <div className="relative h-16 w-64">
                             <Image
                                 src="/thiasa-logo-full.jpg"
@@ -112,58 +112,33 @@ export function ServiciosNavbar() {
                 {/* Mobile Navigation */}
                 {isOpen && (
                     <div className="md:hidden pb-4">
-                        <div className="flex flex-col space-y-3">
+                        <div className="flex flex-col space-y-1">
                             <Link
                                 href="/"
-                                className="text-white hover:text-accent transition-colors px-4 py-2"
+                                className="text-white hover:text-accent transition-colors px-4 py-3 font-medium"
                                 onClick={() => setIsOpen(false)}
                             >
                                 Inicio
                             </Link>
 
-                            {/* Mobile Services Accordion */}
-                            <div>
-                                <button
-                                    onClick={() => setIsServicesOpen(!isServicesOpen)}
-                                    className="flex items-center justify-between w-full text-white hover:text-accent transition-colors px-4 py-2"
-                                >
-                                    Servicios
-                                    <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
-                                </button>
-
-                                {isServicesOpen && (
-                                    <div className="pl-8 mt-2 space-y-2">
-                                        {services.map((service, index) => (
-                                            <Link
-                                                key={index}
-                                                href={service.href}
-                                                className="block text-white/70 hover:text-accent transition-colors py-2"
-                                                onClick={() => setIsOpen(false)}
-                                            >
-                                                {service.title}
-                                            </Link>
-                                        ))}
-                                    </div>
-                                )}
+                            {/* Services Header */}
+                            <div className="px-4 pt-4 pb-2">
+                                <span className="text-white/50 text-xs uppercase tracking-wider font-bold">Servicios</span>
                             </div>
 
-                            <Link
-                                href="/#projects"
-                                className="text-white hover:text-accent transition-colors px-4 py-2"
-                                onClick={() => setIsOpen(false)}
-                            >
-                                Proyectos
-                            </Link>
-
-                            <a
-                                href="https://wa.me/34604154746"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="bg-accent hover:bg-primary text-white px-6 py-3 rounded-lg font-bold transition-all mx-4"
-                                onClick={() => setIsOpen(false)}
-                            >
-                                Solicitar Presupuesto
-                            </a>
+                            {/* Services List - Always Visible */}
+                            <div className="space-y-1">
+                                {services.map((service, index) => (
+                                    <Link
+                                        key={index}
+                                        href={service.href}
+                                        className="block text-white/80 hover:text-accent hover:bg-white/5 transition-colors px-4 py-3 pl-8"
+                                        onClick={() => setIsOpen(false)}
+                                    >
+                                        {service.title}
+                                    </Link>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 )}
