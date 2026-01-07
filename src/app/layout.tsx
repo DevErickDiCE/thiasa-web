@@ -54,8 +54,7 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
   },
   verification: {
-    // Añadirás estos después de verificar en Google Search Console
-    // google: 'tu-código-de-verificación',
+    google: '0ebWO2OzovdnFfgEd5I47Kx-Q1GP2g33_ngxbFGsRXA',
   },
 };
 
