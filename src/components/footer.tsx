@@ -55,22 +55,37 @@ export function Footer() {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-white/60 text-xs text-center md:text-left">
-                        &copy; {currentYear} THIASA Reformas. Todos los derechos reservados.
-                    </p>
-                    <div className="flex flex-wrap justify-center md:justify-end gap-4 text-xs">
-                        <Link href="/aviso-legal" className="text-white/60 hover:text-accent transition-colors">
-                            Aviso Legal
-                        </Link>
-                        <span className="text-white/40">|</span>
-                        <Link href="/politica-privacidad" className="text-white/60 hover:text-accent transition-colors">
-                            Política de Privacidad
-                        </Link>
-                        <span className="text-white/40">|</span>
-                        <Link href="/politica-cookies" className="text-white/60 hover:text-accent transition-colors">
-                            Política de Cookies
-                        </Link>
+                <div className="pt-8 border-t border-white/10 space-y-4">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+                        <p className="text-white/60 text-xs text-center md:text-left">
+                            &copy; {currentYear} THIASA Reformas. Todos los derechos reservados.
+                        </p>
+                        <div className="flex flex-wrap justify-center md:justify-end gap-4 text-xs">
+                            <Link href="/aviso-legal" className="text-white/60 hover:text-accent transition-colors">
+                                Aviso Legal
+                            </Link>
+                            <span className="text-white/40">|</span>
+                            <Link href="/politica-privacidad" className="text-white/60 hover:text-accent transition-colors">
+                                Política de Privacidad
+                            </Link>
+                            <span className="text-white/40">|</span>
+                            <Link href="/politica-cookies" className="text-white/60 hover:text-accent transition-colors">
+                                Política de Cookies
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="text-center">
+                        <p className="text-white/40 text-xs">
+                            Desarrollado por{" "}
+                            <a
+                                href="https://www.potenciasoluciones.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-accent hover:text-sky-400 transition-colors font-medium"
+                            >
+                                PotencIA Soluciones
+                            </a>
+                        </p>
                     </div>
                 </div>
             </div>
