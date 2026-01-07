@@ -13,15 +13,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.thiasa.es'),
   title: "THIASA | Reformas Integrales Madrid - Baños, Cocinas, Electricidad y Carpintería",
   description: "Empresa de reformas integrales en Madrid. Especialistas en baños, cocinas, instalaciones eléctricas, fontanería, suelo radiante, carpintería de madera y aluminio. ✓ Presupuesto gratis ✓ Garantía profesional.",
   keywords: "reformas integrales Madrid, reforma de baños, reforma de cocinas, instalaciones eléctricas, fontanería Madrid, suelo radiante, carpintería madera, ventanas aluminio PVC, aire acondicionado, pladur, pintura, albañilería",
+  authors: [{ name: "THIASA - Reformas Integrales" }],
+  creator: "THIASA",
+  publisher: "THIASA",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     title: "THIASA - Reformas Integrales en Madrid",
     description: "Reformas de viviendas, baños y cocinas con garantía profesional. Instalaciones, carpintería y acabados premium.",
     type: "website",
     locale: "es_ES",
-    url: "https://reformas-theta.vercel.app",
+    url: "https://www.thiasa.es",
     siteName: "THIASA - Reformas Integrales",
     images: [
       {
@@ -37,6 +52,10 @@ export const metadata: Metadata = {
     title: "THIASA - Reformas Integrales en Madrid",
     description: "Reformas de viviendas, baños y cocinas con garantía profesional. Instalaciones, carpintería y acabados premium.",
     images: ["/og-image.jpg"],
+  },
+  verification: {
+    // Añadirás estos después de verificar en Google Search Console
+    // google: 'tu-código-de-verificación',
   },
 };
 
