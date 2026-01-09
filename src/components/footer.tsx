@@ -47,7 +47,7 @@ export function Footer() {
                                 Llamar ahora
                             </a>
                             <p className="text-white/60 text-xs mt-2">
-                                info@thasa.es
+                                info@thiasa.es
                             </p>
                         </div>
                     </div>
