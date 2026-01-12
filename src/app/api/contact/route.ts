@@ -26,7 +26,7 @@ export async function POST(req: Request) {
 
         const { data, error } = await resend.emails.send({
             from: "THIASA <onboarding@resend.dev>",
-            to: ["info@thiasa.es"],
+            to: ["erickrua24@gmail.com"], // Temporal: cambiar a info@thiasa.es cuando verifiques el dominio
             replyTo: email,
             subject: `Nuevo mensaje de contacto – ${name}`,
             html: `
