@@ -24,8 +24,8 @@ export async function POST(req: Request) {
             );
         }
 
-        await resend.emails.send({
-            from: "THIASA <noreply@thiasa.es>",
+        const { data, error } = await resend.emails.send({
+            from: "THIASA <onboarding@resend.dev>",
             to: ["info@thiasa.es"],
             replyTo: email,
             subject: `Nuevo mensaje de contacto – ${name}`,
@@ -39,7 +39,15 @@ export async function POST(req: Request) {
       `,
         });
 
-        return NextResponse.json({ success: true });
+        if (error) {
+            console.error("Error de Resend:", error);
+            return NextResponse.json(
+                { error: "Error al enviar el mensaje" },
+                { status: 500 }
+            );
+        }
+
+        return NextResponse.json({ success: true, id: data?.id });
     } catch (error) {
         console.error("Error enviando email:", error);
         return NextResponse.json(
