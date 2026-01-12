@@ -25,7 +25,7 @@ export async function POST(req: Request) {
         }
 
         await resend.emails.send({
-            from: "THIASA <contacto@thiasa.es>",
+            from: "THIASA <noreply@thiasa.es>",
             to: ["info@thiasa.es"],
             replyTo: email,
             subject: `Nuevo mensaje de contacto – ${name}`,
