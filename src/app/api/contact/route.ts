@@ -7,6 +7,7 @@ export async function POST(req: Request) {
     try {
         const { name, email, phone, message } = await req.json();
 
+        // Validación de campos obligatorios
         if (!name || !email || !message) {
             return NextResponse.json(
                 { error: "Faltan campos obligatorios" },
@@ -14,8 +15,17 @@ export async function POST(req: Request) {
             );
         }
 
+        // Validación de formato de email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            return NextResponse.json(
+                { error: "Formato de email inválido" },
+                { status: 400 }
+            );
+        }
+
         await resend.emails.send({
-            from: "THIASA <onboarding@resend.dev>",
+            from: "THIASA <contacto@thiasa.es>",
             to: ["info@thiasa.es"],
             replyTo: email,
             subject: `Nuevo mensaje de contacto – ${name}`,
