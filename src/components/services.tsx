@@ -60,7 +60,7 @@ export function Services() {
                             <div className="p-8">
                                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/10 to-primary/10 border border-accent/20 flex items-center justify-center mb-6 group-hover:border-accent/40 group-hover:shadow-lg group-hover:shadow-accent/20 transition-all duration-300">
                                     <div className="text-accent">
-                                        {React.cloneElement(service.icon as React.ReactElement<any>, { className: "w-8 h-8" })}
+                                        {React.cloneElement(service.icon as React.ReactElement<{ className: string }>, { className: "w-8 h-8" })}
                                     </div>
                                 </div>
                                 <h3 className="text-xl font-bold text-white mb-3">

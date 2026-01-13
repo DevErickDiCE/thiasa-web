@@ -51,7 +51,7 @@ export function Contact() {
                     message: data.error || "Error al enviar el mensaje. Por favor intenta de nuevo.",
                 });
             }
-        } catch (error) {
+        } catch (_) {
             setSubmitStatus({
                 type: "error",
                 message: "Error de conexión. Por favor verifica tu conexión a internet e intenta de nuevo.",
@@ -146,8 +146,8 @@ export function Contact() {
                         {submitStatus.type && (
                             <div
                                 className={`mb-6 p-4 rounded-lg border ${submitStatus.type === "success"
-                                        ? "bg-green-500/10 border-green-500/30 text-green-400"
-                                        : "bg-red-500/10 border-red-500/30 text-red-400"
+                                    ? "bg-green-500/10 border-green-500/30 text-green-400"
+                                    : "bg-red-500/10 border-red-500/30 text-red-400"
                                     }`}
                             >
                                 {submitStatus.message}
