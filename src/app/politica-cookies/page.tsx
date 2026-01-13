@@ -204,7 +204,7 @@ export default function PoliticaCookies() {
                                 Si tienes dudas sobre esta política de cookies, puedes contactar con nosotros:
                             </p>
                             <ul className="list-none space-y-2 text-slate-700 mt-4 bg-slate-50 p-6 rounded-lg">
-                                <li><strong>Email:</strong> contacto@thiasa.es</li>
+                                <li><strong>Email:</strong> info@thiasa.es</li>
                                 <li><strong>Teléfono:</strong> +34 604 15 47 46</li>
                                 <li><strong>Dirección:</strong> Avenida De Los Apóstoles 53ºA, 28011 Madrid</li>
                             </ul>

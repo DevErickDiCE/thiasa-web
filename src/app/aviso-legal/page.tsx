@@ -37,7 +37,7 @@ export default function AvisoLegal() {
                                 <li><strong>Titular:</strong> DISEÑOS E INTERIORISMO THIASA SL</li>
                                 <li><strong>NIF:</strong> B22502082</li>
                                 <li><strong>Domicilio:</strong> Avenida De Los Apóstoles 53ºA, 28011 Madrid, España</li>
-                                <li><strong>Email:</strong> contacto@thiasa.es</li>
+                                <li><strong>Email:</strong> info@thiasa.es</li>
                                 <li><strong>Teléfono:</strong> +34 604 15 47 46</li>
                                 <li><strong>Web:</strong> www.thiasa.es</li>
                             </ul>
