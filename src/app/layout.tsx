@@ -71,11 +71,41 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'HomeAndConstructionBusiness',
+    name: 'THIASA',
+    image: 'https://www.thiasa.es/logo.png',
+    '@id': 'https://www.thiasa.es/#organization',
+    url: 'https://www.thiasa.es',
+    telephone: '+34604154746',
+    email: 'info@thiasa.es',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Madrid',
+      addressCountry: 'ES',
+      addressRegion: 'Madrid'
+    },
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.thiasa.es/logo.png',
+      width: 512,
+      height: 512
+    },
+    description: "Empresa de reformas integrales en Madrid. Especialistas en baños, cocinas, instalaciones eléctricas, fontanería, suelo radiante, carpintería.",
+    foundingDate: "2010",
+    priceRange: "$$"
+  };
+
   return (
     <html lang="es" className="scroll-smooth scroll-pt-28">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-50 text-slate-900`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>
