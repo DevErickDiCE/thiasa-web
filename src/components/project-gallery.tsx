@@ -111,6 +111,26 @@ export function ProjectGallery() {
                 "Pared ladrillo caravista",
                 "Lámparas colgantes de diseño"
             ]
+        },
+        {
+            id: 7,
+            title: "Cocina Blanca y Madera",
+            category: "Cocina",
+            image: "/project-kitchen-new-1.jpg",
+            gallery: [
+                "/project-kitchen-new-1.jpg",
+                "/project-kitchen-new-2.jpg",
+                "/project-kitchen-new-3.jpg",
+                "/project-kitchen-new-4.jpg",
+                "/project-kitchen-new-5.jpg"
+            ],
+            description: "Reforma de cocina luminosa combinando mobiliario blanco con encimera y frente de madera. Contrastes elegantes con grifería y fregadero en negro mate.",
+            details: [
+                "Mobiliario blanco mate minimalista",
+                "Encimera y frontal acabado madera",
+                "Grifería y fregadero negro mate",
+                "Iluminación LED bajo muebles altos"
+            ]
         }
     ];
 
