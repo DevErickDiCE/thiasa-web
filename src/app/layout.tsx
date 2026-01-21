@@ -57,12 +57,8 @@ export const metadata: Metadata = {
     google: '0ebWO2OzovdnFfgEd5I47Kx-Q1GP2g33_ngxbFGsRXA',
   },
   icons: {
-    icon: [
-      { url: '/icon.png', type: 'image/png' },
-    ],
-    apple: [
-      { url: '/apple-icon.png', type: 'image/png' },
-    ],
+    icon: '/icon.png',
+    apple: '/apple-icon.png',
   },
 };
 
