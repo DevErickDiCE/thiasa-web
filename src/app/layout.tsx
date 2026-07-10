@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.thiasa.es'),
   title: "THIASA | Reformas Integrales Madrid - Baños, Cocinas, Electricidad y Carpintería",
-  description: "Empresa de reformas integrales en Madrid. Especialistas en baños, cocinas, instalaciones eléctricas, fontanería, suelo radiante, carpintería de madera y aluminio. ✓ Presupuesto gratis ✓ Garantía profesional.",
+  description: "Empresa de reformas integrales en Madrid. Especialistas en baños, cocinas, instalaciones eléctricas, fontanería y carpintería. Presupuesto gratis en 24h.",
   keywords: "reformas integrales Madrid, reforma de baños, reforma de cocinas, instalaciones eléctricas, fontanería Madrid, suelo radiante, carpintería madera, ventanas aluminio PVC, aire acondicionado, pladur, pintura, albañilería",
   authors: [{ name: "THIASA - Reformas Integrales" }],
   creator: "THIASA",
@@ -69,7 +69,7 @@ export default function RootLayout({
 }>) {
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'HomeAndConstructionBusiness',
+    '@type': 'LocalBusiness',
     name: 'THIASA',
     image: 'https://www.thiasa.es/logo.png',
     '@id': 'https://www.thiasa.es/#organization',
@@ -78,6 +78,8 @@ export default function RootLayout({
     email: 'info@thiasa.es',
     address: {
       '@type': 'PostalAddress',
+      streetAddress: 'Avenida De Los Apóstoles 53ºA',
+      postalCode: '28011',
       addressLocality: 'Madrid',
       addressCountry: 'ES',
       addressRegion: 'Madrid'
@@ -88,9 +90,36 @@ export default function RootLayout({
       width: 512,
       height: 512
     },
-    description: "Empresa de reformas integrales en Madrid. Especialistas en baños, cocinas, instalaciones eléctricas, fontanería, suelo radiante, carpintería.",
+    description: "Empresa de reformas integrales en Madrid. Especialistas en baños, cocinas, instalaciones eléctricas, fontanería y carpintería.",
     foundingDate: "2010",
-    priceRange: "$$"
+    priceRange: "$$",
+    areaServed: [
+      { '@type': 'City', name: 'Madrid' },
+      { '@type': 'City', name: 'Pozuelo de Alarcón' },
+      { '@type': 'City', name: 'Majadahonda' },
+      { '@type': 'City', name: 'Las Rozas' },
+      { '@type': 'City', name: 'Alcobendas' },
+      { '@type': 'City', name: 'San Sebastián de los Reyes' },
+      { '@type': 'City', name: 'Tres Cantos' },
+      { '@type': 'City', name: 'Coslada' },
+      { '@type': 'City', name: 'San Fernando de Henares' },
+      { '@type': 'City', name: 'Getafe' },
+      { '@type': 'City', name: 'Leganés' },
+      { '@type': 'City', name: 'Alcorcón' },
+      { '@type': 'City', name: 'Móstoles' },
+      { '@type': 'City', name: 'Fuenlabrada' },
+      { '@type': 'City', name: 'Torrejón de Ardoz' }
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+34604154746',
+      contactType: 'customer service',
+      availableLanguage: ['Spanish'],
+      areaServed: 'ES'
+    },
+    sameAs: [
+      'https://www.thiasa.es'
+    ]
   };
 
   return (

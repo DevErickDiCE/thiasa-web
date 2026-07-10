@@ -5,10 +5,10 @@ import { ArrowLeft, CalendarDays, MessageCircle } from "lucide-react";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import {
-  formatPostDate,
+  formatDate,
   getAllPosts,
   getPostBySlug,
-} from "@/lib/blog";
+} from "@/lib/posts";
 import styles from "../blog.module.css";
 
 type BlogPostPageProps = {
@@ -17,8 +17,9 @@ type BlogPostPageProps = {
 
 export const dynamicParams = false;
 
-export function generateStaticParams() {
-  return getAllPosts().map((post) => ({ slug: post.slug }));
+export async function generateStaticParams() {
+  const posts = await getAllPosts();
+  return posts.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({
@@ -29,17 +30,17 @@ export async function generateMetadata({
   if (!post) return {};
 
   return {
-    title: post.seoTitle,
-    description: post.description,
+    title: post.frontmatter.title,
+    description: post.frontmatter.description,
     alternates: {
       canonical: `/blog/${post.slug}`,
     },
     openGraph: {
-      title: post.seoTitle,
-      description: post.description,
+      title: post.frontmatter.title,
+      description: post.frontmatter.description,
       type: "article",
       url: `/blog/${post.slug}`,
-      publishedTime: post.publishedAt,
+      publishedTime: post.frontmatter.fecha,
       locale: "es_ES",
     },
   };
@@ -53,10 +54,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: post.title,
-    description: post.description,
-    datePublished: post.publishedAt,
-    dateModified: post.publishedAt,
+    headline: post.frontmatter.title,
+    description: post.frontmatter.description,
+    datePublished: post.frontmatter.fecha,
+    dateModified: post.frontmatter.fecha,
     mainEntityOfPage: `https://www.thiasa.es/blog/${post.slug}`,
     author: {
       "@type": "Organization",
@@ -89,7 +90,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       {
         "@type": "ListItem",
         position: 3,
-        name: post.title,
+        name: post.frontmatter.title,
         item: `https://www.thiasa.es/blog/${post.slug}`,
       },
     ],
@@ -121,8 +122,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <header className="border-b border-slate-200 bg-slate-50 px-6 py-6 sm:px-10">
               <div className="flex items-center gap-2 text-sm font-medium text-slate-500">
                 <CalendarDays className="h-4 w-4 text-accent" />
-                <time dateTime={post.publishedAt}>
-                  Publicado el {formatPostDate(post.publishedAt)}
+                <time dateTime={post.frontmatter.fecha}>
+                  Publicado el {formatDate(post.frontmatter.fecha ?? "")}
                 </time>
               </div>
             </header>

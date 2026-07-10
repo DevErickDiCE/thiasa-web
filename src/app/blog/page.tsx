@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight, CalendarDays, FileText } from "lucide-react";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-import { formatPostDate, getAllPosts } from "@/lib/blog";
+import { formatDate, getAllPosts } from "@/lib/posts";
 
 export const metadata: Metadata = {
   title: "Blog de reformas en Madrid | Guías THIASA",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default function BlogPage() {
-  const posts = getAllPosts();
+export default async function BlogPage() {
+  const posts = await getAllPosts();
 
   return (
     <>
@@ -55,15 +55,15 @@ export default function BlogPage() {
                 <div className="flex flex-1 flex-col p-7">
                   <div className="mb-5 flex items-center gap-2 text-sm text-slate-500">
                     <CalendarDays className="h-4 w-4 text-accent" />
-                    <time dateTime={post.publishedAt}>
-                      {formatPostDate(post.publishedAt)}
+                    <time dateTime={post.frontmatter.fecha}>
+                      {formatDate(post.frontmatter.fecha ?? "")}
                     </time>
                   </div>
                   <h2 className="text-2xl font-extrabold leading-tight text-slate-900 transition-colors group-hover:text-primary">
-                    <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                    <Link href={`/blog/${post.slug}`}>{post.frontmatter.title}</Link>
                   </h2>
                   <p className="mt-4 flex-1 leading-relaxed text-slate-600">
-                    {post.description}
+                    {post.frontmatter.description}
                   </p>
                   <Link
                     href={`/blog/${post.slug}`}

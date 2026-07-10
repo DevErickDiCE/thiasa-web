@@ -18,6 +18,7 @@ export function Hero() {
                     fill
                     className="object-cover object-center opacity-40 hover:scale-105 transition-transform duration-[20s]"
                     priority
+                    sizes="100vw"
                 />
                 {/* Subtle dark blue gradient overlay for text readability */}
                 <div className="absolute inset-0 bg-gradient-to-b from-[#1A2332]/80 via-[#1A2332]/60 to-[#1A2332]/80 sm:bg-gradient-to-r sm:from-[#1A2332]/90 sm:via-[#1A2332]/70 sm:to-[#1A2332]/30" />

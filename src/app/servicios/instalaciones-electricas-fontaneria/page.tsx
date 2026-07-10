@@ -21,11 +21,61 @@ export default function InstalacionesElectricasFontaneria() {
         "Mantenimiento preventivo"
     ];
 
+    const serviceSchema = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "Instalaciones Eléctricas y Fontanería en Madrid",
+        provider: {
+            "@type": "LocalBusiness",
+            name: "THIASA",
+            telephone: "+34604154746",
+            email: "info@thiasa.es",
+            address: {
+                "@type": "PostalAddress",
+                addressLocality: "Madrid",
+                addressCountry: "ES",
+            },
+        },
+        areaServed: {
+            "@type": "City",
+            name: "Madrid",
+        },
+        description: "Electricistas y fontaneros certificados en Madrid. Instalaciones eléctricas, fontanería, aire acondicionado y suelo radiante.",
+    };
+
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            {
+                "@type": "ListItem",
+                position: 1,
+                name: "Inicio",
+                item: "https://www.thiasa.es/",
+            },
+            {
+                "@type": "ListItem",
+                position: 2,
+                name: "Instalaciones Eléctricas y Fontanería",
+                item: "https://www.thiasa.es/servicios/instalaciones-electricas-fontaneria",
+            },
+        ],
+    };
+
     return (
-        <main>
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <main>
             <section className="relative bg-[#1D1D1D] min-h-[550px] flex items-center pt-32 pb-20 overflow-hidden">
                 <div className="absolute inset-0">
-                    <Image src="/hero-bg.png" alt="Instalaciones eléctricas y fontanería" fill className="object-cover opacity-40" />
+                    <Image src="/hero-bg.png" alt="Instalaciones eléctricas y fontanería" fill className="object-cover opacity-40" priority sizes="100vw" />
                     <div className="absolute inset-0 bg-gradient-to-r from-[#1D1D1D]/90 via-[#1D1D1D]/75 to-[#1D1D1D]/60" />
                 </div>
 
@@ -70,7 +120,7 @@ export default function InstalacionesElectricasFontaneria() {
                             ))}
                         </div>
                         <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg">
-                            <Image src="/hero-bg.png" alt="Instalaciones profesionales" fill className="object-cover" />
+                            <Image src="/hero-bg.png" alt="Instalaciones profesionales" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
                         </div>
                     </div>
                 </div>
@@ -236,5 +286,6 @@ export default function InstalacionesElectricasFontaneria() {
                 </div>
             </section>
         </main>
+        </>
     );
 }

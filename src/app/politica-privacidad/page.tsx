@@ -128,7 +128,7 @@ export default function PoliticaPrivacidad() {
                                 <li><strong>Retirar consentimiento:</strong> En cualquier momento</li>
                             </ul>
                             <p className="text-slate-700 leading-relaxed mt-4">
-                                Para ejercer estos derechos, contacta con nosotros en: <strong>contacto@thiasa.es</strong>
+                                Para ejercer estos derechos, contacta con nosotros en: <strong>info@thiasa.es</strong>
                                 o en nuestra dirección postal, adjuntando copia de tu DNI.
                             </p>
                             <p className="text-slate-700 leading-relaxed mt-4">

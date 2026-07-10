@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Home, Bath, ChefHat, Hammer, Paintbrush, ArrowRight } from "lucide-react";
+import { Home, Bath, ChefHat, Hammer, Paintbrush, Store, ArrowRight } from "lucide-react";
 
 export function Services() {
     const services = [
@@ -38,6 +38,13 @@ export function Services() {
             description: "Pintura interior y exterior, instalación de Pladur, tabiques, alicatados, solados y todo tipo de trabajos de albañilería.",
             gradient: "from-blue-500/20 to-accent/20",
             slug: "pintura-pladur-albanileria"
+        },
+        {
+            icon: <Store className="w-10 h-10" />,
+            title: "Reforma de Locales Comerciales",
+            description: "Tiendas, restaurantes, oficinas y negocios en Madrid. Reformas comerciales con plazos ajustados y mínima interrupción.",
+            gradient: "from-accent/20 to-primary/20",
+            slug: "reformas-locales-comerciales"
         }
     ];
 

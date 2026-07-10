@@ -29,7 +29,8 @@ export function ServiciosNavbar() {
         { title: "Baños y Cocinas", href: "/servicios/reformas-banos-cocinas" },
         { title: "Instalaciones Eléctricas", href: "/servicios/instalaciones-electricas-fontaneria" },
         { title: "Carpintería", href: "/servicios/carpinteria-madera-aluminio" },
-        { title: "Pintura y Albañilería", href: "/servicios/pintura-pladur-albanileria" }
+        { title: "Pintura y Albañilería", href: "/servicios/pintura-pladur-albanileria" },
+        { title: "Locales Comerciales", href: "/servicios/reformas-locales-comerciales" }
     ];
 
     return (

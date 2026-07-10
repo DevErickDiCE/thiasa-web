@@ -97,7 +97,7 @@ export function Contact() {
                                     </div>
                                     <div>
                                         <span className="block text-sm font-semibold uppercase tracking-widest text-white/60 mb-1">Email</span>
-                                        <a href="mailto:info@thasa.es" className="text-lg text-white font-medium hover:text-accent transition-colors">
+                                        <a href="mailto:info@thiasa.es" className="text-lg text-white font-medium hover:text-accent transition-colors">
                                             info@thiasa.es
                                         </a>
                                     </div>
