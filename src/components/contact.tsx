@@ -51,7 +51,7 @@ export function Contact() {
                     message: data.error || "Error al enviar el mensaje. Por favor intenta de nuevo.",
                 });
             }
-        } catch (_) {
+        } catch {
             setSubmitStatus({
                 type: "error",
                 message: "Error de conexión. Por favor verifica tu conexión a internet e intenta de nuevo.",

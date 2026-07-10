@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Zap, CheckCircle2, Phone, ArrowLeft } from "lucide-react";
+import { CheckCircle2, Phone, ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
     title: "Instalaciones Eléctricas y Fontanería Madrid | THIASA - Profesionales Certificados",
