@@ -29,14 +29,17 @@ export function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="#services" className="text-gray-300 hover:text-white transition-colors text-sm font-bold uppercase tracking-wider">
+            <Link href="/#services" className="text-gray-300 hover:text-white transition-colors text-sm font-bold uppercase tracking-wider">
               Servicios
             </Link>
-            <Link href="#projects" className="text-gray-300 hover:text-white transition-colors text-sm font-bold uppercase tracking-wider">
+            <Link href="/#projects" className="text-gray-300 hover:text-white transition-colors text-sm font-bold uppercase tracking-wider">
               Proyectos
             </Link>
-            <Link href="#why-us" className="text-gray-300 hover:text-white transition-colors text-sm font-bold uppercase tracking-wider">
+            <Link href="/#why-us" className="text-gray-300 hover:text-white transition-colors text-sm font-bold uppercase tracking-wider">
               Por Qué Elegirnos
+            </Link>
+            <Link href="/blog" className="text-gray-300 hover:text-white transition-colors text-sm font-bold uppercase tracking-wider">
+              Blog
             </Link>
             <a
               href={whatsappUrl}
@@ -67,25 +70,32 @@ export function Navbar() {
         <div className="md:hidden bg-[#1D1D1D] border-b border-white/10">
           <div className="px-4 pt-2 pb-6 space-y-2">
             <Link
-              href="#services"
+              href="/#services"
               onClick={() => setIsOpen(false)}
               className="block px-3 py-3 rounded-md text-base font-bold text-gray-300 hover:text-white hover:bg-white/5"
             >
               Servicios
             </Link>
             <Link
-              href="#projects"
+              href="/#projects"
               onClick={() => setIsOpen(false)}
               className="block px-3 py-3 rounded-md text-base font-bold text-gray-300 hover:text-white hover:bg-white/5"
             >
               Proyectos
             </Link>
             <Link
-              href="#why-us"
+              href="/#why-us"
               onClick={() => setIsOpen(false)}
               className="block px-3 py-3 rounded-md text-base font-bold text-gray-300 hover:text-white hover:bg-white/5"
             >
               Por qué elegirnos
+            </Link>
+            <Link
+              href="/blog"
+              onClick={() => setIsOpen(false)}
+              className="block px-3 py-3 rounded-md text-base font-bold text-gray-300 hover:text-white hover:bg-white/5"
+            >
+              Blog
             </Link>
             <a
               href={whatsappUrl}

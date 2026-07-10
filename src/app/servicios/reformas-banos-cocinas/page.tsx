@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Bath, CheckCircle2, Phone, ArrowLeft, Droplets, Sparkles, Shield, ChevronLeft, ChevronRight } from "lucide-react";
+import { CheckCircle2, Phone, ArrowLeft, Droplets, Sparkles, Shield, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function ReformasBanosCocinas() {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -78,8 +78,6 @@ export default function ReformasBanosCocinas() {
     // Auto-advance with progress bar
     useEffect(() => {
         if (!isPlaying) return;
-
-        setProgress(0);
 
         progressInterval.current = setInterval(() => {
             setProgress((prev) => {

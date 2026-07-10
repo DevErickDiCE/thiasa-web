@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Home, CheckCircle2, Phone, ArrowLeft, Clock, Award, Wrench, Users, ChevronLeft, ChevronRight } from "lucide-react";
+import { CheckCircle2, Phone, ArrowLeft, Clock, Award, Wrench, Users, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function ReformasIntegrales() {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -84,8 +84,6 @@ export default function ReformasIntegrales() {
     useEffect(() => {
         if (!isPlaying) return;
 
-        setProgress(0);
-
         progressInterval.current = setInterval(() => {
             setProgress((prev) => {
                 if (prev >= 100) {
@@ -114,10 +112,6 @@ export default function ReformasIntegrales() {
     const goToSlide = (index: number) => {
         setCurrentSlide(index);
         setProgress(0);
-    };
-
-    const togglePlayPause = () => {
-        setIsPlaying(!isPlaying);
     };
 
     // Touch handlers for mobile swipe

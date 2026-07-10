@@ -33,6 +33,7 @@ export function Footer() {
                             <li><Link href="/servicios/instalaciones-electricas-fontaneria" className="text-white/70 hover:text-accent transition-colors text-sm">Instalaciones</Link></li>
                             <li><Link href="/servicios/carpinteria-madera-aluminio" className="text-white/70 hover:text-accent transition-colors text-sm">Carpintería</Link></li>
                             <li><Link href="/servicios/pintura-pladur-albanileria" className="text-white/70 hover:text-accent transition-colors text-sm">Pintura y Albañilería</Link></li>
+                            <li><Link href="/blog" className="text-white/70 hover:text-accent transition-colors text-sm">Blog de reformas</Link></li>
                         </ul>
                     </div>
 
