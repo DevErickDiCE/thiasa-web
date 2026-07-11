@@ -87,7 +87,7 @@ export function Services() {
                     <div className="bg-gradient-to-br from-accent via-primary to-accent rounded-2xl p-8 flex flex-col justify-center items-start text-white shadow-xl shadow-accent/30 relative overflow-hidden group">
                         <div className="absolute inset-0 bg-gradient-to-br from-accent/0 via-white/5 to-primary/0 group-hover:via-white/10 transition-all duration-500" />
                         <div className="relative z-10">
-                            <h3 className="text-2xl font-bold mb-4">¿Tienes otro proyecto en mente?</h3>
+                            <h3 className="text-2xl font-bold text-white mb-4">¿Tienes otro proyecto en mente?</h3>
                             <p className="text-white/90 mb-8">
                                 Cuéntanos tu idea, nos adaptamos a tus necesidades específicas.
                             </p>

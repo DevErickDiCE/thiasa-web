@@ -2,16 +2,18 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowUpRight, Clock3, MessageCircle } from "lucide-react";
+import { ArrowLeft, CalendarDays, ChevronRight, Clock3, MessageCircle } from "lucide-react";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { formatDate, getAllPosts, getPostBySlug } from "@/lib/posts";
-import { editorialSans, editorialSerif } from "../fonts";
 import styles from "../blog.module.css";
 
 type BlogPostPageProps = { params: Promise<{ slug: string }> };
 
 export const dynamicParams = false;
+
+const whatsappUrl =
+  "https://wa.me/34604154746?text=Hola,%20quiero%20solicitar%20un%20presupuesto%20de%20reforma%20en%20Madrid.";
 
 export async function generateStaticParams() {
   const posts = await getAllPosts();
@@ -46,6 +48,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const post = await getPostBySlug(slug);
   if (!post) notFound();
 
+  const category =
+    post.frontmatter.tipo_articulo === "educativo" ? "Guías y trámites" : "Precios y presupuestos";
+
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -72,68 +77,88 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <>
       <Navbar />
-      <main className={`${styles.articlePage} ${editorialSerif.variable} ${editorialSans.variable}`}>
+      <main className="bg-background">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
-        <header className={styles.articleHeader}>
-          <div className={styles.articleNav}>
-            <Link href="/blog"><ArrowLeft aria-hidden="true" /> Cuaderno de obra</Link>
-            <span>THIASA / Madrid</span>
-          </div>
-          <div className={styles.articleHeading}>
-            <p className={styles.eyebrow}>{post.frontmatter.tipo_articulo === "educativo" ? "Guía y trámites" : "Precios y presupuestos"}</p>
-            <h1>{post.frontmatter.title}</h1>
-            <p className={styles.articleDek}>{post.frontmatter.description}</p>
-            <div className={styles.byline}>
-              <span>Por THIASA</span>
+        {/* Article header */}
+        <header className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-14 pb-8">
+          <nav aria-label="Miga de pan" className="flex items-center flex-wrap gap-1.5 text-sm text-[#1D1D1D]/60 mb-8">
+            <Link href="/" className="hover:text-primary transition-colors">Inicio</Link>
+            <ChevronRight className="w-4 h-4" aria-hidden="true" />
+            <Link href="/blog" className="hover:text-primary transition-colors">Blog</Link>
+            <ChevronRight className="w-4 h-4" aria-hidden="true" />
+            <span className="text-[#1D1D1D]/80">{category}</span>
+          </nav>
+
+          <span className="inline-flex items-center px-3 py-1 rounded-full bg-accent/15 text-primary text-xs font-bold uppercase tracking-wide mb-5">
+            {category}
+          </span>
+
+          <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-extrabold tracking-tight leading-tight mb-5">
+            {post.frontmatter.title}
+          </h1>
+
+          <p className="text-lg text-[#1D1D1D]/70 leading-relaxed mb-6">
+            {post.frontmatter.description}
+          </p>
+
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-5 border-t border-black/10 text-sm text-[#1D1D1D]/60">
+            <span className="font-bold text-[#1D1D1D]/80">Por THIASA</span>
+            <span className="inline-flex items-center gap-1.5">
+              <CalendarDays className="w-4 h-4" aria-hidden="true" />
               <time dateTime={post.frontmatter.fecha}>{formatDate(post.frontmatter.fecha ?? "")}</time>
-              <span><Clock3 aria-hidden="true" /> {post.readingTime} min de lectura</span>
-            </div>
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <Clock3 className="w-4 h-4" aria-hidden="true" /> {post.readingTime} min de lectura
+            </span>
           </div>
         </header>
 
+        {/* Hero image */}
         {post.frontmatter.imagen ? (
-          <figure className={styles.articleHero}>
-            <Image
-              src={post.frontmatter.imagen}
-              alt={post.frontmatter.imagen_alt ?? post.frontmatter.title}
-              fill
-              priority
-              sizes="100vw"
-              className={styles.coverImage}
-            />
-            <figcaption>
-              <span>Cuaderno de obra · 2026</span>
-              <span>{post.frontmatter.imagen_alt}</span>
-            </figcaption>
-          </figure>
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden shadow-md">
+              <Image
+                src={post.frontmatter.imagen}
+                alt={post.frontmatter.imagen_alt ?? post.frontmatter.title}
+                fill
+                priority
+                sizes="(max-width: 896px) 100vw, 896px"
+                className="object-cover"
+              />
+            </div>
+          </div>
         ) : null}
 
-        <div className={styles.articleLayout}>
-          <aside className={styles.articleAside}>
-            <span className={styles.asideRule} />
-            <p>Una guía de THIASA</p>
-            <strong>Reformas integrales y rehabilitación en Madrid.</strong>
-            <a href="https://wa.me/34604154746?text=Hola,%20quiero%20solicitar%20un%20presupuesto%20de%20reforma%20en%20Madrid." target="_blank" rel="noopener noreferrer">
-              Consultar proyecto <ArrowUpRight aria-hidden="true" />
+        {/* Article body */}
+        <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-12 pb-16">
+          <div className={styles.content} dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
+
+          {/* CTA */}
+          <aside className="mt-14 bg-gradient-to-br from-primary to-[#003580] rounded-2xl p-8 sm:p-10 text-center shadow-xl">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-3">
+              ¿Quieres poner números reales a tu reforma?
+            </h2>
+            <p className="text-white/80 mb-7 max-w-xl mx-auto">
+              Te preparamos un presupuesto claro y adaptado a tu vivienda, sin compromiso.
+            </p>
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-accent text-white font-bold hover:bg-white hover:text-primary transition-colors shadow-lg"
+            >
+              <MessageCircle className="w-5 h-5" aria-hidden="true" /> Hablar con THIASA
             </a>
           </aside>
 
-          <article className={styles.articlePaper}>
-            <div className={styles.content} dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
-
-            <aside className={styles.articleCta}>
-              <div>
-                <p>Tu proyecto, bien planteado desde el principio</p>
-                <h2>¿Quieres poner números reales a tu reforma?</h2>
-              </div>
-              <a href="https://wa.me/34604154746?text=Hola,%20quiero%20solicitar%20un%20presupuesto%20de%20reforma%20en%20Madrid." target="_blank" rel="noopener noreferrer">
-                <MessageCircle aria-hidden="true" /> Hablar con THIASA
-              </a>
-            </aside>
-          </article>
-        </div>
+          <div className="mt-10">
+            <Link href="/blog" className="inline-flex items-center gap-2 text-primary font-bold hover:text-accent transition-colors">
+              <ArrowLeft className="w-4 h-4" aria-hidden="true" /> Volver al blog
+            </Link>
+          </div>
+        </article>
       </main>
       <Footer />
     </>

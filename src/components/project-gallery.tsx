@@ -196,7 +196,7 @@ export function ProjectGallery() {
                                 <span className="inline-block px-3 py-1 bg-accent text-xs font-bold uppercase tracking-wider rounded-lg mb-3 shadow-xl text-white">
                                     {project.category}
                                 </span>
-                                <h3 className="text-2xl font-bold mb-1 leading-tight group-hover:text-accent transition-colors" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.9)' }}>
+                                <h3 className="text-2xl font-bold text-white mb-1 leading-tight group-hover:text-accent transition-colors" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.9)' }}>
                                     {project.title}
                                 </h3>
                             </div>

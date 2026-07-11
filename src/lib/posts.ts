@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
+import remarkGfm from "remark-gfm";
 import html from "remark-html";
 
 const postsDirectory = path.join(process.cwd(), "content", "blog");
@@ -76,7 +77,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
         return null;
     }
 
-    const processedContent = await remark().use(html).process(content);
+    const processedContent = await remark().use(remarkGfm).use(html).process(content);
     const contentHtml = processedContent
         .toString()
         .replace(/<h2>(.*?)<\/h2>/g, (_, heading: string) => {
