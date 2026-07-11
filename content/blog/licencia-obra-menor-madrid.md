@@ -16,9 +16,9 @@ enlaces_internos:
   - "/servicios/reformas-integrales"
   - "/blog/cuanto-cuesta-reforma-integral-madrid"
 cta: "¿Tienes dudas sobre trámites? Te ayudamos a gestionarlos. Pide presupuesto sin compromiso."
+imagen: "/images/blog/licencia-obra-madrid.jpg"
+imagen_alt: "Mesa de planificación de una reforma con planos y muestras de materiales"
 ---
-
-# Licencia de obra menor en Madrid: cuándo se necesita y cómo tramitarla
 
 La expresión **licencia de obra menor en Madrid** se sigue utilizando de forma habitual, pero al preparar una reforma conviene identificar el título urbanístico que corresponde realmente. Según la actuación, el Ayuntamiento puede exigir una **declaración responsable urbanística**, una **licencia urbanística** o considerar que el trabajo no está sujeto a esos medios de intervención.
 

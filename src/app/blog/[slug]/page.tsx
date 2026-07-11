@@ -1,19 +1,15 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, CalendarDays, MessageCircle } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Clock3, MessageCircle } from "lucide-react";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-import {
-  formatDate,
-  getAllPosts,
-  getPostBySlug,
-} from "@/lib/posts";
+import { formatDate, getAllPosts, getPostBySlug } from "@/lib/posts";
+import { editorialSans, editorialSerif } from "../fonts";
 import styles from "../blog.module.css";
 
-type BlogPostPageProps = {
-  params: Promise<{ slug: string }>;
-};
+type BlogPostPageProps = { params: Promise<{ slug: string }> };
 
 export const dynamicParams = false;
 
@@ -22,9 +18,7 @@ export async function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
 }
 
-export async function generateMetadata({
-  params,
-}: BlogPostPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
   if (!post) return {};
@@ -32,9 +26,7 @@ export async function generateMetadata({
   return {
     title: post.frontmatter.title,
     description: post.frontmatter.description,
-    alternates: {
-      canonical: `/blog/${post.slug}`,
-    },
+    alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
       title: post.frontmatter.title,
       description: post.frontmatter.description,
@@ -42,6 +34,9 @@ export async function generateMetadata({
       url: `/blog/${post.slug}`,
       publishedTime: post.frontmatter.fecha,
       locale: "es_ES",
+      images: post.frontmatter.imagen
+        ? [{ url: post.frontmatter.imagen, width: 1536, height: 1024, alt: post.frontmatter.imagen_alt }]
+        : undefined,
     },
   };
 }
@@ -56,99 +51,85 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     "@type": "Article",
     headline: post.frontmatter.title,
     description: post.frontmatter.description,
+    image: post.frontmatter.imagen ? `https://www.thiasa.es${post.frontmatter.imagen}` : undefined,
     datePublished: post.frontmatter.fecha,
     dateModified: post.frontmatter.fecha,
     mainEntityOfPage: `https://www.thiasa.es/blog/${post.slug}`,
-    author: {
-      "@type": "Organization",
-      name: "THIASA",
-      url: "https://www.thiasa.es",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "THIASA",
-      url: "https://www.thiasa.es",
-    },
+    author: { "@type": "Organization", name: "THIASA", url: "https://www.thiasa.es" },
+    publisher: { "@type": "Organization", name: "THIASA", url: "https://www.thiasa.es" },
   };
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Inicio",
-        item: "https://www.thiasa.es",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Blog",
-        item: "https://www.thiasa.es/blog",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: post.frontmatter.title,
-        item: `https://www.thiasa.es/blog/${post.slug}`,
-      },
+      { "@type": "ListItem", position: 1, name: "Inicio", item: "https://www.thiasa.es" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.thiasa.es/blog" },
+      { "@type": "ListItem", position: 3, name: post.frontmatter.title, item: `https://www.thiasa.es/blog/${post.slug}` },
     ],
   };
 
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-[#F2F1ED]">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-        />
+      <main className={`${styles.articlePage} ${editorialSerif.variable} ${editorialSans.variable}`}>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
-        <div className="mx-auto max-w-4xl px-4 pb-20 pt-10 sm:px-6 lg:px-8">
-          <Link
-            href="/blog"
-            className="mb-8 inline-flex items-center gap-2 font-bold text-primary transition-colors hover:text-accent"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Volver al blog
-          </Link>
+        <header className={styles.articleHeader}>
+          <div className={styles.articleNav}>
+            <Link href="/blog"><ArrowLeft aria-hidden="true" /> Cuaderno de obra</Link>
+            <span>THIASA / Madrid</span>
+          </div>
+          <div className={styles.articleHeading}>
+            <p className={styles.eyebrow}>{post.frontmatter.tipo_articulo === "educativo" ? "Guía y trámites" : "Precios y presupuestos"}</p>
+            <h1>{post.frontmatter.title}</h1>
+            <p className={styles.articleDek}>{post.frontmatter.description}</p>
+            <div className={styles.byline}>
+              <span>Por THIASA</span>
+              <time dateTime={post.frontmatter.fecha}>{formatDate(post.frontmatter.fecha ?? "")}</time>
+              <span><Clock3 aria-hidden="true" /> {post.readingTime} min de lectura</span>
+            </div>
+          </div>
+        </header>
 
-          <article className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl shadow-slate-900/5">
-            <header className="border-b border-slate-200 bg-slate-50 px-6 py-6 sm:px-10">
-              <div className="flex items-center gap-2 text-sm font-medium text-slate-500">
-                <CalendarDays className="h-4 w-4 text-accent" />
-                <time dateTime={post.frontmatter.fecha}>
-                  Publicado el {formatDate(post.frontmatter.fecha ?? "")}
-                </time>
-              </div>
-            </header>
-
-            <div
-              className={`${styles.content} px-6 py-10 sm:px-10 sm:py-12`}
-              dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+        {post.frontmatter.imagen ? (
+          <figure className={styles.articleHero}>
+            <Image
+              src={post.frontmatter.imagen}
+              alt={post.frontmatter.imagen_alt ?? post.frontmatter.title}
+              fill
+              priority
+              sizes="100vw"
+              className={styles.coverImage}
             />
+            <figcaption>
+              <span>Cuaderno de obra · 2026</span>
+              <span>{post.frontmatter.imagen_alt}</span>
+            </figcaption>
+          </figure>
+        ) : null}
 
-            <aside className="m-6 rounded-2xl bg-[#1D1D1D] p-7 text-white sm:m-10 sm:p-9">
-              <h2 className="text-2xl font-extrabold text-white">
-                ¿Quieres valorar tu reforma?
-              </h2>
-              <p className="mt-3 max-w-2xl text-white/75">
-                Cuéntanos qué quieres reformar y solicita un presupuesto adaptado
-                al estado, los metros y las calidades de tu proyecto.
-              </p>
-              <a
-                href="https://wa.me/34604154746?text=Hola,%20quiero%20solicitar%20un%20presupuesto%20de%20reforma%20en%20Madrid."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 rounded-xl bg-accent px-6 py-3 font-bold text-white transition hover:bg-primary"
-              >
-                <MessageCircle className="h-5 w-5" />
-                Pedir presupuesto por WhatsApp
+        <div className={styles.articleLayout}>
+          <aside className={styles.articleAside}>
+            <span className={styles.asideRule} />
+            <p>Una guía de THIASA</p>
+            <strong>Reformas integrales y rehabilitación en Madrid.</strong>
+            <a href="https://wa.me/34604154746?text=Hola,%20quiero%20solicitar%20un%20presupuesto%20de%20reforma%20en%20Madrid." target="_blank" rel="noopener noreferrer">
+              Consultar proyecto <ArrowUpRight aria-hidden="true" />
+            </a>
+          </aside>
+
+          <article className={styles.articlePaper}>
+            <div className={styles.content} dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
+
+            <aside className={styles.articleCta}>
+              <div>
+                <p>Tu proyecto, bien planteado desde el principio</p>
+                <h2>¿Quieres poner números reales a tu reforma?</h2>
+              </div>
+              <a href="https://wa.me/34604154746?text=Hola,%20quiero%20solicitar%20un%20presupuesto%20de%20reforma%20en%20Madrid." target="_blank" rel="noopener noreferrer">
+                <MessageCircle aria-hidden="true" /> Hablar con THIASA
               </a>
             </aside>
           </article>

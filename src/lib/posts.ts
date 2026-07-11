@@ -6,6 +6,24 @@ import html from "remark-html";
 
 const postsDirectory = path.join(process.cwd(), "content", "blog");
 
+function toHeadingId(value: string): string {
+    let decodedValue = value;
+
+    try {
+        decodedValue = decodeURIComponent(value);
+    } catch {
+        // Keep the original value if a malformed sequence appears in authored content.
+    }
+
+    return decodedValue
+        .replace(/<[^>]+>/g, "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, "");
+}
+
 export interface PostFrontmatter {
     id?: string;
     slug: string;
@@ -29,6 +47,7 @@ export interface Post {
     frontmatter: PostFrontmatter;
     content: string;
     contentHtml: string;
+    readingTime: number;
 }
 
 export function getPostSlugs(): string[] {
@@ -58,13 +77,22 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     }
 
     const processedContent = await remark().use(html).process(content);
-    const contentHtml = processedContent.toString();
+    const contentHtml = processedContent
+        .toString()
+        .replace(/<h2>(.*?)<\/h2>/g, (_, heading: string) => {
+            return `<h2 id="${toHeadingId(heading)}">${heading}</h2>`;
+        })
+        .replace(/href="#([^"]+)"/g, (_, anchor: string) => {
+            return `href="#${toHeadingId(anchor)}"`;
+        });
+    const readingTime = Math.max(1, Math.ceil(content.trim().split(/\s+/).length / 210));
 
     return {
         slug,
         frontmatter,
         content,
         contentHtml,
+        readingTime,
     };
 }
 

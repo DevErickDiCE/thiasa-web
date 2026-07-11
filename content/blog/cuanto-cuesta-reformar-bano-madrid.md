@@ -17,9 +17,9 @@ enlaces_internos:
   - "/blog/cuanto-cuesta-reforma-integral-madrid"
   - "/blog/licencia-obra-menor-madrid"
 cta: "¿Quieres un presupuesto real para tu baño? Escríbenos por WhatsApp."
+imagen: "/images/blog/reforma-bano-madrid.jpg"
+imagen_alt: "Baño en proceso de reforma con azulejo terracota e impermeabilización visible"
 ---
-
-# ¿Cuánto cuesta reformar un baño en Madrid? Guía de precios 2026
 
 El **precio de reformar un baño en Madrid** puede comenzar alrededor de 1.500 € en actuaciones sencillas y superar los 5.000 € cuando se renuevan instalaciones, revestimientos, sanitarios y mobiliario con calidades más altas. En proyectos complejos o baños amplios, la cifra puede ser mayor.
 

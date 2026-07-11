@@ -18,9 +18,9 @@ enlaces_internos:
   - "/blog/precio-metro-cuadrado-reforma-madrid"
   - "/blog/licencia-obra-menor-madrid"
 cta: "¿Quieres un presupuesto real? Escríbenos por WhatsApp."
+imagen: "/images/blog/reforma-integral-madrid.jpg"
+imagen_alt: "Piso de Madrid durante una reforma integral con cocina de madera ya instalada"
 ---
-
-# ¿Cuánto cuesta una reforma integral en Madrid? Guía de precios 2026
 
 Saber **cuánto cuesta una reforma integral en Madrid** exige algo más que multiplicar los metros cuadrados por una tarifa. Dos viviendas con la misma superficie pueden necesitar presupuestos muy diferentes según su estado, la distribución, las instalaciones, los materiales y el alcance real de la obra.
 
