@@ -159,6 +159,9 @@ export function ProjectGallery() {
         <section id="projects" className="py-24 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
+                    <span className="inline-block text-primary text-xs font-bold uppercase tracking-[0.25em] mb-4">
+                        Trabajos reales
+                    </span>
                     <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6 tracking-tight">
                         Nuestros Últimos Proyectos
                     </h2>
@@ -172,7 +175,7 @@ export function ProjectGallery() {
                         <div
                             key={project.id}
                             onClick={() => openModal(project)}
-                            className="group relative rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                            className="group relative rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-2xl hover:shadow-black/25 transition-all duration-500 hover:-translate-y-1"
                         >
                             <div className="relative h-80 w-full overflow-hidden">
                                 <Image
@@ -193,7 +196,7 @@ export function ProjectGallery() {
                             </div>
 
                             <div className="absolute bottom-0 left-0 right-0 p-8 text-white z-10">
-                                <span className="inline-block px-3 py-1 bg-accent text-xs font-bold uppercase tracking-wider rounded-lg mb-3 shadow-xl text-white">
+                                <span className="inline-block px-3 py-1 bg-accent text-xs font-bold uppercase tracking-wider rounded-full mb-3 shadow-md text-white">
                                     {project.category}
                                 </span>
                                 <h3 className="text-2xl font-bold text-white mb-1 leading-tight group-hover:text-accent transition-colors" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.9)' }}>
@@ -218,7 +221,7 @@ export function ProjectGallery() {
                         href="https://wa.me/34604154746?text=Hola, he visto vuestros trabajos y me gustaría pedir presupuesto."
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center px-8 py-4 bg-accent hover:bg-primary text-white font-bold rounded-xl transition-all shadow-lg shadow-accent/30 hover:shadow-accent/50 transform hover:-translate-y-1"
+                        className="inline-flex items-center px-8 py-4 bg-accent hover:bg-primary text-white font-bold rounded-xl transition-all shadow-lg shadow-black/20 hover:shadow-xl hover:-translate-y-0.5"
                     >
                         <MessageCircle className="w-5 h-5 mr-2" />
                         Contactar por WhatsApp

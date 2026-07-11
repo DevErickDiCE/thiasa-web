@@ -52,7 +52,10 @@ export function Services() {
         <section id="services" className="py-20 bg-[#0D1117]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
+                    <span className="inline-block text-accent text-xs font-bold uppercase tracking-[0.25em] mb-4">
+                        Nuestros servicios
+                    </span>
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 tracking-tight">
                         Servicios Profesionales de Reforma
                     </h2>
                     <p className="text-lg text-white/70">
@@ -62,10 +65,10 @@ export function Services() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service, index) => (
-                        <div key={index} className="group relative bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-2xl overflow-hidden hover:border-accent/30 transition-all duration-300 hover:shadow-xl hover:shadow-accent/20 backdrop-blur-sm">
+                        <div key={index} className="group relative bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-2xl overflow-hidden hover:border-accent/30 transition-all duration-300 hover:shadow-2xl hover:shadow-black/40 hover:-translate-y-1 backdrop-blur-sm">
                             <div className={`h-1 bg-gradient-to-r ${service.gradient}`} />
                             <div className="p-8">
-                                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/10 to-primary/10 border border-accent/20 flex items-center justify-center mb-6 group-hover:border-accent/40 group-hover:shadow-lg group-hover:shadow-accent/20 transition-all duration-300">
+                                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/10 to-primary/10 border border-accent/20 flex items-center justify-center mb-6 group-hover:border-accent/40 transition-all duration-300">
                                     <div className="text-accent">
                                         {React.cloneElement(service.icon as React.ReactElement<{ className: string }>, { className: "w-8 h-8" })}
                                     </div>
@@ -84,8 +87,8 @@ export function Services() {
                     ))}
 
                     {/* Call to action card */}
-                    <div className="bg-gradient-to-br from-accent via-primary to-accent rounded-2xl p-8 flex flex-col justify-center items-start text-white shadow-xl shadow-accent/30 relative overflow-hidden group">
-                        <div className="absolute inset-0 bg-gradient-to-br from-accent/0 via-white/5 to-primary/0 group-hover:via-white/10 transition-all duration-500" />
+                    <div className="bg-gradient-to-br from-primary to-[#003580] rounded-2xl p-8 flex flex-col justify-center items-start text-white shadow-2xl shadow-black/40 border border-white/10 relative overflow-hidden group">
+                        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent group-hover:via-white/10 transition-all duration-500" />
                         <div className="relative z-10">
                             <h3 className="text-2xl font-bold text-white mb-4">¿Tienes otro proyecto en mente?</h3>
                             <p className="text-white/90 mb-8">

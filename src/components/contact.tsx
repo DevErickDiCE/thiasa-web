@@ -65,6 +65,9 @@ export function Contact() {
         <section id="contact" className="py-24 bg-[#0D1117]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
+                    <span className="inline-block text-accent text-xs font-bold uppercase tracking-[0.25em] mb-4">
+                        Hablemos de tu proyecto
+                    </span>
                     <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
                         Contacta con Nosotros
                     </h2>
@@ -118,8 +121,8 @@ export function Contact() {
                         </div>
 
                         {/* WhatsApp CTA */}
-                        <div className="bg-gradient-to-br from-accent via-primary to-accent rounded-2xl p-8 relative overflow-hidden group shadow-xl shadow-accent/30">
-                            <div className="absolute inset-0 bg-gradient-to-br from-accent/0 via-white/5 to-primary/0 group-hover:via-white/10 transition-all duration-500" />
+                        <div className="bg-gradient-to-br from-primary to-[#003580] rounded-2xl p-8 relative overflow-hidden group shadow-2xl shadow-black/40 border border-white/10">
+                            <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent group-hover:via-white/10 transition-all duration-500" />
                             <div className="relative z-10">
                                 <h3 className="text-2xl font-bold text-white mb-4">¿Prefieres WhatsApp?</h3>
                                 <p className="text-white/90 mb-6">
@@ -129,7 +132,7 @@ export function Contact() {
                                     href="https://wa.me/34604154746"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center justify-center w-full px-6 py-4 bg-white text-primary font-bold rounded-xl transition-all shadow-lg hover:shadow-xl hover:scale-105"
+                                    className="inline-flex items-center justify-center w-full px-6 py-4 bg-white text-primary font-bold rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                                 >
                                     <MessageCircle className="w-6 h-6 mr-2" />
                                     Abrir WhatsApp
@@ -211,7 +214,7 @@ export function Contact() {
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className="w-full px-8 py-4 bg-accent hover:bg-primary text-white font-bold rounded-xl transition-all shadow-lg shadow-accent/30 hover:shadow-accent/50 flex items-center justify-center group disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-accent"
+                                className="w-full px-8 py-4 bg-accent hover:bg-primary text-white font-bold rounded-xl transition-all shadow-lg shadow-black/25 hover:shadow-xl flex items-center justify-center group disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-accent"
                             >
                                 {isSubmitting ? (
                                     <>

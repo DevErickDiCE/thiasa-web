@@ -21,7 +21,7 @@ export function Navbar() {
                 src="/thiasa-logo-full.jpg"
                 alt="THIASA - Construcción y Diseño"
                 fill
-                className="object-contain transition-transform hover:scale-105"
+                className="object-contain"
                 priority
               />
             </div>
@@ -45,7 +45,7 @@ export function Navbar() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-5 py-2.5 text-sm font-bold rounded-full text-white bg-accent hover:bg-primary transition-all shadow-lg shadow-[#38B6FF]/50 hover:shadow-[#38B6FF]/70 hover:shadow-xl"
+              className="inline-flex items-center px-5 py-2.5 text-sm font-bold rounded-full text-white bg-accent hover:bg-primary transition-all shadow-md shadow-black/30"
             >
               <Phone className="w-4 h-4 mr-2" />
               Solicitar Presupuesto
