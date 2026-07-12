@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { CookieConsentProvider } from "@/components/analytics/cookie-consent-context";
+import { GoogleAnalytics } from "@/components/analytics/google-analytics";
+import { LinkClickTracker } from "@/components/analytics/link-click-tracker";
+import { CookieBanner } from "@/components/analytics/cookie-banner";
+import { COOKIE_CONSENT_STORAGE_KEY } from "@/lib/cookie-consent";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -122,16 +127,48 @@ export default function RootLayout({
     ]
   };
 
+  // Consent Mode v2: define el estado por defecto (todo denegado) antes de
+  // cualquier otro script. Se ejecuta como script plano, no como parte del
+  // árbol de React, para garantizar que corre antes de que se cargue GA4.
+  const consentBootstrapScript = `
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ window.dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    try {
+      var stored = window.localStorage.getItem('${COOKIE_CONSENT_STORAGE_KEY}');
+      if (stored) {
+        var parsed = JSON.parse(stored);
+        if (parsed && parsed.analytics === true) {
+          gtag('consent', 'update', { analytics_storage: 'granted' });
+        }
+      }
+    } catch (e) {}
+  `;
+
   return (
     <html lang="es" className="scroll-smooth scroll-pt-28">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-50 text-slate-900`}
       >
         <script
+          dangerouslySetInnerHTML={{ __html: consentBootstrapScript }}
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {children}
+        <CookieConsentProvider>
+          {children}
+          <GoogleAnalytics />
+          <LinkClickTracker />
+          <CookieBanner />
+        </CookieConsentProvider>
       </body>
     </html>
   );

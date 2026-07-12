@@ -147,6 +147,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
+              data-ga-location="blog_post"
               className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-accent text-white font-bold hover:bg-white hover:text-primary transition-colors shadow-lg"
             >
               <MessageCircle className="w-5 h-5" aria-hidden="true" /> Hablar con THIASA

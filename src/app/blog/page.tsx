@@ -168,6 +168,7 @@ export default async function BlogPage() {
               href="https://wa.me/34604154746?text=Hola,%20quiero%20solicitar%20un%20presupuesto%20de%20reforma%20en%20Madrid."
               target="_blank"
               rel="noopener noreferrer"
+              data-ga-location="blog_page"
               className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-accent text-white text-lg font-bold hover:bg-white hover:text-primary transition-colors shadow-lg"
             >
               <MessageCircle className="w-5 h-5" /> Pedir presupuesto gratis

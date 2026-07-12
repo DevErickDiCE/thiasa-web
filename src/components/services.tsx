@@ -96,6 +96,7 @@ export function Services() {
                             </p>
                             <a
                                 href="https://wa.me/34604154746"
+                                data-ga-location="services_section"
                                 className="inline-flex items-center text-white font-bold hover:text-white/80 transition-colors underline decoration-2 underline-offset-4"
                             >
                                 Consultar ahora <ArrowRight className="ml-2 w-5 h-5" />

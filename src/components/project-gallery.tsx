@@ -221,6 +221,7 @@ export function ProjectGallery() {
                         href="https://wa.me/34604154746?text=Hola, he visto vuestros trabajos y me gustaría pedir presupuesto."
                         target="_blank"
                         rel="noopener noreferrer"
+                        data-ga-location="project_gallery"
                         className="inline-flex items-center px-8 py-4 bg-accent hover:bg-primary text-white font-bold rounded-xl transition-all shadow-lg shadow-black/20 hover:shadow-xl hover:-translate-y-0.5"
                     >
                         <MessageCircle className="w-5 h-5 mr-2" />
@@ -312,6 +313,7 @@ export function ProjectGallery() {
                                         href={`https://wa.me/34604154746?text=Hola, he visto el proyecto "${selectedProject.title}" y me gustaría solicitar un presupuesto similar.`}
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        data-ga-location="project_gallery_modal"
                                         className="flex w-full items-center justify-center px-6 py-4 bg-accent hover:bg-primary text-white rounded-xl font-bold transition-all shadow-lg hover:shadow-accent/30 group"
                                     >
                                         <MessageCircle className="w-5 h-5 mr-2" />

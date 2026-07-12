@@ -2,8 +2,11 @@
 
 import { Phone, Mail, MapPin, ArrowRight, MessageCircle } from "lucide-react";
 import { useState } from "react";
+import { trackGenerateLead } from "@/lib/analytics";
+import { useCookieConsent } from "@/components/analytics/cookie-consent-context";
 
 export function Contact() {
+    const { consent } = useCookieConsent();
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -45,6 +48,12 @@ export function Contact() {
                     message: "¡Mensaje enviado correctamente! Te responderemos pronto.",
                 });
                 setFormData({ name: "", email: "", phone: "", message: "" });
+                if (consent?.analytics) {
+                    trackGenerateLead({
+                        form_name: "contacto",
+                        page_path: window.location.pathname,
+                    });
+                }
             } else {
                 setSubmitStatus({
                     type: "error",
@@ -88,7 +97,7 @@ export function Contact() {
                                     </div>
                                     <div>
                                         <span className="block text-sm font-semibold uppercase tracking-widest text-white/60 mb-1">Teléfono</span>
-                                        <a href="tel:+34604154746" className="text-lg text-white font-medium hover:text-accent transition-colors">
+                                        <a href="tel:+34604154746" data-ga-location="contact_section" className="text-lg text-white font-medium hover:text-accent transition-colors">
                                             +34 604 15 47 46
                                         </a>
                                     </div>
@@ -100,7 +109,7 @@ export function Contact() {
                                     </div>
                                     <div>
                                         <span className="block text-sm font-semibold uppercase tracking-widest text-white/60 mb-1">Email</span>
-                                        <a href="mailto:info@thiasa.es" className="text-lg text-white font-medium hover:text-accent transition-colors">
+                                        <a href="mailto:info@thiasa.es" data-ga-location="contact_section" className="text-lg text-white font-medium hover:text-accent transition-colors">
                                             info@thiasa.es
                                         </a>
                                     </div>
@@ -132,6 +141,7 @@ export function Contact() {
                                     href="https://wa.me/34604154746"
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    data-ga-location="contact_section"
                                     className="inline-flex items-center justify-center w-full px-6 py-4 bg-white text-primary font-bold rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                                 >
                                     <MessageCircle className="w-6 h-6 mr-2" />

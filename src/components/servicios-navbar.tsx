@@ -95,6 +95,7 @@ export function ServiciosNavbar() {
                             href="https://wa.me/34604154746"
                             target="_blank"
                             rel="noopener noreferrer"
+                            data-ga-location="servicios_navbar"
                             className="bg-accent hover:bg-primary text-white px-6 py-3 rounded-lg font-bold transition-all shadow-lg shadow-accent/50"
                         >
                             Solicitar Presupuesto

@@ -69,14 +69,16 @@ export default function PoliticaCookies() {
                                 <div className="bg-slate-50 p-6 rounded-lg">
                                     <h3 className="text-xl font-bold text-primary mb-3">📊 Cookies de Análisis</h3>
                                     <p className="text-slate-700 mb-2">
-                                        Permiten el seguimiento y análisis del comportamiento de los usuarios.
-                                        La información recogida se utiliza para medir la actividad y elaborar
-                                        perfiles de navegación para mejorar el sitio web.
+                                        Utilizamos Google Analytics 4 para entender cómo se usa el sitio web y
+                                        mejorarlo (páginas más visitadas, origen del tráfico, etc.). Son cookies
+                                        <strong> de terceros y opcionales</strong>: solo se instalan si aceptas las
+                                        cookies analíticas en el panel de preferencias.
                                     </p>
                                     <ul className="list-disc list-inside space-y-1 text-slate-700 text-sm">
-                                        <li><strong>Proveedor:</strong> Google Analytics</li>
-                                        <li><strong>Finalidad:</strong> Estadísticas de uso y tráfico</li>
+                                        <li><strong>Proveedor:</strong> Google Analytics (Google Ireland Limited / Google LLC)</li>
+                                        <li><strong>Finalidad:</strong> Estadísticas de uso y tráfico del sitio</li>
                                         <li><strong>Duración:</strong> Hasta 2 años</li>
+                                        <li><strong>Transferencia internacional:</strong> Google puede procesar los datos en servidores fuera del EEE, amparándose en las cláusulas contractuales tipo aprobadas por la Comisión Europea</li>
                                         <li><strong>Más info:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Política de Google</a></li>
                                     </ul>
                                 </div>
@@ -111,15 +113,21 @@ export default function PoliticaCookies() {
                                     <tbody className="divide-y divide-slate-200">
                                         <tr>
                                             <td className="px-4 py-3 text-sm text-slate-700">_ga</td>
-                                            <td className="px-4 py-3 text-sm text-slate-700">Análisis</td>
+                                            <td className="px-4 py-3 text-sm text-slate-700">Análisis (requiere consentimiento)</td>
                                             <td className="px-4 py-3 text-sm text-slate-700">2 años</td>
-                                            <td className="px-4 py-3 text-sm text-slate-700">Distinguir usuarios (Google Analytics)</td>
+                                            <td className="px-4 py-3 text-sm text-slate-700">Distinguir usuarios (Google Analytics 4)</td>
                                         </tr>
                                         <tr>
-                                            <td className="px-4 py-3 text-sm text-slate-700">_gid</td>
-                                            <td className="px-4 py-3 text-sm text-slate-700">Análisis</td>
-                                            <td className="px-4 py-3 text-sm text-slate-700">24 horas</td>
-                                            <td className="px-4 py-3 text-sm text-slate-700">Distinguir usuarios (Google Analytics)</td>
+                                            <td className="px-4 py-3 text-sm text-slate-700">_ga_&lt;ID&gt;</td>
+                                            <td className="px-4 py-3 text-sm text-slate-700">Análisis (requiere consentimiento)</td>
+                                            <td className="px-4 py-3 text-sm text-slate-700">2 años</td>
+                                            <td className="px-4 py-3 text-sm text-slate-700">Mantener el estado de la sesión (Google Analytics 4)</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="px-4 py-3 text-sm text-slate-700">thiasa_cookie_consent</td>
+                                            <td className="px-4 py-3 text-sm text-slate-700">Técnica</td>
+                                            <td className="px-4 py-3 text-sm text-slate-700">1 año</td>
+                                            <td className="px-4 py-3 text-sm text-slate-700">Recordar tu decisión sobre cookies (localStorage, no es una cookie de terceros)</td>
                                         </tr>
                                         <tr>
                                             <td className="px-4 py-3 text-sm text-slate-700">session</td>
@@ -135,11 +143,23 @@ export default function PoliticaCookies() {
                         {/* Aceptación */}
                         <section>
                             <h2 className="text-2xl font-bold text-primary mb-4">4. Aceptación de Cookies</h2>
+                            <p className="text-slate-700 leading-relaxed mb-4">
+                                Al acceder a nuestro sitio web por primera vez, se muestra un aviso donde puedes
+                                <strong> aceptar todas las cookies</strong>, <strong>rechazar las no necesarias</strong> o
+                                <strong> configurar tus preferencias</strong> y decidir específicamente si permites las
+                                cookies analíticas. Las cookies necesarias funcionan siempre; Google Analytics
+                                permanece desactivado hasta que aceptas las cookies analíticas de forma expresa.
+                            </p>
+                            <p className="text-slate-700 leading-relaxed mb-4">
+                                Para ello utilizamos el <strong>Modo de Consentimiento de Google (Consent Mode v2)</strong>:
+                                mientras no des tu consentimiento, el estado de almacenamiento analítico
+                                (<em>analytics_storage</em>) permanece en &ldquo;denegado&rdquo; y no se envía ninguna
+                                información a Google Analytics.
+                            </p>
                             <p className="text-slate-700 leading-relaxed">
-                                Al acceder a nuestro sitio web por primera vez, se mostrará una ventana donde se te
-                                informa del uso de cookies y donde puedes consultar esta política. Si continúas
-                                navegando, se entiende que aceptas su uso. No obstante, puedes retirar tu consentimiento
-                                en cualquier momento mediante la configuración de tu navegador.
+                                Puedes cambiar tu decisión en cualquier momento desde el enlace
+                                &ldquo;Configurar cookies&rdquo; disponible en el pie de página de todas las
+                                secciones del sitio, o eliminando las cookies desde la configuración de tu navegador.
                             </p>
                         </section>
 
@@ -212,7 +232,7 @@ export default function PoliticaCookies() {
 
                         <div className="border-t border-slate-200 pt-8 mt-12">
                             <p className="text-sm text-slate-500">
-                                Última actualización: Enero 2026
+                                Última actualización: Julio 2026
                             </p>
                         </div>
                     </div>

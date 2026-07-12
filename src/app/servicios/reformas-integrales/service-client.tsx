@@ -176,6 +176,7 @@ export default function ReformasIntegralesClient() {
                             href="https://wa.me/34604154746?text=Hola, quiero presupuesto para reforma integral"
                             target="_blank"
                             rel="noopener noreferrer"
+                            data-ga-location="service_hero"
                             className="inline-flex items-center px-8 py-4 bg-accent hover:bg-primary text-white text-base font-bold rounded-xl transition-all shadow-lg shadow-accent/50 hover:shadow-xl hover:scale-105"
                         >
                             <Phone className="w-5 h-5 mr-2" />
@@ -383,6 +384,7 @@ export default function ReformasIntegralesClient() {
                                 href="https://wa.me/34604154746?text=Hola, quiero presupuesto para reforma integral"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                data-ga-location="service_cta"
                                 className="group inline-flex items-center px-10 py-5 bg-gradient-to-r from-accent to-primary text-white text-lg font-bold rounded-xl shadow-2xl shadow-accent/50 hover:shadow-accent/70 hover:scale-105 transition-all"
                             >
                                 <Phone className="w-6 h-6 mr-3 group-hover:rotate-12 transition-transform" />
@@ -391,6 +393,7 @@ export default function ReformasIntegralesClient() {
 
                             <a
                                 href="tel:+34604154746"
+                                data-ga-location="service_cta"
                                 className="inline-flex items-center px-10 py-5 bg-white/10 backdrop-blur-sm text-white text-lg font-bold rounded-xl border-2 border-white/20 hover:bg-white/20 hover:border-accent transition-all"
                             >
                                 <Phone className="w-6 h-6 mr-3" />

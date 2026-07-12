@@ -28,6 +28,7 @@ export function ConvertSection() {
                         href="https://wa.me/34604154746?text=Hola, quiero empezar mi reforma. ¿Podemos hablar?"
                         target="_blank"
                         rel="noopener noreferrer"
+                        data-ga-location="convert_section"
                         className="group w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-xl font-bold rounded-xl text-white bg-accent hover:bg-primary transition-all shadow-lg shadow-black/30 hover:shadow-xl hover:-translate-y-0.5"
                     >
                         <Phone className="w-6 h-6 mr-3" />

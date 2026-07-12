@@ -108,6 +108,11 @@ export default function PoliticaPrivacidad() {
                             <ul className="list-disc list-inside space-y-2 text-slate-700">
                                 <li>Obligación legal (Agencia Tributaria, etc.)</li>
                                 <li>Proveedores de servicios necesarios para la prestación de nuestros servicios (hosting, email)</li>
+                                <li>
+                                    Google Analytics (Google Ireland Limited / Google LLC), únicamente si aceptas
+                                    las cookies analíticas. Google puede procesar estos datos fuera del EEE
+                                    amparándose en las cláusulas contractuales tipo aprobadas por la Comisión Europea
+                                </li>
                                 <li>Con tu consentimiento explícito</li>
                             </ul>
                         </section>
@@ -156,8 +161,11 @@ export default function PoliticaPrivacidad() {
                         <section>
                             <h2 className="text-2xl font-bold text-primary mb-4">9. Cookies</h2>
                             <p className="text-slate-700 leading-relaxed">
-                                Nuestro sitio web utiliza cookies para mejorar la experiencia del usuario.
-                                Para más información, consulta nuestra{" "}
+                                Nuestro sitio web utiliza cookies técnicas necesarias y, solo si das tu
+                                consentimiento, cookies analíticas de Google Analytics 4. Puedes aceptarlas,
+                                rechazarlas o cambiar tu decisión en cualquier momento desde el enlace
+                                &ldquo;Configurar cookies&rdquo; del pie de página. Para más información, consulta
+                                nuestra{" "}
                                 <Link href="/politica-cookies" className="text-accent hover:text-primary underline">
                                     Política de Cookies
                                 </Link>.
@@ -175,7 +183,7 @@ export default function PoliticaPrivacidad() {
 
                         <div className="border-t border-slate-200 pt-8 mt-12">
                             <p className="text-sm text-slate-500">
-                                Última actualización: Enero 2026
+                                Última actualización: Julio 2026
                             </p>
                         </div>
                     </div>
