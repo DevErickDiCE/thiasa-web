@@ -48,8 +48,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const post = await getPostBySlug(slug);
   if (!post) notFound();
 
-  const category =
-    post.frontmatter.tipo_articulo === "educativo" ? "Guías y trámites" : "Precios y presupuestos";
+  const categoryNames: Record<string, string> = {
+    presupuesto: "Precios y presupuestos",
+    educativo: "Guías y trámites",
+    comercial: "Servicios y proceso",
+    comparativo: "Comparativas y dudas",
+  };
+  const category = categoryNames[post.frontmatter.tipo_articulo ?? ""] ?? "Reformas";
 
   const articleJsonLd = {
     "@context": "https://schema.org",

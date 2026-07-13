@@ -80,7 +80,7 @@ Una vivienda bien mantenida no plantea las mismas necesidades que un piso antigu
 
 ### Cambios de distribución
 
-Eliminar o mover tabiques, abrir la cocina o trasladar zonas húmedas añade trabajo técnico y puede exigir comprobaciones adicionales. También puede afectar a estructura, elementos comunes o requisitos municipales.
+Eliminar o mover tabiques, [abrir la cocina](/blog/cocina-abierta-vs-cerrada) o trasladar zonas húmedas añade trabajo técnico y puede exigir comprobaciones adicionales. También puede afectar a estructura, elementos comunes o requisitos municipales.
 
 ### Número de baños y complejidad de la cocina
 
@@ -108,6 +108,8 @@ No compares solo el importe final. Revisa que todos los profesionales estén val
 - Calendario estimado, condicionado a permisos y suministro de materiales.
 
 Un presupuesto muy breve puede parecer más económico porque deja decisiones fuera. Una comparación útil necesita una memoria común: mismas estancias, mismas calidades y el mismo nivel de intervención.
+
+Antes de decidir con quién trabajas, repasa también [cómo contratar una empresa de reformas en Madrid sin arriesgarte](/blog/contratar-empresa-reformas-madrid).
 
 ## Preguntas frecuentes
 

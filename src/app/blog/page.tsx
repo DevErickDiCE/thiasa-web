@@ -24,6 +24,8 @@ export const metadata: Metadata = {
 const categoryNames: Record<string, string> = {
   presupuesto: "Precios y presupuestos",
   educativo: "Guías y trámites",
+  comercial: "Servicios y proceso",
+  comparativo: "Comparativas y dudas",
 };
 
 function categoryLabel(tipo?: string) {

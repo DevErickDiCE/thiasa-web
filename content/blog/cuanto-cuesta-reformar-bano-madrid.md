@@ -48,7 +48,7 @@ Estas franjas no son una oferta. En baños grandes, redistribuciones, acabados e
 
 ## Partidas de una reforma de baño
 
-Un presupuesto de [reforma de baño en Madrid](/servicios/reformas-banos-cocinas) debería explicar qué incluye cada partida y con qué calidades.
+Un presupuesto de [reforma de baño en Madrid](/servicios/reformas-banos-cocinas) debería explicar qué incluye cada partida y con qué calidades. Si quieres ver el orden real en que se ejecutan los trabajos, consulta [qué incluye una reforma de baño completa](/blog/que-incluye-reforma-bano-completa-madrid).
 
 ### Demolición y gestión de residuos
 
