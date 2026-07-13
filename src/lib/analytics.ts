@@ -1,4 +1,7 @@
-export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+// .trim() defiende contra espacios/saltos de línea accidentales en la variable
+// de entorno (p. ej. al pegar el valor en el panel de Vercel), que corrompen
+// el argumento de gtag('config', ...) y hacen que GA4 rechace todos los hits.
+export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim();
 
 declare global {
   interface Window {
