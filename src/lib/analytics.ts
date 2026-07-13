@@ -6,31 +6,44 @@ export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim
 declare global {
   interface Window {
     dataLayer: unknown[];
+    gtag?: (...args: unknown[]) => void;
   }
 }
 
-function pushToDataLayer(...args: unknown[]) {
+// gtag.js solo interpreta como comandos los elementos del dataLayer que son
+// objetos `arguments` (lo que empuja el snippet oficial). Un array normal
+// (dataLayer.push(["config", ...])) se descarta en silencio: el script carga
+// pero nunca emite /g/collect. Por eso aquí nada hace push directo de arrays;
+// todo pasa por window.gtag, definido en el script inline del layout (con un
+// fallback idéntico por si aún no existiera).
+function gtag(...args: unknown[]) {
   if (typeof window === "undefined") return;
   window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push(args);
+  if (typeof window.gtag !== "function") {
+    window.gtag = function () {
+      // eslint-disable-next-line prefer-rest-params -- gtag.js exige `arguments`; un array de rest params se ignoraría
+      window.dataLayer.push(arguments);
+    };
+  }
+  window.gtag(...args);
 }
 
 export function updateAnalyticsConsent(granted: boolean) {
-  pushToDataLayer("consent", "update", {
+  gtag("consent", "update", {
     analytics_storage: granted ? "granted" : "denied",
   });
 }
 
 export function initGtag(measurementId: string) {
-  pushToDataLayer("js", new Date());
+  gtag("js", new Date());
   // send_page_view: false porque el page_view se envía manualmente en cada
   // cambio de ruta (ver PageviewTracker) para evitar duplicados en el App Router.
-  pushToDataLayer("config", measurementId, { send_page_view: false });
+  gtag("config", measurementId, { send_page_view: false });
 }
 
 export function trackPageview(pagePath: string) {
   if (!GA_MEASUREMENT_ID) return;
-  pushToDataLayer("event", "page_view", { page_path: pagePath });
+  gtag("event", "page_view", { page_path: pagePath });
 }
 
 interface ClickEventParams {
@@ -39,17 +52,17 @@ interface ClickEventParams {
 }
 
 export function trackWhatsappClick(params: ClickEventParams) {
-  pushToDataLayer("event", "click_whatsapp", params);
+  gtag("event", "click_whatsapp", params);
 }
 
 export function trackPhoneClick(params: ClickEventParams) {
-  pushToDataLayer("event", "click_phone", params);
+  gtag("event", "click_phone", params);
 }
 
 export function trackEmailClick(params: ClickEventParams) {
-  pushToDataLayer("event", "click_email", params);
+  gtag("event", "click_email", params);
 }
 
 export function trackGenerateLead(params: { form_name: string; page_path: string }) {
-  pushToDataLayer("event", "generate_lead", params);
+  gtag("event", "generate_lead", params);
 }

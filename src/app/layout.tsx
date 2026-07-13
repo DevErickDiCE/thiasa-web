@@ -132,8 +132,8 @@ export default function RootLayout({
   // árbol de React, para garantizar que corre antes de que se cargue GA4.
   const consentBootstrapScript = `
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ window.dataLayer.push(arguments); }
-    gtag('consent', 'default', {
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('consent', 'default', {
       ad_storage: 'denied',
       ad_user_data: 'denied',
       ad_personalization: 'denied',
@@ -145,7 +145,7 @@ export default function RootLayout({
       if (stored) {
         var parsed = JSON.parse(stored);
         if (parsed && parsed.analytics === true) {
-          gtag('consent', 'update', { analytics_storage: 'granted' });
+          window.gtag('consent', 'update', { analytics_storage: 'granted' });
         }
       }
     } catch (e) {}

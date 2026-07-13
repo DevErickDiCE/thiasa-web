@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useEffect, useRef } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import Script from "next/script";
 import { GA_MEASUREMENT_ID, initGtag, trackPageview } from "@/lib/analytics";
@@ -23,14 +23,17 @@ export function GoogleAnalytics() {
   const analyticsGranted = consent?.analytics === true;
   const measurementId = GA_MEASUREMENT_ID;
   const initializedRef = useRef<string | null>(null);
+  // Analytics está "listo" cuando gtag.js ha terminado de cargar y 'js'/'config'
+  // ya están encolados. Solo entonces se monta PageviewTracker y se emite el
+  // primer page_view: elimina cualquier carrera entre la inicialización y el
+  // primer evento, y evita duplicarlo (el tracker se monta una sola vez).
+  const [analyticsReady, setAnalyticsReady] = useState(false);
 
   // Encola 'js'/'config' de forma síncrona en el render (no en onReady ni en
   // un efecto): dataLayer.push no necesita que gtag.js haya cargado, y hacerlo
-  // aquí garantiza que 'config' quede en el array antes que cualquier 'event'
-  // (p. ej. el page_view de PageviewTracker, que es hijo de este componente y
-  // por tanto su efecto se ejecuta antes que cualquier efecto propio). Si
-  // 'event' llega antes que 'config' en la cola, gtag.js no sabe a qué
-  // propiedad enviarlo y lo descarta sin avisar.
+  // aquí garantiza que 'config' quede en la cola antes que cualquier 'event'.
+  // Si 'event' llegara antes que 'config', gtag.js no sabría a qué propiedad
+  // enviarlo y lo descartaría sin avisar.
   if (measurementId && analyticsGranted) {
     if (initializedRef.current == null) {
       initializedRef.current = measurementId;
@@ -44,10 +47,16 @@ export function GoogleAnalytics() {
 
   return (
     <>
-      <Script src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`} strategy="afterInteractive" />
-      <Suspense fallback={null}>
-        <PageviewTracker />
-      </Suspense>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
+        strategy="afterInteractive"
+        onReady={() => setAnalyticsReady(true)}
+      />
+      {analyticsReady ? (
+        <Suspense fallback={null}>
+          <PageviewTracker />
+        </Suspense>
+      ) : null}
     </>
   );
 }
