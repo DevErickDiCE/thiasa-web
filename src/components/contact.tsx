@@ -73,7 +73,7 @@ export function Contact() {
     return (
         <section id="contact" className="py-24 bg-[#0D1117]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
+                <div data-reveal className="text-center mb-16">
                     <span className="inline-block text-accent text-xs font-bold uppercase tracking-[0.25em] mb-4">
                         Hablemos de tu proyecto
                     </span>
@@ -87,7 +87,7 @@ export function Contact() {
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
                     {/* Contact Info & WhatsApp */}
-                    <div className="flex flex-col justify-center space-y-8">
+                    <div data-reveal="left" className="flex flex-col justify-center space-y-8">
                         <div className="bg-gradient-to-br from-white/5 to-white/[0.02] p-8 rounded-2xl border border-white/10 backdrop-blur-sm">
                             <h3 className="text-2xl font-bold text-white mb-6">Información de Contacto</h3>
                             <div className="space-y-6">
@@ -142,7 +142,7 @@ export function Contact() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     data-ga-location="contact_section"
-                                    className="inline-flex items-center justify-center w-full px-6 py-4 bg-white text-primary font-bold rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                                    className="inline-flex items-center justify-center w-full px-6 py-4 bg-white text-primary font-bold rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.98]"
                                 >
                                     <MessageCircle className="w-6 h-6 mr-2" />
                                     Abrir WhatsApp
@@ -152,7 +152,7 @@ export function Contact() {
                     </div>
 
                     {/* Contact Form */}
-                    <div className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-3xl shadow-xl p-8 md:p-10 border border-white/10 backdrop-blur-sm">
+                    <div data-reveal="right" className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-3xl shadow-xl p-8 md:p-10 border border-white/10 backdrop-blur-sm">
                         <h3 className="text-2xl font-bold text-white mb-6">Envíanos un mensaje</h3>
 
                         {/* Status Message */}

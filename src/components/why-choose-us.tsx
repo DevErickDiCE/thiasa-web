@@ -26,7 +26,7 @@ export function WhyChooseUs() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                     {/* Text Content */}
-                    <div className="flex-1 order-2 lg:order-1">
+                    <div data-reveal="left" className="flex-1 order-2 lg:order-1">
                         <span className="inline-block text-primary text-xs font-bold uppercase tracking-[0.25em] mb-4">
                             Nuestro compromiso
                         </span>
@@ -53,7 +53,7 @@ export function WhyChooseUs() {
                     </div>
 
                     {/* Image */}
-                    <div className="flex-1 order-1 lg:order-2 w-full">
+                    <div data-reveal="right" className="flex-1 order-1 lg:order-2 w-full">
                         <div className="relative h-[400px] lg:h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl shadow-black/20 border border-slate-200">
                             <Image
                                 src="/consultation.png"

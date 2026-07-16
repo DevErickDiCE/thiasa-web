@@ -46,7 +46,7 @@ export function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               data-ga-location="navbar_desktop"
-              className="inline-flex items-center px-5 py-2.5 text-sm font-bold rounded-full text-white bg-accent hover:bg-primary transition-all shadow-md shadow-black/30"
+              className="inline-flex items-center px-5 py-2.5 text-sm font-bold rounded-full text-white bg-accent hover:bg-primary transition-all shadow-md shadow-black/30 active:scale-[0.98]"
             >
               <Phone className="w-4 h-4 mr-2" />
               Solicitar Presupuesto
@@ -103,7 +103,7 @@ export function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               data-ga-location="navbar_mobile"
-              className="block w-full text-center mt-4 px-5 py-3 rounded-lg text-base font-bold text-white bg-accent hover:bg-primary"
+              className="block w-full text-center mt-4 px-5 py-3 rounded-lg text-base font-bold text-white bg-accent hover:bg-primary active:scale-[0.98]"
             >
               Solicitar Presupuesto
             </a>

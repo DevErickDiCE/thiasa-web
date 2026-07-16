@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import Link from "next/link";
 import { Phone, ArrowRight } from "lucide-react";
 import Image from "next/image";
@@ -27,28 +28,47 @@ export function Hero() {
             <div className="relative max-w-7xl mx-auto px-2 sm:px-4 w-full flex flex-col justify-center">
                 <div className="max-w-xl sm:max-w-2xl text-center sm:text-left">
                     {/* Badge */}
-                    <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/5 border border-accent/30 text-accent text-sm font-semibold tracking-wide mb-6 backdrop-blur-sm self-center sm:self-start mx-auto sm:mx-0">
+                    <div
+                        data-reveal
+                        className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/5 border border-accent/30 text-accent text-sm font-semibold tracking-wide mb-6 backdrop-blur-sm self-center sm:self-start mx-auto sm:mx-0"
+                    >
                         <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse"></span>
                         Disponibilidad inmediata
                     </div>
 
                     {/* H1 Title - Optimized for SEO */}
                     <h1 className="flex flex-col gap-2 mb-6">
-                        <span className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white">
+                        <span
+                            data-reveal
+                            style={{ "--reveal-delay": 1 } as CSSProperties}
+                            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white"
+                        >
                             Reformas Integrales
                         </span>
-                        <span className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none text-accent">
+                        <span
+                            data-reveal
+                            style={{ "--reveal-delay": 2 } as CSSProperties}
+                            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none text-accent"
+                        >
                             con garantía profesional
                         </span>
                     </h1>
 
                     {/* Subheadline - SEO optimized with services */}
-                    <p className="text-lg sm:text-xl text-white/90 mb-8 leading-relaxed max-w-lg mx-auto sm:mx-0">
+                    <p
+                        data-reveal
+                        style={{ "--reveal-delay": 3 } as CSSProperties}
+                        className="text-lg sm:text-xl text-white/90 mb-8 leading-relaxed max-w-lg mx-auto sm:mx-0"
+                    >
                         Especialistas en reformas de viviendas, baños, cocinas, instalaciones eléctricas, fontanería y carpintería. Acabados de calidad en Madrid y alrededores.
                     </p>
 
                     {/* CTA Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-start">
+                    <div
+                        data-reveal
+                        style={{ "--reveal-delay": 4 } as CSSProperties}
+                        className="flex flex-col sm:flex-row gap-4 items-center sm:items-start"
+                    >
                         <a
                             href={whatsappUrl}
                             target="_blank"
@@ -62,7 +82,7 @@ export function Hero() {
 
                         <Link
                             href="#projects"
-                            className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-4 text-base sm:text-lg font-bold rounded-xl text-white border-2 border-white/50 hover:bg-white hover:text-[#1D1D1D] transition-all backdrop-blur-sm bg-white/10"
+                            className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-4 text-base sm:text-lg font-bold rounded-xl text-white border-2 border-white/50 hover:bg-white hover:text-[#1D1D1D] transition-all backdrop-blur-sm bg-white/10 active:scale-[0.98]"
                         >
                             Ver Proyectos
                             <ArrowRight className="w-5 h-5 ml-2 opacity-70" />

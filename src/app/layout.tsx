@@ -5,6 +5,7 @@ import { CookieConsentProvider } from "@/components/analytics/cookie-consent-con
 import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 import { LinkClickTracker } from "@/components/analytics/link-click-tracker";
 import { CookieBanner } from "@/components/analytics/cookie-banner";
+import { ScrollReveal } from "@/components/scroll-reveal";
 import { COOKIE_CONSENT_STORAGE_KEY } from "@/lib/cookie-consent";
 
 const geistSans = Geist({
@@ -163,8 +164,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <noscript>
+          <style>{`[data-reveal]{opacity:1!important;transform:none!important;}`}</style>
+        </noscript>
         <CookieConsentProvider>
           {children}
+          <ScrollReveal />
           <GoogleAnalytics />
           <LinkClickTracker />
           <CookieBanner />

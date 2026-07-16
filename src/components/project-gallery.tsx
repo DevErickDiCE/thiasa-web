@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import type { CSSProperties } from "react";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight, MessageCircle, ArrowRight, ZoomIn } from "lucide-react";
 
@@ -158,7 +159,7 @@ export function ProjectGallery() {
     return (
         <section id="projects" className="py-24 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
+                <div data-reveal className="text-center mb-16">
                     <span className="inline-block text-primary text-xs font-bold uppercase tracking-[0.25em] mb-4">
                         Trabajos reales
                     </span>
@@ -171,10 +172,12 @@ export function ProjectGallery() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((project) => (
+                    {projects.map((project, index) => (
                         <div
                             key={project.id}
                             onClick={() => openModal(project)}
+                            data-reveal
+                            style={{ "--reveal-delay": Math.min(index, 5) } as CSSProperties}
                             className="group relative rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-2xl hover:shadow-black/25 transition-all duration-500 hover:-translate-y-1"
                         >
                             <div className="relative h-80 w-full overflow-hidden">
@@ -222,7 +225,7 @@ export function ProjectGallery() {
                         target="_blank"
                         rel="noopener noreferrer"
                         data-ga-location="project_gallery"
-                        className="inline-flex items-center px-8 py-4 bg-accent hover:bg-primary text-white font-bold rounded-xl transition-all shadow-lg shadow-black/20 hover:shadow-xl hover:-translate-y-0.5"
+                        className="inline-flex items-center px-8 py-4 bg-accent hover:bg-primary text-white font-bold rounded-xl transition-all shadow-lg shadow-black/20 hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.98]"
                     >
                         <MessageCircle className="w-5 h-5 mr-2" />
                         Contactar por WhatsApp
@@ -233,11 +236,11 @@ export function ProjectGallery() {
                 {selectedProject && (
                     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
                         <div
-                            className="absolute inset-0 bg-primary/90 backdrop-blur-sm transition-opacity"
+                            className="modal-backdrop absolute inset-0 bg-primary/90 backdrop-blur-sm"
                             onClick={closeModal}
                         />
 
-                        <div className="relative bg-white rounded-3xl overflow-hidden max-w-5xl w-full max-h-[90vh] shadow-2xl flex flex-col md:flex-row animate-in fade-in zoom-in-95 duration-300">
+                        <div className="modal-panel relative bg-white rounded-3xl overflow-hidden max-w-5xl w-full max-h-[90vh] shadow-2xl flex flex-col md:flex-row">
 
                             {/* Close Button */}
                             <button

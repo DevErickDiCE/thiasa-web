@@ -7,7 +7,7 @@ export function ConvertSection() {
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
             <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
 
-            <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div data-reveal className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <span className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-white/5 text-accent font-bold rounded-full text-xs uppercase tracking-[0.2em] mb-6 border border-accent/30 backdrop-blur-sm">
                     <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse"></span>
                     Trabajamos Ya
@@ -29,7 +29,7 @@ export function ConvertSection() {
                         target="_blank"
                         rel="noopener noreferrer"
                         data-ga-location="convert_section"
-                        className="group w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-xl font-bold rounded-xl text-white bg-accent hover:bg-primary transition-all shadow-lg shadow-black/30 hover:shadow-xl hover:-translate-y-0.5"
+                        className="group w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-xl font-bold rounded-xl text-white bg-accent hover:bg-primary transition-all shadow-lg shadow-black/30 hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.98]"
                     >
                         <Phone className="w-6 h-6 mr-3" />
                         Hablar por WhatsApp
@@ -37,7 +37,7 @@ export function ConvertSection() {
 
                     <a
                         href="#contact"
-                        className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl text-white bg-white/5 border border-white/20 hover:bg-white/10 hover:border-white/30 transition-all shadow-sm backdrop-blur-sm"
+                        className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl text-white bg-white/5 border border-white/20 hover:bg-white/10 hover:border-white/30 transition-all shadow-sm backdrop-blur-sm active:scale-[0.98]"
                     >
                         Rellenar formulario
                         <ArrowRight className="w-5 h-5 ml-2 opacity-70" />

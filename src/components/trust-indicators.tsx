@@ -1,10 +1,12 @@
+import type { CSSProperties } from "react";
 import { Calculator, Award, ShieldCheck, UserCheck } from "lucide-react";
+import { AnimatedCounter } from "@/components/animated-counter";
 
 export function TrustIndicators() {
     const stats = [
-        { number: "+15", label: "Años de experiencia" },
-        { number: "+200", label: "Proyectos finalizados" },
-        { number: "100%", label: "Clientes satisfechos" },
+        { value: 15, prefix: "+", label: "Años de experiencia" },
+        { value: 200, prefix: "+", label: "Proyectos finalizados" },
+        { value: 100, suffix: "%", label: "Clientes satisfechos" },
     ];
 
     const items = [
@@ -34,12 +36,12 @@ export function TrustIndicators() {
         <section className="relative z-10 -mt-8 sm:-mt-16 pb-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Stats Card - Premium gradient with glow */}
-                <div className="bg-gradient-to-br from-[#1A2332] via-[#1A2332] to-[#1D1D1D] rounded-2xl shadow-2xl shadow-black/40 border border-white/10 p-8 mb-12 backdrop-blur-sm">
+                <div data-reveal className="bg-gradient-to-br from-[#1A2332] via-[#1A2332] to-[#1D1D1D] rounded-2xl shadow-2xl shadow-black/40 border border-white/10 p-8 mb-12 backdrop-blur-sm">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-white/10">
                         {stats.map((stat, index) => (
                             <div key={index} className="flex flex-col items-center text-center pt-8 md:pt-0 first:pt-0 group">
                                 <span className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-2">
-                                    {stat.number}
+                                    <AnimatedCounter value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
                                 </span>
                                 <span className="text-accent/90 font-semibold uppercase tracking-[0.18em] text-xs">
                                     {stat.label}
@@ -52,7 +54,12 @@ export function TrustIndicators() {
                 {/* Features Grid - Dark Cards */}
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                     {items.map((item, index) => (
-                        <div key={index} className="group flex flex-col items-center text-center p-6 bg-white rounded-xl transition-all duration-300 border border-black/5 shadow-sm hover:shadow-md hover:border-accent/30">
+                        <div
+                            key={index}
+                            data-reveal
+                            style={{ "--reveal-delay": Math.min(index, 5) } as CSSProperties}
+                            className="group flex flex-col items-center text-center p-6 bg-white rounded-xl transition-all duration-300 border border-black/5 shadow-sm hover:shadow-md hover:border-accent/30"
+                        >
                             <div className="bg-primary/5 p-3 rounded-xl mb-3 text-primary group-hover:bg-primary/10 transition-all">
                                 {item.icon}
                             </div>
