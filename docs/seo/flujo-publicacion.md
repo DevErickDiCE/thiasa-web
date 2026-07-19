@@ -1,57 +1,76 @@
-# Flujo de publicación SEO — THIASA Reformas (Madrid)
+# Flujo de Publicación SEO — THIASA Reformas (Madrid)
 
-> Proceso para pasar de la planificación a la publicación de cada artículo del calendario SEO.
+> Proceso para pasar de la planificación a la publicación de cada artículo del calendario SEO aplicando un flujo de lectura y análisis escalable.
 > Fase actual: solo documentación. **No se publica contenido del blog todavía.**
 
-Última actualización: 2026-07-10
+Última actualización: 2026-07-19
 
 ---
 
-## Etapas del flujo
+## Modos de Operación SEO
 
-### 1. Planificación
-- Revisar el artículo siguiente en `calendario-publicaciones.csv`.
-- Confirmar keyword principal, secundaria, intención de búsqueda y cluster.
-- Validar que el pilar (página de servicio) está activo y accesible.
-- Identificar 1–2 artículos relacionados ya publicados para enlazar (ver `enlaces-internos.md`).
+Para optimizar el uso de contexto y agilizar el trabajo del agente, el flujo editorial se divide en tres modos distintos de operación:
 
-### 2. Brief rápido
-- Definir H1, estructura de H2/H3 y puntos clave a cubrir.
-- Elegir CTA (WhatsApp, formulario o ambos).
-- Confirmar que no se inventarán precios, casos, fotos ni datos sin validar.
+### 1. SEO SIGUIENTE ARTÍCULO (Modo por defecto)
+*   **Propósito:** Redacción y edición diaria de contenidos individuales sin sobrecargar el contexto.
+*   **Alcance:** El agente lee únicamente el calendario, el registro ligero, la página pilar y como máximo **5 artículos relacionados**.
+*   **Flujo:**
+    1.  Consultar [calendario-publicaciones.csv](file:///Users/mypro/Workspace/Webs/reformas/docs/seo/calendario-publicaciones.csv) para identificar el próximo contenido a redactar.
+    2.  Consultar [registro-publicaciones.csv](file:///Users/mypro/Workspace/Webs/reformas/docs/seo/registro-publicaciones.csv) para analizar títulos, keywords y slugs existentes.
+    3.  Realizar búsquedas dirigidas (ej. `rg` o `grep`) en `content/blog/` para descartar solapamientos semánticos.
+    4.  Seleccionar hasta 5 artículos del mismo cluster o muy relacionados y leerlos completos junto a la página pilar correspondiente.
+    5.  Si se detecta riesgo de canibalización insoluble con esta muestra, detenerse y pedir autorización para una revisión ampliada.
+    6.  Redactar el artículo y ejecutar la indexación para actualizar el registro:
+        ```bash
+        npm run seo:index
+        ```
 
-### 3. Redacción
-- Seguir `guia-estilo-articulos.md`.
-- Longitud: 800–1.500 palabras según tipo.
-- Incluir intro, índice, H2/H3, conclusión, enlaces internos y CTA final.
-- Escribir title y meta description.
+### 2. SEO REVISIÓN EDITORIAL
+*   **Propósito:** Mantener la salud editorial, actualizar el registro ligero, y evitar desviaciones del plan.
+*   **Frecuencia:** Cada 25 artículos creados/publicados o cada tres meses.
+*   **Alcance:** Revisa solapamientos menores, oportunidades de enlazado interno cruzado, contenidos desactualizados y canibalización en el registro.
+*   **Acciones:** Ejecuta `npm run seo:index`, valida la unicidad de slugs y IDs en el registro, y produce un informe de oportunidades.
 
-### 4. Revisión SEO y técnica
-- [ ] Keyword principal en H1, intro y conclusión.
-- [ ] Estructura de encabezados correcta (H1 → H2 → H3).
-- [ ] Enlaces internos al pilar y a artículos relacionados.
-- [ ] Title (50–60 caracteres) y meta description (150–160 caracteres).
-- [ ] Slug sin tildes ni espacios.
-- [ ] Sin datos inventados ni precios sin validar.
-- [ ] Imágenes solo si son reales y autorizadas; alt text descriptivo.
-- [ ] CTA con enlace a WhatsApp (`https://wa.me/34604154746`) o formulario.
+### 3. SEO AUDITORÍA COMPLETA
+*   **Propósito:** Análisis estructural y completo de toda la biblioteca de contenidos.
+*   **Alcance:** Permite la lectura completa de todos los artículos y pilares del blog.
+*   **Activación:** **Únicamente bajo orden explícita del usuario** (ej. auditorías semánticas periódicas, migraciones o cambios de arquitectura del blog).
 
-### 5. Publicación técnica
-- Añadir artículo como entrada en `src/lib/posts.ts` o sistema de contenido acordado.
-- Subir a `/blog/[slug]`.
-- Comprobar que la URL, title y meta description se renderizan correctamente.
-- Verificar enlaces internos y CTA.
+---
 
-### 6. Enlaces internos post-publicación
-- Añadir enlace al nuevo artículo desde su pilar si es coherente.
-- Revisar artículos publicados recientemente para enlazar al nuevo spoke.
-- Actualizar `enlaces-internos.md` si cambian las conexiones.
+## Etapas del flujo (Modo "Siguiente Artículo")
 
-### 7. Medición
-- Esperar 7–14 días tras la indexación.
-- Revisar en Google Search Console: impresiones, clicks y posición.
-- Anotar resultados en una hoja de seguimiento.
-- Ajustar próximos artículos según aprendizajes.
+### 1. Planificación e Inspección Ligera
+- Consultar el siguiente artículo `pendiente` en `calendario-publicaciones.csv`.
+- Leer [registro-publicaciones.csv](file:///Users/mypro/Workspace/Webs/reformas/docs/seo/registro-publicaciones.csv) para obtener el estado de la biblioteca y comparar keywords.
+- Hacer una búsqueda rápida en `content/blog/` con palabras clave para comprobar que no existan borradores o artículos similares.
+- Identificar la página pilar activa del clúster (columna `pagina_pilar` del registro ligero).
+
+### 2. Selección de Candidatos y Lectura Directa
+- Seleccionar hasta **5 artículos** con la relación temática más estrecha.
+- Leer únicamente esos archivos y la página pilar asociada.
+- Desarrollar el H1, estructura de H2/H3 y puntos clave a cubrir basándose en la información extraída, evitando la lectura de cualquier otro artículo.
+
+### 3. Redacción y SEO On-Page
+- Seguir las pautas de [guia-estilo-articulos.md](file:///Users/mypro/Workspace/Webs/reformas/docs/seo/guia-estilo-articulos.md).
+- Longitud: 800–1.500 palabras.
+- Incluir la keyword principal en H1, introducción (primeros 2 párrafos) y conclusión.
+- Redactar un título SEO (≤ 60 caracteres) y meta descripción (140-155 caracteres).
+- Guardar el borrador en `/content/blog/[slug].md`.
+
+### 4. Revisión y Control de Canibalización
+- Verificar que la keyword principal no está en uso en otros artículos del registro.
+- Enlazar al pilar de su clúster y añadir 1 o 2 enlaces internos hacia artículos relacionados de la lista de candidatos.
+- Si se detecta un posible solapamiento de intenciones o canibalización que no pueda resolverse entre los 5 candidatos seleccionados, **parar el flujo** y consultar al usuario.
+
+### 5. Publicación Técnica y Regeneración de Índice
+- Cambiar el estado del artículo en el frontmatter a `estado: publicado` (cuando proceda la fase de publicación).
+- Registrar la publicación ejecutando:
+  ```bash
+  npm run seo:index
+  ```
+- Modificar el estado del contenido en `calendario-publicaciones.csv` de `pendiente` a `publicado`.
+- Actualizar enlaces en la página pilar si aplica.
 
 ---
 
@@ -69,29 +88,20 @@
 | Rol | Tareas |
 |---|---|
 | Estratega SEO | Aprobar calendario, keywords, clusters y prioridades. |
-| Redactor | Crear el artículo siguiendo el brief y la guía de estilo. |
-| Revisor SEO | Validar on-page, enlaces internos y metadatos. |
-| Técnico web | Publicar el artículo, verificar renderizado y enlaces. |
+| Redactor | Crear el artículo siguiendo el flujo escalable de consulta de registros. |
+| Revisor SEO | Validar on-page, evitar canibalización y coordinar enlaces internos. |
+| Técnico web | Publicar el artículo, verificar renderizado y ejecutar `npm run seo:index`. |
 | THIASA (cliente) | Validar precios, datos técnicos y disponibilidad comercial. |
 
 ---
 
 ## Checklist final antes de dar por publicado un artículo
 
-- [ ] Artículo redactado y revisado.
-- [ ] Title y meta description definidos.
-- [ ] Slug validado.
-- [ ] Enlaces internos al pilar y artículos relacionados incluidos.
+- [ ] Registro rápido [registro-publicaciones.csv](file:///Users/mypro/Workspace/Webs/reformas/docs/seo/registro-publicaciones.csv) consultado para evitar duplicidades.
+- [ ] No se han leído más de 5 artículos de referencia en el proceso.
+- [ ] Keyword principal en H1, intro y conclusión.
+- [ ] Enlaces internos al pilar y artículos relacionados incluidos con anchor semántico.
 - [ ] CTA final con WhatsApp o formulario.
 - [ ] Publicado en `/blog/[slug]`.
-- [ ] Pilar actualizado con enlace al nuevo artículo si aplica.
-- [ ] Indexación solicitada en Search Console (opcional).
-- [ ] Estado actualizado en `calendario-publicaciones.csv` (de `pendiente` a `publicado`).
-
----
-
-## Notas importantes
-
-- **No se publica contenido del blog en esta fase.** El flujo queda documentado para su ejecución posterior.
-- Antes de escalar el calendario, validar resultados de los primeros 4–6 artículos.
-- Las zonas de Madrid (cluster 9) son propuestas SEO, no confirmadas por la empresa: validar con THIASA antes de publicar y evaluar tráfico/conversiones antes de ampliarlas. No afirmar sede, oficina ni proyectos confirmados en esas zonas.
+- [ ] Script `npm run seo:index` ejecutado para actualizar el registro ligero.
+- [ ] Estado actualizado en `calendario-publicaciones.csv`.
