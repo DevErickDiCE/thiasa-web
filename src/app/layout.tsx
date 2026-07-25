@@ -20,6 +20,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.thiasa.es"),
+  alternates: {
+    canonical: "https://www.thiasa.es/",
+  },
   title: "Reformas Integrales en Madrid | THIASA",
   description: "Empresa de reformas integrales en Madrid. Especialistas en baños, cocinas, instalaciones eléctricas, fontanería y carpintería. Presupuesto gratis en 24h.",
   keywords: "reformas integrales Madrid, reforma de baños, reforma de cocinas, instalaciones eléctricas, fontanería Madrid, suelo radiante, carpintería madera, ventanas aluminio PVC, aire acondicionado, pladur, pintura, albañilería",
