@@ -9,8 +9,6 @@ export function Footer() {
         <footer className="bg-[#1D1D1D] pt-16 pb-8 border-t border-white/10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 mb-12">
-
-                    {/* Column 1: Brand (Mobile: Order 1) */}
                     <div className="flex flex-col items-center md:items-start order-1 space-y-4">
                         <div className="relative w-56 h-20 md:w-72 md:h-24">
                             <Image
@@ -21,11 +19,13 @@ export function Footer() {
                             />
                         </div>
                         <p className="text-white/70 text-sm md:text-base text-center md:text-left max-w-xs leading-relaxed">
-                            Especialistas en reformas integrales, instalaciones y carpintería. Calidad y confianza desde 2010.
+                            Reformas integrales, instalaciones, carpintería y acabados para viviendas y espacios en Madrid.
                         </p>
+                        <Link href="/sobre-nosotros" className="text-accent hover:text-sky-400 transition-colors text-sm font-semibold">
+                            Conoce THIASA
+                        </Link>
                     </div>
 
-                    {/* Column 2: Services */}
                     <div className="flex flex-col items-center md:items-start order-2 space-y-4">
                         <h3 className="text-white/90 font-bold text-sm uppercase tracking-[0.2em] hidden md:block">Servicios</h3>
                         <ul className="space-y-3 text-center md:text-left">
@@ -39,42 +39,33 @@ export function Footer() {
                         </ul>
                     </div>
 
-                    {/* Column 3: Contact (Mobile: Order 2) */}
                     <div className="flex flex-col items-center md:items-start order-3 space-y-4">
                         <h3 className="text-white/90 font-bold text-sm uppercase tracking-[0.2em] hidden md:block">Contacto Rápido</h3>
                         <div className="flex flex-col space-y-3 text-center md:text-left w-full">
-                            <a href="https://wa.me/34604154746" target="_blank" data-ga-location="footer" className="inline-flex items-center justify-center md:justify-start px-4 py-2 bg-accent hover:bg-sky-400 text-white rounded-lg text-sm font-bold transition-colors">
+                            <a href="https://wa.me/34604154746" target="_blank" rel="noopener noreferrer" data-ga-location="footer" className="inline-flex items-center justify-center md:justify-start px-4 py-2 bg-accent hover:bg-sky-400 text-white rounded-lg text-sm font-bold transition-colors">
                                 WhatsApp
                             </a>
                             <a href="tel:+34604154746" data-ga-location="footer" className="inline-flex items-center justify-center md:justify-start px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg text-sm font-bold transition-colors border border-white/20">
                                 Llamar ahora
                             </a>
-                            <p className="text-white/60 text-xs mt-2">
-                                info@thiasa.es
-                            </p>
+                            <p className="text-white/60 text-xs mt-2">info@thiasa.es</p>
                         </div>
                     </div>
-
                 </div>
 
-                {/* Bottom Bar */}
                 <div className="pt-8 border-t border-white/10 space-y-4">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-white/60 text-xs text-center md:text-left">
                             &copy; {currentYear} THIASA Reformas. Todos los derechos reservados.
                         </p>
                         <div className="flex flex-wrap justify-center md:justify-end gap-4 text-xs">
-                            <Link href="/aviso-legal" className="text-white/60 hover:text-accent transition-colors">
-                                Aviso Legal
-                            </Link>
+                            <Link href="/sobre-nosotros" className="text-white/60 hover:text-accent transition-colors">Empresa</Link>
                             <span className="text-white/40">|</span>
-                            <Link href="/politica-privacidad" className="text-white/60 hover:text-accent transition-colors">
-                                Política de Privacidad
-                            </Link>
+                            <Link href="/aviso-legal" className="text-white/60 hover:text-accent transition-colors">Aviso Legal</Link>
                             <span className="text-white/40">|</span>
-                            <Link href="/politica-cookies" className="text-white/60 hover:text-accent transition-colors">
-                                Política de Cookies
-                            </Link>
+                            <Link href="/politica-privacidad" className="text-white/60 hover:text-accent transition-colors">Política de Privacidad</Link>
+                            <span className="text-white/40">|</span>
+                            <Link href="/politica-cookies" className="text-white/60 hover:text-accent transition-colors">Política de Cookies</Link>
                             <span className="text-white/40">|</span>
                             <CookieSettingsLink />
                         </div>

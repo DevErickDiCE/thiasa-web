@@ -4,14 +4,10 @@ import { Phone, ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 export function Hero() {
-    const whatsappUrl = "https://wa.me/34604154746?text=Hola,%20me%20interesa%20solicitar%20un%20presupuesto%20de%20reforma."; // Pre-filled message
+    const whatsappUrl = "https://wa.me/34604154746?text=Hola,%20me%20interesa%20solicitar%20un%20presupuesto%20de%20reforma.";
 
     return (
-        // Mobile: min-h screen to fill view, but allow content to dictate height if needed on very small screens.
-        // Desktop: standard min-h-screen
-        // Adjusted padding for mobile visibility
         <div className="relative bg-background min-h-[650px] sm:min-h-[700px] lg:min-h-[750px] flex items-center pt-32 pb-20 sm:pt-40 sm:pb-28 overflow-hidden">
-            {/* Background Image - Zoomed/Centered for Mobile */}
             <div className="absolute inset-0 overflow-hidden">
                 <Image
                     src="/hero-bg.png"
@@ -21,13 +17,11 @@ export function Hero() {
                     priority
                     sizes="100vw"
                 />
-                {/* Subtle dark blue gradient overlay for text readability */}
                 <div className="absolute inset-0 bg-gradient-to-b from-[#1A2332]/80 via-[#1A2332]/60 to-[#1A2332]/80 sm:bg-gradient-to-r sm:from-[#1A2332]/90 sm:via-[#1A2332]/70 sm:to-[#1A2332]/30" />
             </div>
 
             <div className="relative max-w-7xl mx-auto px-2 sm:px-4 w-full flex flex-col justify-center">
                 <div className="max-w-xl sm:max-w-2xl text-center sm:text-left">
-                    {/* Badge */}
                     <div
                         data-reveal
                         className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/5 border border-accent/30 text-accent text-sm font-semibold tracking-wide mb-6 backdrop-blur-sm self-center sm:self-start mx-auto sm:mx-0"
@@ -36,14 +30,13 @@ export function Hero() {
                         Disponibilidad inmediata
                     </div>
 
-                    {/* H1 Title - Optimized for SEO */}
                     <h1 className="flex flex-col gap-2 mb-6">
                         <span
                             data-reveal
                             style={{ "--reveal-delay": 1 } as CSSProperties}
                             className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white"
                         >
-                            Reformas Integrales
+                            Reformas Integrales en Madrid
                         </span>
                         <span
                             data-reveal
@@ -54,7 +47,6 @@ export function Hero() {
                         </span>
                     </h1>
 
-                    {/* Subheadline - SEO optimized with services */}
                     <p
                         data-reveal
                         style={{ "--reveal-delay": 3 } as CSSProperties}
@@ -63,7 +55,6 @@ export function Hero() {
                         Especialistas en reformas de viviendas, baños, cocinas, instalaciones eléctricas, fontanería y carpintería. Acabados de calidad en Madrid y alrededores.
                     </p>
 
-                    {/* CTA Buttons */}
                     <div
                         data-reveal
                         style={{ "--reveal-delay": 4 } as CSSProperties}
