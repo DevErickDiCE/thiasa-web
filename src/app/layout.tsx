@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.thiasa.es'),
-  title: "THIASA | Reformas Integrales Madrid - Baños, Cocinas, Electricidad y Carpintería",
+  metadataBase: new URL("https://www.thiasa.es"),
+  title: "Reformas Integrales en Madrid | THIASA",
   description: "Empresa de reformas integrales en Madrid. Especialistas en baños, cocinas, instalaciones eléctricas, fontanería y carpintería. Presupuesto gratis en 24h.",
   keywords: "reformas integrales Madrid, reforma de baños, reforma de cocinas, instalaciones eléctricas, fontanería Madrid, suelo radiante, carpintería madera, ventanas aluminio PVC, aire acondicionado, pladur, pintura, albañilería",
   authors: [{ name: "THIASA - Reformas Integrales" }],
@@ -32,14 +32,14 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   openGraph: {
-    title: "THIASA - Reformas Integrales en Madrid",
-    description: "Reformas de viviendas, baños y cocinas con garantía profesional. Instalaciones, carpintería y acabados premium.",
+    title: "Reformas Integrales en Madrid | THIASA",
+    description: "Reformas de viviendas, baños y cocinas en Madrid. Instalaciones, carpintería y acabados con presupuesto sin compromiso.",
     type: "website",
     locale: "es_ES",
     url: "https://www.thiasa.es",
@@ -50,21 +50,21 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "THIASA - Empresa de Reformas Integrales en Madrid",
-      }
+      },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "THIASA - Reformas Integrales en Madrid",
-    description: "Reformas de viviendas, baños y cocinas con garantía profesional. Instalaciones, carpintería y acabados premium.",
+    title: "Reformas Integrales en Madrid | THIASA",
+    description: "Reformas de viviendas, baños y cocinas en Madrid. Instalaciones, carpintería y acabados con presupuesto sin compromiso.",
     images: ["/og-image.jpg"],
   },
   verification: {
-    google: '0ebWO2OzovdnFfgEd5I47Kx-Q1GP2g33_ngxbFGsRXA',
+    google: "0ebWO2OzovdnFfgEd5I47Kx-Q1GP2g33_ngxbFGsRXA",
   },
   icons: {
-    icon: '/icon.png',
-    apple: '/apple-icon.png',
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
   },
 };
 
@@ -74,63 +74,57 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'THIASA',
-    image: 'https://www.thiasa.es/logo.png',
-    '@id': 'https://www.thiasa.es/#organization',
-    url: 'https://www.thiasa.es',
-    telephone: '+34604154746',
-    email: 'info@thiasa.es',
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "THIASA",
+    legalName: "DISEÑOS E INTERIORISMO THIASA SL",
+    image: "https://www.thiasa.es/logo.png",
+    "@id": "https://www.thiasa.es/#organization",
+    url: "https://www.thiasa.es",
+    telephone: "+34604154746",
+    email: "info@thiasa.es",
     address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Avenida De Los Apóstoles 53ºA',
-      postalCode: '28011',
-      addressLocality: 'Madrid',
-      addressCountry: 'ES',
-      addressRegion: 'Madrid'
+      "@type": "PostalAddress",
+      streetAddress: "Avenida de los Apóstoles 5, 3ºA",
+      postalCode: "28011",
+      addressLocality: "Madrid",
+      addressCountry: "ES",
+      addressRegion: "Madrid",
     },
     logo: {
-      '@type': 'ImageObject',
-      url: 'https://www.thiasa.es/logo.png',
+      "@type": "ImageObject",
+      url: "https://www.thiasa.es/logo.png",
       width: 512,
-      height: 512
+      height: 512,
     },
     description: "Empresa de reformas integrales en Madrid. Especialistas en baños, cocinas, instalaciones eléctricas, fontanería y carpintería.",
-    foundingDate: "2010",
-    priceRange: "$$",
+    priceRange: "€€",
     areaServed: [
-      { '@type': 'City', name: 'Madrid' },
-      { '@type': 'City', name: 'Pozuelo de Alarcón' },
-      { '@type': 'City', name: 'Majadahonda' },
-      { '@type': 'City', name: 'Las Rozas' },
-      { '@type': 'City', name: 'Alcobendas' },
-      { '@type': 'City', name: 'San Sebastián de los Reyes' },
-      { '@type': 'City', name: 'Tres Cantos' },
-      { '@type': 'City', name: 'Coslada' },
-      { '@type': 'City', name: 'San Fernando de Henares' },
-      { '@type': 'City', name: 'Getafe' },
-      { '@type': 'City', name: 'Leganés' },
-      { '@type': 'City', name: 'Alcorcón' },
-      { '@type': 'City', name: 'Móstoles' },
-      { '@type': 'City', name: 'Fuenlabrada' },
-      { '@type': 'City', name: 'Torrejón de Ardoz' }
+      { "@type": "City", name: "Madrid" },
+      { "@type": "City", name: "Pozuelo de Alarcón" },
+      { "@type": "City", name: "Majadahonda" },
+      { "@type": "City", name: "Las Rozas" },
+      { "@type": "City", name: "Alcobendas" },
+      { "@type": "City", name: "San Sebastián de los Reyes" },
+      { "@type": "City", name: "Tres Cantos" },
+      { "@type": "City", name: "Coslada" },
+      { "@type": "City", name: "San Fernando de Henares" },
+      { "@type": "City", name: "Getafe" },
+      { "@type": "City", name: "Leganés" },
+      { "@type": "City", name: "Alcorcón" },
+      { "@type": "City", name: "Móstoles" },
+      { "@type": "City", name: "Fuenlabrada" },
+      { "@type": "City", name: "Torrejón de Ardoz" },
     ],
     contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+34604154746',
-      contactType: 'customer service',
-      availableLanguage: ['Spanish'],
-      areaServed: 'ES'
+      "@type": "ContactPoint",
+      telephone: "+34604154746",
+      contactType: "customer service",
+      availableLanguage: ["Spanish"],
+      areaServed: "ES",
     },
-    sameAs: [
-      'https://www.thiasa.es'
-    ]
   };
 
-  // Consent Mode v2: define el estado por defecto (todo denegado) antes de
-  // cualquier otro script. Se ejecuta como script plano, no como parte del
-  // árbol de React, para garantizar que corre antes de que se cargue GA4.
   const consentBootstrapScript = `
     window.dataLayer = window.dataLayer || [];
     window.gtag = function () { window.dataLayer.push(arguments); };
@@ -157,9 +151,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-50 text-slate-900`}
       >
-        <script
-          dangerouslySetInnerHTML={{ __html: consentBootstrapScript }}
-        />
+        <script dangerouslySetInnerHTML={{ __html: consentBootstrapScript }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
