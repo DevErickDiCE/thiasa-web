@@ -7,6 +7,7 @@ import { ProjectGallery } from "@/components/project-gallery";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 import { ConvertSection } from "@/components/convert-section";
+import { HomeFaq } from "@/components/home-faq";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <ConvertSection />
       <WhyChooseUs />
       <ProjectGallery />
+      <HomeFaq />
       <Contact />
       <Footer />
     </main>
