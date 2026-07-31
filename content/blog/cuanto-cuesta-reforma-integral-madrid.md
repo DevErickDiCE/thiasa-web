@@ -1,30 +1,40 @@
 ---
 id: "9"
 slug: "cuanto-cuesta-reforma-integral-madrid"
-title: "¿Cuánto cuesta una reforma integral en Madrid? Guía de precios 2026"
-description: "Consulta precios orientativos de una reforma integral en Madrid en 2026, qué partidas influyen y cómo solicitar un presupuesto para tu vivienda en Madrid."
+title: "¿Cuánto cuesta una reforma integral en Madrid en 2026?"
+description: "Precios orientativos de una reforma integral en Madrid: rangos por m², partidas que más influyen y claves para comparar presupuestos en 2026."
 keyword_principal: "cuánto cuesta reforma integral Madrid"
 keywords_secundarias:
   - "presupuesto reforma integral Madrid"
+  - "reformas integrales Madrid precios"
+  - "precio reforma integral por m² Madrid"
 tipo_articulo: "presupuesto"
 cluster: "5-precios-presupuestos"
 fecha: "2026-07-10"
+fecha_modificacion: "2026-07-31"
 autor: "THIASA"
 estado: "publicado"
 servicio_asociado: "reformas-integrales"
 enlaces_internos:
   - "/servicios/reformas-integrales"
-  - "/blog/presupuesto-reforma-piso-madrid"
-  - "/blog/precio-metro-cuadrado-reforma-madrid"
+  - "/servicios/instalaciones-electricas-fontaneria"
   - "/blog/licencia-obra-menor-madrid"
+  - "/blog/contratar-empresa-reformas-madrid"
 cta: "¿Quieres un presupuesto real? Escríbenos por WhatsApp."
 imagen: "/images/blog/reforma-integral-madrid.jpg"
 imagen_alt: "Piso de Madrid durante una reforma integral con cocina de madera ya instalada"
+faqs:
+  - question: "¿Es fiable calcular la reforma solo por metros cuadrados?"
+    answer: "El precio por metro cuadrado sirve para una primera orientación, pero no para contratar: no refleja el estado de las instalaciones, el número de baños, la distribución, las calidades ni la logística del edificio."
+  - question: "¿Conviene reservar una cantidad para imprevistos?"
+    answer: "Es prudente contemplar un margen, especialmente en viviendas antiguas. La cantidad depende de cuánto se haya podido inspeccionar y definir antes de abrir suelos, techos o paredes."
+  - question: "¿Cómo obtengo un precio realmente ajustado?"
+    answer: "Prepara planos o medidas, fotografías, necesidades por estancia y referencias de acabados; después solicita una visita y un presupuesto desglosado con el alcance incluido y excluido."
 ---
 
-Saber **cuánto cuesta una reforma integral en Madrid** exige algo más que multiplicar los metros cuadrados por una tarifa. Dos viviendas con la misma superficie pueden necesitar presupuestos muy diferentes según su estado, la distribución, las instalaciones, los materiales y el alcance real de la obra.
+Como referencia de mercado para 2026, una **reforma integral en Madrid** puede moverse en una horquilla orientativa de **400 a 1.000 €/m²**, e incluso superarla cuando hay redistribuciones complejas, instalaciones completas o acabados de gama alta. No son tarifas de THIASA ni sustituyen una visita técnica.
 
-Como referencia de mercado para 2026, pueden encontrarse orientaciones amplias de aproximadamente **400 a 1.000 €/m²**, e incluso superiores cuando hay redistribuciones complejas, instalaciones completas o acabados de gama alta. No son tarifas de THIASA ni sustituyen una visita técnica: sirven únicamente para entender el orden de magnitud y comparar presupuestos con criterio.
+El precio final exige algo más que multiplicar metros por una tarifa. Dos viviendas con la misma superficie pueden necesitar presupuestos muy diferentes según su estado, la distribución, las instalaciones, los materiales y el alcance real de la obra.
 
 ## Índice
 
@@ -62,7 +72,7 @@ Aquí entran nuevos tabiques, recrecidos, falsos techos, rozas y preparación de
 
 ### Electricidad, fontanería y climatización
 
-En viviendas antiguas puede ser recomendable renovar instalaciones completas. Este punto influye mucho en el presupuesto, pero también evita cubrir con acabados nuevos una instalación que pronto necesitará abrirse de nuevo.
+En viviendas antiguas puede ser recomendable renovar las [instalaciones eléctricas y de fontanería](/servicios/instalaciones-electricas-fontaneria). Este punto influye mucho en el presupuesto, pero también evita cubrir con acabados nuevos una instalación que pronto necesitará abrirse de nuevo.
 
 ### Cocina, baños y acabados
 
@@ -115,7 +125,7 @@ Antes de decidir con quién trabajas, repasa también [cómo contratar una empre
 
 ### ¿Es fiable calcular la reforma solo por metros cuadrados?
 
-Sirve para una primera orientación, pero no para contratar. Los metros no reflejan el estado de las instalaciones, el número de baños, la distribución, las calidades ni la logística del edificio.
+El precio por metro cuadrado sirve para una primera orientación, pero no para contratar: no refleja el estado de las instalaciones, el número de baños, la distribución, las calidades ni la logística del edificio.
 
 ### ¿Conviene reservar una cantidad para imprevistos?
 
@@ -123,7 +133,7 @@ Es prudente contemplar un margen, especialmente en viviendas antiguas. La cantid
 
 ### ¿Cómo obtengo un precio realmente ajustado?
 
-Prepara planos o medidas, fotografías, necesidades por estancia y referencias de acabados. Después solicita una visita y un presupuesto desglosado. Cuanto más definido esté el alcance, más útil será la cifra.
+Prepara planos o medidas, fotografías, necesidades por estancia y referencias de acabados; después solicita una visita y un presupuesto desglosado con el alcance incluido y excluido.
 
 ## Pide un presupuesto adaptado a tu vivienda
 

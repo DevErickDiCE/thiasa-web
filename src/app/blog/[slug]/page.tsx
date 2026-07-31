@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       type: "article",
       url: `/blog/${post.slug}`,
       publishedTime: post.frontmatter.fecha,
+      modifiedTime: post.frontmatter.fecha_modificacion ?? post.frontmatter.fecha,
       locale: "es_ES",
       images: post.frontmatter.imagen
         ? [{ url: post.frontmatter.imagen, width: 1536, height: 1024, alt: post.frontmatter.imagen_alt }]
@@ -63,7 +64,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     description: post.frontmatter.description,
     image: post.frontmatter.imagen ? `https://www.thiasa.es${post.frontmatter.imagen}` : undefined,
     datePublished: post.frontmatter.fecha,
-    dateModified: post.frontmatter.fecha,
+    dateModified: post.frontmatter.fecha_modificacion ?? post.frontmatter.fecha,
     mainEntityOfPage: `https://www.thiasa.es/blog/${post.slug}`,
     author: { "@type": "Organization", name: "THIASA", url: "https://www.thiasa.es" },
     publisher: { "@type": "Organization", name: "THIASA", url: "https://www.thiasa.es" },
@@ -79,12 +80,30 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     ],
   };
 
+  const faqJsonLd = post.frontmatter.faqs?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: post.frontmatter.faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      }
+    : null;
+
   return (
     <>
       <Navbar />
       <main className="bg-background">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+        {faqJsonLd ? (
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+        ) : null}
 
         {/* Article header */}
         <header className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-14 pb-8">
@@ -114,6 +133,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <CalendarDays className="w-4 h-4" aria-hidden="true" />
               <time dateTime={post.frontmatter.fecha}>{formatDate(post.frontmatter.fecha ?? "")}</time>
             </span>
+            {post.frontmatter.fecha_modificacion ? (
+              <span>
+                Actualizado el {formatDate(post.frontmatter.fecha_modificacion)}
+              </span>
+            ) : null}
             <span className="inline-flex items-center gap-1.5">
               <Clock3 className="w-4 h-4" aria-hidden="true" /> {post.readingTime} min de lectura
             </span>

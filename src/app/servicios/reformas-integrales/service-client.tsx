@@ -18,10 +18,10 @@ export default function ReformasIntegralesClient() {
         "Coordinación de todos los gremios: electricistas, fontaneros, carpinteros",
         "Demolición selectiva y gestión legal de escombros",
         "Nueva distribución optimizada según tus necesidades",
-        "Instalaciones eléctricas y fontanería certificadas",
+        "Renovación coordinada de electricidad y fontanería",
         "Carpintería de calidad: suelos, puertas y armarios",
-        "Pintura con acabados profesionales y garantía",
-        "Cumplimiento estricto de plazos por contrato"
+        "Pintura y preparación de superficies",
+        "Planificación de fases, materiales y remates"
     ];
 
     const process = [
@@ -32,18 +32,18 @@ export default function ReformasIntegralesClient() {
         },
         {
             icon: <Wrench className="w-8 h-8" />,
-            title: "2. Proyecto y Presupuesto",
-            description: "Diseño 3D de la reforma y presupuesto detallado sin sorpresas"
+            title: "2. Alcance y Presupuesto",
+            description: "Definimos las partidas incluidas y preparamos un presupuesto detallado"
         },
         {
             icon: <Award className="w-8 h-8" />,
             title: "3. Ejecución Total",
-            description: "Realizamos la reforma integral con acabados de máxima calidad"
+            description: "Coordinamos los trabajos y revisamos cada fase de la reforma"
         },
         {
             icon: <Clock className="w-8 h-8" />,
-            title: "4. Entrega Puntual",
-            description: "Tu vivienda reformada en la fecha acordada con garantía"
+            title: "4. Revisión y Entrega",
+            description: "Revisamos los remates y el alcance ejecutado antes de la entrega"
         }
     ];
 
@@ -142,7 +142,7 @@ export default function ReformasIntegralesClient() {
     };
 
     return (
-        <main>
+        <>
             {/* Hero Section - Minimalist */}
             <section className="relative bg-[#1D1D1D] min-h-[550px] flex items-center pt-32 pb-20 overflow-hidden">
                 <div className="absolute inset-0">
@@ -169,7 +169,7 @@ export default function ReformasIntegralesClient() {
                         </h1>
 
                         <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl">
-                            Transformamos tu vivienda de principio a fin. Gestión completa y garantizada.
+                            Coordinamos distribución, instalaciones y acabados dentro de un único proyecto.
                         </p>
 
                         <a
@@ -180,7 +180,7 @@ export default function ReformasIntegralesClient() {
                             className="inline-flex items-center px-8 py-4 bg-accent hover:bg-primary text-white text-base font-bold rounded-xl transition-all shadow-lg shadow-accent/50 hover:shadow-xl hover:scale-105"
                         >
                             <Phone className="w-5 h-5 mr-2" />
-                            Presupuesto Gratis en 24h
+                            Solicitar presupuesto
                         </a>
                     </div>
                 </div>
@@ -194,7 +194,7 @@ export default function ReformasIntegralesClient() {
                             Nuestras Reformas Integrales
                         </h2>
                         <p className="text-lg text-slate-600">
-                            Ejemplos reales de viviendas transformadas por nuestro equipo profesional.
+                            Ejemplos de distribuciones, acabados y soluciones aplicadas en viviendas.
                         </p>
                     </div>
 
@@ -310,7 +310,7 @@ export default function ReformasIntegralesClient() {
 
                             <div className="bg-white border-l-4 border-accent p-6 rounded-r-xl shadow-md">
                                 <p className="text-slate-700 font-medium">
-                                    <strong className="text-slate-900">Garantía Total:</strong> Todos nuestros trabajos cuentan con garantía por escrito. Tu tranquilidad es nuestra prioridad.
+                                    <strong className="text-slate-900">Presupuesto por partidas:</strong> Definimos trabajos incluidos, materiales previstos y posibles exclusiones antes de comenzar.
                                 </p>
                             </div>
                         </div>
@@ -367,7 +367,7 @@ export default function ReformasIntegralesClient() {
                     <div className="text-center">
                         <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/20 text-accent font-bold rounded-full text-sm uppercase tracking-wide mb-6 border border-accent/30">
                             <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse"></span>
-                            Disponibles Ahora
+                            Consulta directa
                         </div>
 
                         <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
@@ -375,7 +375,7 @@ export default function ReformasIntegralesClient() {
                         </h2>
 
                         <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto">
-                            Te damos un presupuesto detallado en 24 horas. Sin compromiso.
+                            Cuéntanos el inmueble, las estancias y los cambios que estás valorando. La consulta es sin compromiso.
                         </p>
 
                         {/* CTA Buttons */}
@@ -404,11 +404,11 @@ export default function ReformasIntegralesClient() {
                         {/* Trust Badge */}
                         <div className="mt-8 inline-flex items-center gap-2 text-white/50 text-sm">
                             <CheckCircle2 className="w-5 h-5 text-accent" />
-                            <span>Sin compromiso • Presupuesto gratuito • Respuesta inmediata</span>
+                            <span>Sin compromiso • Presupuesto detallado • Contacto directo</span>
                         </div>
                     </div>
                 </div>
             </section>
-        </main>
+        </>
     );
 }

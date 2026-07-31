@@ -1,14 +1,17 @@
 ---
 id: "1"
 slug: "licencia-obra-menor-madrid"
-title: "Licencia de obra menor en Madrid: cuándo se necesita y cómo tramitarla"
-description: "Descubre cuándo una reforma en Madrid puede requerir declaración responsable o licencia, qué documentos preparar y dónde confirmar el trámite vigente."
+title: "Licencia de obra menor en Madrid: requisitos y trámite"
+description: "¿Necesitas licencia de obra menor en Madrid? Revisa cuándo corresponde una declaración responsable, qué documentación preparar y dónde tramitarla."
 keyword_principal: "licencia obra menor Madrid"
 keywords_secundarias:
   - "licencia reforma piso Madrid"
+  - "licencia de obras Ayuntamiento de Madrid"
+  - "declaración responsable obras Madrid"
 tipo_articulo: "educativo"
 cluster: "6-permisos-licencias"
 fecha: "2026-07-10"
+fecha_modificacion: "2026-07-31"
 autor: "THIASA"
 estado: "publicado"
 servicio_asociado: "reformas-integrales"
@@ -18,22 +21,29 @@ enlaces_internos:
 cta: "¿Tienes dudas sobre trámites? Te ayudamos a gestionarlos. Pide presupuesto sin compromiso."
 imagen: "/images/blog/licencia-obra-madrid.jpg"
 imagen_alt: "Mesa de planificación de una reforma con planos y muestras de materiales"
+faqs:
+  - question: "¿Puedo comenzar al presentar la declaración responsable?"
+    answer: "La declaración responsable produce efectos desde su entrada en el Registro cuando se presenta con la documentación y los requisitos exigidos. Antes de iniciar la obra, confirma que el expediente está completo y que ese es el procedimiento aplicable."
+  - question: "¿La comunidad de vecinos sustituye el permiso municipal?"
+    answer: "No. La autorización de la comunidad, cuando sea necesaria, no sustituye el trámite urbanístico; tampoco ocurre a la inversa."
+  - question: "¿Quién puede ayudarme a identificar el procedimiento?"
+    answer: "Puedes consultar los canales de información urbanística del Ayuntamiento de Madrid o acudir a un arquitecto, arquitecto técnico u otro profesional competente según la actuación."
 ---
 
-La expresión **licencia de obra menor en Madrid** se sigue utilizando de forma habitual, pero al preparar una reforma conviene identificar el título urbanístico que corresponde realmente. Según la actuación, el Ayuntamiento puede exigir una **declaración responsable urbanística**, una **licencia urbanística** o considerar que el trabajo no está sujeto a esos medios de intervención.
+En Madrid, la llamada **licencia de obra menor** no es un trámite único. Según la actuación, puede corresponder una **declaración responsable urbanística**, una **licencia urbanística** o ninguno de esos medios de intervención. Las obras incluidas en el anexo I de la OLDRUAM requieren licencia; las demás deben clasificarse según su alcance y el inmueble.
 
 No existe una respuesta única para todas las viviendas. Cambia si se toca la estructura, la fachada, elementos comunes, un inmueble protegido, la distribución o las instalaciones. Esta guía ofrece una orientación práctica, no asesoramiento legal cerrado. Antes de comenzar, confirma siempre el procedimiento con el Ayuntamiento de Madrid o con un técnico competente.
 
 ## Índice
 
-- [¿Licencia o declaración responsable?](#licencia-o-declaración-responsable)
+- [Qué exige el Ayuntamiento de Madrid](#qué-exige-el-ayuntamiento-de-madrid)
 - [Qué reformas deben revisarse con especial cuidado](#qué-reformas-deben-revisarse-con-especial-cuidado)
 - [Cómo tramitar una declaración responsable](#cómo-tramitar-una-declaración-responsable)
 - [Documentación que pueden solicitar](#documentación-que-pueden-solicitar)
 - [Errores frecuentes antes de empezar](#errores-frecuentes-antes-de-empezar)
 - [Preguntas frecuentes](#preguntas-frecuentes)
 
-## ¿Licencia o declaración responsable?
+## Qué exige el Ayuntamiento de Madrid
 
 El Ayuntamiento de Madrid indica que las obras que requieren intervención municipal deben contar con el título habilitante correspondiente. Las actuaciones incluidas en el anexo I de la Ordenanza de Licencias y Declaraciones Responsables Urbanísticas —OLDRUAM— se tramitan mediante licencia; las restantes actuaciones sujetas a control municipal pueden tramitarse mediante declaración responsable, según su naturaleza.
 
@@ -128,7 +138,7 @@ Antes de fijar fecha con los gremios, comprueba el título habilitante, los sumi
 
 ### ¿Puedo comenzar al presentar la declaración responsable?
 
-La sede municipal señala que produce efectos desde su entrada en el Registro cuando se acompaña de la documentación y requisitos exigidos. Como cada actuación es distinta, confirma que tu expediente está completo antes de iniciar los trabajos.
+La declaración responsable produce efectos desde su entrada en el Registro cuando se presenta con la documentación y los requisitos exigidos. Antes de iniciar la obra, confirma que el expediente está completo y que ese es el procedimiento aplicable.
 
 ### ¿La comunidad de vecinos sustituye el permiso municipal?
 
@@ -136,7 +146,7 @@ No. La autorización de la comunidad, cuando sea necesaria, no sustituye el trá
 
 ### ¿Quién puede ayudarme a identificar el procedimiento?
 
-Puedes utilizar los canales de información urbanística del Ayuntamiento de Madrid o consultar a un arquitecto, arquitecto técnico u otro profesional competente según la actuación.
+Puedes consultar los canales de información urbanística del Ayuntamiento de Madrid o acudir a un arquitecto, arquitecto técnico u otro profesional competente según la actuación.
 
 ## Planifica la reforma antes de empezar
 

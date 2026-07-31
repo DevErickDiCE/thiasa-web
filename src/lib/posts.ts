@@ -35,11 +35,16 @@ export interface PostFrontmatter {
     tipo_articulo?: string;
     cluster?: string;
     fecha?: string;
+    fecha_modificacion?: string;
     autor?: string;
     servicio_asociado?: string;
     estado?: string;
     imagen?: string;
     imagen_alt?: string;
+    faqs?: Array<{
+        question: string;
+        answer: string;
+    }>;
     [key: string]: unknown;
 }
 

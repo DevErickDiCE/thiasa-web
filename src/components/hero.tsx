@@ -43,7 +43,7 @@ export function Hero() {
                             style={{ "--reveal-delay": 2 } as CSSProperties}
                             className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none text-accent"
                         >
-                            con garantía profesional
+                            THIASA
                         </span>
                     </h1>
 
@@ -52,7 +52,7 @@ export function Hero() {
                         style={{ "--reveal-delay": 3 } as CSSProperties}
                         className="text-lg sm:text-xl text-white/90 mb-8 leading-relaxed max-w-lg mx-auto sm:mx-0"
                     >
-                        Especialistas en reformas de viviendas, baños, cocinas, instalaciones eléctricas, fontanería y carpintería. Acabados de calidad en Madrid y alrededores.
+                        THIASA coordina reformas de viviendas, baños, cocinas, instalaciones eléctricas, fontanería y carpintería en Madrid y alrededores.
                     </p>
 
                     <div

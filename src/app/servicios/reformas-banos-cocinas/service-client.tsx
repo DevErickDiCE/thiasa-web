@@ -14,13 +14,13 @@ export default function ReformasBanosCocinasClient() {
     const progressInterval = useRef<NodeJS.Timeout | null>(null);
 
     const benefits = [
-        "Diseño 3D previo de tu reforma de baño o cocina",
-        "Alicatados y solados de alta calidad según normativa",
-        "Fontanería certificada y grifería de primeras marcas",
+        "Definición previa de distribución, materiales y acabados",
+        "Preparación de soportes, alicatados y solados",
+        "Renovación de fontanería según el alcance del proyecto",
         "Sanitarios suspendidos y platos de ducha a medida",
         "Muebles de cocina y baño personalizados",
         "Iluminación LED empotrada y regulable",
-        "Impermeabilizaciones con garantía de 10 años",
+        "Impermeabilización y preparación de zonas húmedas",
         "Optimización de espacios pequeños"
     ];
 
@@ -28,17 +28,17 @@ export default function ReformasBanosCocinasClient() {
         {
             icon: <Droplets className="w-8 h-8" />,
             title: "Reforma de Baños Completa",
-            description: "Especialistas en reforma de baños en Madrid. Platos de ducha, mamparas, sanitarios de diseño y alicatados premium con acabados impecables."
+            description: "Reformas de baños en Madrid con platos de ducha, mamparas, sanitarios, revestimientos y soluciones adaptadas al espacio."
         },
         {
             icon: <Sparkles className="w-8 h-8" />,
             title: "Reforma de Cocinas Integrales",
-            description: "Reforma de cocinas con muebles a medida, encimeras de Silestone o cuarzo, electrodomésticos integrados y distribución optimizada."
+            description: "Reformas de cocinas con distribución, instalaciones, mobiliario, encimeras, iluminación y coordinación de acabados."
         },
         {
             icon: <Shield className="w-8 h-8" />,
-            title: "Garantía y Calidad",
-            description: "Todas nuestras reformas de baños y cocinas incluyen garantía por escrito. Trabajamos con Roca, Grohe, Silestone y Santos."
+            title: "Alcance Definido",
+            description: "Detallamos las partidas, materiales previstos y trabajos incluidos para que puedas comparar el presupuesto con criterio."
         }
     ];
 
@@ -137,7 +137,7 @@ export default function ReformasBanosCocinasClient() {
     };
 
     return (
-        <main>
+        <>
             {/* Hero Section */}
             <section className="relative bg-[#1D1D1D] min-h-[550px] flex items-center pt-32 pb-20 overflow-hidden">
                 <div className="absolute inset-0">
@@ -164,7 +164,7 @@ export default function ReformasBanosCocinasClient() {
                         </h1>
 
                         <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl">
-                            Diseño, reforma y acabados premium. Tu baño o cocina soñados en Madrid.
+                            Distribución, instalaciones, revestimientos, mobiliario y acabados coordinados en Madrid.
                         </p>
 
                         <a
@@ -175,7 +175,7 @@ export default function ReformasBanosCocinasClient() {
                             className="inline-flex items-center px-8 py-4 bg-accent hover:bg-primary text-white text-base font-bold rounded-xl transition-all shadow-lg shadow-accent/50 hover:shadow-xl hover:scale-105"
                         >
                             <Phone className="w-5 h-5 mr-2" />
-                            Presupuesto Gratis en 24h
+                            Solicitar presupuesto
                         </a>
                     </div>
                 </div>
@@ -189,7 +189,7 @@ export default function ReformasBanosCocinasClient() {
                             Reformas de Baños y Cocinas
                         </h2>
                         <p className="text-lg text-slate-600">
-                            Proyectos reales que reflejan nuestra calidad y atención al detalle.
+                            Ejemplos de distribuciones, revestimientos y acabados para baños y cocinas.
                         </p>
                     </div>
 
@@ -305,7 +305,7 @@ export default function ReformasBanosCocinasClient() {
 
                             <div className="bg-white border-l-4 border-accent p-6 rounded-r-xl shadow-md">
                                 <p className="text-slate-700 font-medium">
-                                    <strong className="text-slate-900">Trabajamos con las mejores marcas:</strong> Roca, Grohe, Silestone, Santos y más. Calidad garantizada.
+                                    <strong className="text-slate-900">Decisiones antes de empezar:</strong> Distribución, medidas, piezas y acabados deben quedar definidos para coordinar instalaciones y suministro.
                                 </p>
                             </div>
                         </div>
@@ -359,7 +359,7 @@ export default function ReformasBanosCocinasClient() {
                     <div className="text-center">
                         <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/20 text-accent font-bold rounded-full text-sm uppercase tracking-wide mb-6 border border-accent/30">
                             <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse"></span>
-                            Disponibles Ahora
+                            Consulta directa
                         </div>
 
                         <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
@@ -367,7 +367,7 @@ export default function ReformasBanosCocinasClient() {
                         </h2>
 
                         <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto">
-                            Diseño personalizado y presupuesto sin compromiso en 24 horas.
+                            Define el espacio, las necesidades y las calidades para solicitar una valoración comparable.
                         </p>
 
                         {/* CTA Buttons */}
@@ -396,11 +396,11 @@ export default function ReformasBanosCocinasClient() {
                         {/* Trust Badge */}
                         <div className="mt-8 inline-flex items-center gap-2 text-white/50 text-sm">
                             <CheckCircle2 className="w-5 h-5 text-accent" />
-                            <span>Sin compromiso • Presupuesto gratuito • Respuesta inmediata</span>
+                            <span>Sin compromiso • Presupuesto detallado • Contacto directo</span>
                         </div>
                     </div>
                 </div>
             </section>
-        </main>
+        </>
     );
 }
