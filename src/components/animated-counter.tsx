@@ -30,8 +30,8 @@ export function AnimatedCounter({
     ).matches;
 
     if (prefersReducedMotion) {
-      setDisplay(value);
-      return;
+      const frame = window.requestAnimationFrame(() => setDisplay(value));
+      return () => window.cancelAnimationFrame(frame);
     }
 
     const observer = new IntersectionObserver(
