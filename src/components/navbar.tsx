@@ -19,6 +19,7 @@ export function Navbar() {
                 src="/thiasa-logo-full.jpg"
                 alt="THIASA - Construcción y Diseño"
                 fill
+                sizes="256px"
                 className="object-contain"
                 priority
               />

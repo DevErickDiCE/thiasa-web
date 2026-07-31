@@ -59,11 +59,12 @@ export function WhyChooseUs() {
                                 src="/consultation.png"
                                 alt="Reunión de obra con clientes"
                                 fill
+                                sizes="(max-width: 1023px) 100vw, 50vw"
                                 className="object-cover"
                             />
                             <div className="absolute bottom-5 left-5 bg-white/95 backdrop-blur rounded-xl px-5 py-4 shadow-lg">
-                                <p className="text-3xl font-extrabold text-primary leading-none mb-1">+15</p>
-                                <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">Años de experiencia</p>
+                                <p className="text-2xl font-extrabold text-primary leading-none mb-1">THIASA</p>
+                                <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">Reformas en Madrid</p>
                             </div>
                         </div>
                     </div>

@@ -15,6 +15,7 @@ export function Footer() {
                                 src="/thiasa-logo-full.jpg"
                                 alt="THIASA - Empresa de Reformas Integrales en Madrid"
                                 fill
+                                sizes="(max-width: 767px) 224px, 288px"
                                 className="object-contain object-center md:object-left"
                             />
                         </div>
