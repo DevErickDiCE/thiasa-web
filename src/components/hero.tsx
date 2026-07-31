@@ -27,7 +27,7 @@ export function Hero() {
                         className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/5 border border-accent/30 text-accent text-sm font-semibold tracking-wide mb-6 backdrop-blur-sm self-center sm:self-start mx-auto sm:mx-0"
                     >
                         <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse"></span>
-                        Disponibilidad inmediata
+                        Reformas y obra en Madrid
                     </div>
 
                     <h1 className="flex flex-col gap-2 mb-6">
