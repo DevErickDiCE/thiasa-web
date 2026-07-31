@@ -2,16 +2,69 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, Phone, ArrowLeft } from "lucide-react";
+import { ServiceSeoSection, type ServiceFaq } from "@/components/service-seo-section";
 
 export const metadata: Metadata = {
-    title: "Instalaciones Eléctricas y Fontanería Madrid | THIASA - Profesionales Certificados",
-    description: "Instalaciones eléctricas, fontanería, aire acondicionado y suelo radiante en Madrid. ✓ Electricistas y fontaneros certificados ✓ Presupuesto gratis ✓ Garantía total.",
-    keywords: "instalaciones eléctricas Madrid, fontanería Madrid, aire acondicionado, suelo radiante, cuadros eléctricos, calefacción"
+    title: "Instalaciones Eléctricas y Fontanería en Madrid | THIASA",
+    description: "Instalaciones eléctricas y fontanería en Madrid para reformas: cuadros, puntos eléctricos, tuberías, saneamiento, climatización y suelo radiante.",
+    keywords: "instalaciones eléctricas Madrid, fontanería Madrid, aire acondicionado, suelo radiante, cuadros eléctricos, calefacción",
+    alternates: {
+        canonical: "https://www.thiasa.es/servicios/instalaciones-electricas-fontaneria",
+    },
+    openGraph: {
+        title: "Instalaciones Eléctricas y Fontanería en Madrid | THIASA",
+        description: "Instalaciones eléctricas y fontanería en Madrid coordinadas dentro de proyectos de reforma.",
+        type: "website",
+        locale: "es_ES",
+        url: "https://www.thiasa.es/servicios/instalaciones-electricas-fontaneria",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Instalaciones Eléctricas y Fontanería en Madrid | THIASA",
+        description: "Electricidad, fontanería, climatización y suelo radiante para proyectos de reforma en Madrid.",
+    },
 };
+
+const serviceFaqs: ServiceFaq[] = [
+    {
+        question: "¿Se pueden coordinar electricidad y fontanería en la misma reforma?",
+        answer: "Sí. Coordinar rozas, recorridos, puntos eléctricos, tomas de agua y saneamiento evita duplicar trabajos y permite cerrar paredes y acabados en el orden correcto.",
+    },
+    {
+        question: "¿Cuándo conviene renovar una instalación completa?",
+        answer: "Depende de su antigüedad, estado, capacidad y del alcance de la reforma. Antes de cubrir la instalación con acabados nuevos conviene revisar si responde a las necesidades previstas.",
+    },
+    {
+        question: "¿Qué debe indicar el presupuesto de instalaciones?",
+        answer: "Debe detallar puntos, metros o unidades, mecanismos, materiales previstos, trabajos auxiliares, pruebas, documentación aplicable y cualquier partida excluida.",
+    },
+    {
+        question: "¿Las instalaciones pueden afectar al permiso de obra?",
+        answer: "Sí, según su alcance y si afectan a elementos comunes, distribución o instalaciones generales. El procedimiento debe comprobarse antes de comenzar la actuación.",
+    },
+];
+
+const relatedGuides = [
+    {
+        href: "/blog/cuanto-cuesta-reforma-integral-madrid",
+        title: "Partidas de una reforma integral",
+        description: "Cómo influyen electricidad, fontanería y climatización en el presupuesto global.",
+    },
+    {
+        href: "/blog/licencia-obra-menor-madrid",
+        title: "Licencias y declaración responsable",
+        description: "Qué revisar si la obra modifica distribución, instalaciones o elementos comunes.",
+    },
+    {
+        href: "/blog/contratar-empresa-reformas-madrid",
+        title: "Cómo comparar presupuestos",
+        description: "Alcance, documentación y exclusiones que conviene comprobar antes de contratar.",
+    },
+];
 
 export default function InstalacionesElectricasFontaneria() {
     const services = [
-        "Instalaciones eléctricas completas y certificadas",
+        "Instalaciones eléctricas completas y renovación de cuadros",
         "Cuadros eléctricos y automatizaciones",
         "Fontanería general y reparaciones",
         "Instalación de aire acondicionado",
@@ -26,21 +79,13 @@ export default function InstalacionesElectricasFontaneria() {
         "@type": "Service",
         name: "Instalaciones Eléctricas y Fontanería en Madrid",
         provider: {
-            "@type": "LocalBusiness",
-            name: "THIASA",
-            telephone: "+34604154746",
-            email: "info@thiasa.es",
-            address: {
-                "@type": "PostalAddress",
-                addressLocality: "Madrid",
-                addressCountry: "ES",
-            },
+            "@id": "https://www.thiasa.es/#organization",
         },
         areaServed: {
             "@type": "City",
             name: "Madrid",
         },
-        description: "Electricistas y fontaneros certificados en Madrid. Instalaciones eléctricas, fontanería, aire acondicionado y suelo radiante.",
+        description: "Instalaciones eléctricas, fontanería, climatización y suelo radiante para proyectos de reforma en Madrid.",
     };
 
     const breadcrumbSchema = {
@@ -62,6 +107,19 @@ export default function InstalacionesElectricasFontaneria() {
         ],
     };
 
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: serviceFaqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+            },
+        })),
+    };
+
     return (
         <>
             <script
@@ -71,6 +129,10 @@ export default function InstalacionesElectricasFontaneria() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
             <main>
             <section className="relative bg-[#1D1D1D] min-h-[550px] flex items-center pt-32 pb-20 overflow-hidden">
@@ -87,11 +149,11 @@ export default function InstalacionesElectricasFontaneria() {
 
                     <div className="max-w-4xl">
                         <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
-                            Instalaciones Eléctricas y Fontanería
+                            Instalaciones Eléctricas y Fontanería en Madrid
                         </h1>
 
                         <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl">
-                            Electricistas y fontaneros certificados en Madrid. Instalaciones seguras y garantizadas.
+                            Coordinamos electricidad, fontanería, climatización y trabajos auxiliares dentro de tu reforma.
                         </p>
 
                         <a
@@ -102,7 +164,7 @@ export default function InstalacionesElectricasFontaneria() {
                             className="inline-flex items-center px-8 py-4 bg-accent hover:bg-primary text-white text-base font-bold rounded-xl transition-all shadow-lg shadow-accent/50 hover:shadow-xl hover:scale-105"
                         >
                             <Phone className="w-5 h-5 mr-2" />
-                            Presupuesto Gratis en 24h
+                            Solicitar presupuesto
                         </a>
                     </div>
                 </div>
@@ -135,7 +197,7 @@ export default function InstalacionesElectricasFontaneria() {
                             Por qué confiar en THIASA
                         </h2>
                         <p className="text-lg text-white/70 max-w-2xl mx-auto">
-                            Profesionales certificados con más de 15 años de experiencia en instalaciones
+                            Planificación de recorridos, puntos, materiales y coordinación con el resto de la obra
                         </p>
                     </div>
 
@@ -143,14 +205,14 @@ export default function InstalacionesElectricasFontaneria() {
                         {/* Badge 1 */}
                         <div className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-accent/50 transition-all hover:shadow-2xl hover:shadow-accent/20">
                             <div className="absolute -top-4 left-8 bg-accent text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg shadow-accent/50">
-                                ✓ Certificado
+                                ✓ Cualificación
                             </div>
                             <div className="mt-4">
                                 <h3 className="text-xl font-bold text-white mb-2">
                                     Técnicos cualificados y con experiencia
                                 </h3>
                                 <p className="text-white/60">
-                                    Electricistas y fontaneros con certificación oficial y formación continua
+                                    Profesionales cualificados según el tipo y alcance de la instalación
                                 </p>
                             </div>
                         </div>
@@ -165,7 +227,7 @@ export default function InstalacionesElectricasFontaneria() {
                                     Cumplimiento de normativa y seguridad
                                 </h3>
                                 <p className="text-white/60">
-                                    Todas nuestras instalaciones cumplen la normativa vigente y pasan inspección
+                                    Definición de materiales, protecciones y documentación aplicable a cada trabajo
                                 </p>
                             </div>
                         </div>
@@ -192,10 +254,10 @@ export default function InstalacionesElectricasFontaneria() {
                             </div>
                             <div className="mt-4">
                                 <h3 className="text-xl font-bold text-white mb-2">
-                                    Garantía en todos los trabajos
+                                    Alcance y condiciones por escrito
                                 </h3>
                                 <p className="text-white/60">
-                                    Garantía por escrito en todas nuestras instalaciones y reparaciones
+                                    Presupuesto con partidas incluidas, materiales previstos y posibles exclusiones
                                 </p>
                             </div>
                         </div>
@@ -207,10 +269,10 @@ export default function InstalacionesElectricasFontaneria() {
                             </div>
                             <div className="mt-4">
                                 <h3 className="text-xl font-bold text-white mb-2">
-                                    Presupuesto claro y sin sorpresas
+                                    Presupuesto claro por partidas
                                 </h3>
                                 <p className="text-white/60">
-                                    Presupuesto detallado antes de empezar. El precio final es el acordado
+                                    Definición previa de unidades, materiales, trabajos auxiliares y exclusiones
                                 </p>
                             </div>
                         </div>
@@ -218,20 +280,27 @@ export default function InstalacionesElectricasFontaneria() {
                         {/* Badge 6 - Extra visual importance */}
                         <div className="group relative bg-gradient-to-br from-accent/20 to-primary/20 backdrop-blur-sm p-8 rounded-2xl border-2 border-accent hover:border-accent hover:shadow-2xl hover:shadow-accent/30 transition-all">
                             <div className="absolute -top-4 left-8 bg-gradient-to-r from-accent to-primary text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg shadow-accent/50">
-                                ★ Premium
+                                ★ Coordinación
                             </div>
                             <div className="mt-4">
                                 <h3 className="text-xl font-bold text-white mb-2">
-                                    +15 años de experiencia
+                                    Coordinación de principio a fin
                                 </h3>
                                 <p className="text-white/80">
-                                    Miles de instalaciones realizadas con clientes 100% satisfechos
+                                    Electricidad y fontanería integradas con albañilería, carpintería, pintura y acabados
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+
+            <ServiceSeoSection
+                title="Dudas sobre instalaciones en una reforma"
+                description="Respuestas para definir el alcance técnico y comparar presupuestos de electricidad y fontanería en Madrid."
+                faqs={serviceFaqs}
+                guides={relatedGuides}
+            />
 
             {/* Enhanced CTA Section */}
             <section className="relative py-24 bg-gradient-to-br from-slate-900 via-[#0D1117] to-slate-900 overflow-hidden">
@@ -246,7 +315,7 @@ export default function InstalacionesElectricasFontaneria() {
                     <div className="text-center">
                         <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/20 text-accent font-bold rounded-full text-sm uppercase tracking-wide mb-6 border border-accent/30">
                             <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse"></span>
-                            Disponibles Ahora
+                            Consulta directa
                         </div>
 
                         <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
@@ -254,7 +323,7 @@ export default function InstalacionesElectricasFontaneria() {
                         </h2>
 
                         <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto">
-                            Presupuesto sin compromiso en 24 horas. Profesionales certificados a tu servicio.
+                            Indica el tipo de inmueble, los trabajos previstos y si la instalación forma parte de una reforma mayor.
                         </p>
 
                         {/* CTA Buttons */}
@@ -283,7 +352,7 @@ export default function InstalacionesElectricasFontaneria() {
                         {/* Trust Badge */}
                         <div className="mt-8 inline-flex items-center gap-2 text-white/50 text-sm">
                             <CheckCircle2 className="w-5 h-5 text-accent" />
-                            <span>Sin compromiso • Presupuesto gratuito • Respuesta inmediata</span>
+                            <span>Sin compromiso • Presupuesto detallado • Contacto directo</span>
                         </div>
                     </div>
                 </div>

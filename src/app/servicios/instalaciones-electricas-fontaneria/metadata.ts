@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Instalaciones Eléctricas y Fontanería Madrid | THIASA - Certificadas",
-    description: "Electricistas y fontaneros profesionales en Madrid. Instalaciones eléctricas certificadas, fontanería, aire acondicionado, suelo radiante. ✓ Urgencias ✓ Garantía ✓ Presupuesto gratis.",
-    keywords: "instalaciones eléctricas Madrid, fontaner ía Madrid, electricista certificado, aire acondicionado, suelo radiante, cuadros eléctricos, calefacción, fontanero urgencias",
+    title: "Instalaciones Eléctricas y Fontanería en Madrid | THIASA",
+    description: "Instalaciones eléctricas y fontanería en Madrid para reformas: cuadros, puntos eléctricos, tuberías, saneamiento, climatización y suelo radiante.",
+    keywords: "instalaciones eléctricas Madrid, fontanería Madrid, aire acondicionado, suelo radiante, cuadros eléctricos, calefacción",
     openGraph: {
         title: "Instalaciones Eléctricas y Fontanería Madrid - THIASA",
-        description: "Profesionales certificados en instalaciones eléctricas y fontanería. Presupuesto sin compromiso",
+        description: "Electricidad, fontanería, climatización y suelo radiante para proyectos de reforma en Madrid.",
         type: "website",
         locale: "es_ES",
     }

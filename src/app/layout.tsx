@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.thiasa.es/",
   },
-  title: "Reformas Integrales en Madrid | THIASA",
-  description: "Empresa de reformas integrales en Madrid. Especialistas en baños, cocinas, instalaciones eléctricas, fontanería y carpintería. Presupuesto gratis en 24h.",
+  title: "THIASA | Empresa de Reformas Integrales en Madrid",
+  description: "THIASA realiza reformas integrales en Madrid: viviendas, baños, cocinas, instalaciones eléctricas, fontanería, carpintería y acabados.",
   keywords: "reformas integrales Madrid, reforma de baños, reforma de cocinas, instalaciones eléctricas, fontanería Madrid, suelo radiante, carpintería madera, ventanas aluminio PVC, aire acondicionado, pladur, pintura, albañilería",
   authors: [{ name: "THIASA - Reformas Integrales" }],
   creator: "THIASA",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Reformas Integrales en Madrid | THIASA",
+    title: "THIASA | Empresa de Reformas Integrales en Madrid",
     description: "Reformas de viviendas, baños y cocinas en Madrid. Instalaciones, carpintería y acabados con presupuesto sin compromiso.",
     type: "website",
     locale: "es_ES",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Reformas Integrales en Madrid | THIASA",
+    title: "THIASA | Empresa de Reformas Integrales en Madrid",
     description: "Reformas de viviendas, baños y cocinas en Madrid. Instalaciones, carpintería y acabados con presupuesto sin compromiso.",
     images: ["/og-image.jpg"],
   },
@@ -149,6 +149,19 @@ export default function RootLayout({
     } catch (e) {}
   `;
 
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.thiasa.es/#website",
+    url: "https://www.thiasa.es/",
+    name: "THIASA",
+    alternateName: "THIASA Reformas",
+    publisher: {
+      "@id": "https://www.thiasa.es/#organization",
+    },
+    inLanguage: "es-ES",
+  };
+
   return (
     <html lang="es" className="scroll-smooth scroll-pt-28">
       <body
@@ -158,6 +171,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
         <noscript>
           <style>{`[data-reveal]{opacity:1!important;transform:none!important;}`}</style>
