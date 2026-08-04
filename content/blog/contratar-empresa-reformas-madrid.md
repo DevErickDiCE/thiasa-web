@@ -85,7 +85,7 @@ Para saber si las cifras que te ofrecen están dentro de mercado, puedes apoyart
 
 Con el presupuesto aceptado, la relación debe formalizarse **por escrito**. El contrato debería incorporar el presupuesto como anexo, el calendario de obra, la forma de pago y la garantía de los trabajos.
 
-En los pagos, lo razonable es un esquema **por hitos**: una señal inicial moderada, pagos ligados a fases completadas y un último pago tras el repaso final. Este esquema protege a ambas partes: la empresa financia su trabajo y el cliente conserva capacidad de reacción hasta el final.
+En los pagos, lo razonable es un esquema **por hitos**: una señal inicial moderada, pagos ligados a fases completadas y un último pago tras el repaso final. Este esquema protege a ambas partes: la empresa financia su trabajo y el cliente conserva capacidad de reacción hasta el final. Para fijar esos hitos con criterio, revisa los [plazos reales de una reforma de vivienda en Madrid](/blog/plazos-reforma-vivienda-madrid) fase por fase.
 
 Exige siempre **factura** y pide la **garantía por escrito**, con su alcance y duración. Y si la actuación requiere trámites municipales, aclara quién los gestiona; nuestra guía sobre la [licencia de obra menor en Madrid](/blog/licencia-obra-menor-madrid) te ayudará a situarte.
 

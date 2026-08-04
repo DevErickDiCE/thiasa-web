@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowRight, CalendarDays, Clock3, MessageCircle } from "lucide-react";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-import { formatDate, getAllPosts } from "@/lib/posts";
+import { categoryLabel, formatDate, getAllPosts } from "@/lib/posts";
 
 export const metadata: Metadata = {
   title: "Blog de reformas en Madrid | Guías THIASA",
@@ -20,17 +20,6 @@ export const metadata: Metadata = {
     images: [{ url: "/images/blog/reforma-integral-madrid.jpg", width: 1536, height: 1024 }],
   },
 };
-
-const categoryNames: Record<string, string> = {
-  presupuesto: "Precios y presupuestos",
-  educativo: "Guías y trámites",
-  comercial: "Servicios y proceso",
-  comparativo: "Comparativas y dudas",
-};
-
-function categoryLabel(tipo?: string) {
-  return categoryNames[tipo ?? ""] ?? "Reformas";
-}
 
 export default async function BlogPage() {
   const posts = await getAllPosts();

@@ -114,7 +114,7 @@ Estas opciones se definen mejor sobre plano y medidas reales. En el servicio de 
 
 ### ¿Abrir la cocina encarece la reforma?
 
-Añade demolición, posibles ajustes de instalaciones y la unificación de suelos y techos, así que el alcance es mayor que en una reforma de cocina cerrada equivalente. Si la apertura forma parte de una obra mayor, la [guía de precios de una reforma integral en Madrid](/blog/cuanto-cuesta-reforma-integral-madrid) te ayudará a situar el orden de magnitud.
+Añade demolición, posibles ajustes de instalaciones y la unificación de suelos y techos, así que el alcance es mayor que en una reforma de cocina cerrada equivalente. Para ver partida a partida en qué se traduce, repasa [qué incluye una reforma de cocina en Madrid](/blog/que-incluye-reforma-cocina-madrid). Si la apertura forma parte de una obra mayor, la [guía de precios de una reforma integral en Madrid](/blog/cuanto-cuesta-reforma-integral-madrid) te ayudará a situar el orden de magnitud.
 
 ### ¿Puedo abrir cualquier cocina?
 

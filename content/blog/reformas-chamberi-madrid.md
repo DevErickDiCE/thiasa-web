@@ -104,7 +104,7 @@ Todo esto tiene un reflejo directo en el calendario: merece la pena revisar cóm
 - **Apertura de la cocina al salón**, muy demandada en distribuciones de pasillo con cocina cerrada al fondo.
 - **Actualización de baños**, sustituyendo bañeras por platos de ducha enrasados y ganando espacio de almacenaje.
 - **Sustitución de carpintería exterior** para mejorar el aislamiento térmico y acústico, dentro de las condiciones del edificio.
-- **Rehabilitación de suelos de madera** mediante acuchillado y barnizado en lugar de sustitución.
+- **Rehabilitación de suelos de madera** mediante acuchillado y barnizado en lugar de sustitución. Si la tarima no es recuperable, la comparativa entre [suelo laminado y parquet](/blog/suelo-laminado-parquet-madrid) ayuda a elegir el reemplazo.
 - **Adecuación de viviendas para alquiler**, con acabados duraderos y bajo mantenimiento.
 
 ---

@@ -88,7 +88,7 @@ Para tomar la decisión adecuada, es básico distinguir ambos productos:
 ## Criterios de elección según la estancia y el uso
 
 1. **Viviendas con niños o mascotas:** El **suelo laminado AC5** es imbatible frente a rayaduras de garras o caídas de juguetes duros.
-2. **Hogares donde prima el confort noble:** El **parquet multicapa de roble** aporta distinción y revaloriza de forma notable inmuebles de corte clásico en distritos como Salamanca, Retiro o Chamberí.
+2. **Hogares donde prima el confort noble:** El **parquet multicapa de roble** aporta distinción y revaloriza de forma notable inmuebles de corte clásico en distritos como Salamanca, Retiro o Chamberí. En este último, con mucha tarima original recuperable, conviene valorarlo antes de decidir: lo detallamos en la guía de [reformas en Chamberí](/blog/reformas-chamberi-madrid).
 3. **Reformas integrales con presupuesto optimizado:** Una opción muy inteligente consiste en instalar pavimento porcelánico en zonas de agua (baño y cocina) y reservar un suelo laminado de gama alta para salón y dormitorios.
 4. **Niveles de solera y preparación:** Antes de colocar cualquier pavimento, la superficie debe estar perfectamente nivelada mediante pasta niveladora. Si necesitas coordinar este tipo de partidas en tu reforma, te recomendamos revisar nuestro contenido sobre [cómo contratar una empresa de reformas en Madrid](/blog/contratar-empresa-reformas-madrid) con garantías.
 

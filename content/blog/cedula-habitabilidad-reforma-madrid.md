@@ -79,6 +79,8 @@ Si vas a realizar una reforma que requiere la regularización de la habitabilida
 4. **Ejecución de la obra según proyecto:** Respetando las especificaciones de aislamiento, ventilación e instalaciones.
 5. **Certificado de fin de obra y primera ocupación:** Emisión de los certificados finales para dar de alta los suministros de agua, luz y gas.
 
+Estos trámites conviene encajarlos en el calendario desde el principio, porque condicionan tanto el inicio como la entrega. Puedes ver cómo se reparten en el tiempo en nuestra guía de [plazos de una reforma de vivienda en Madrid](/blog/plazos-reforma-vivienda-madrid).
+
 ---
 
 ## Preguntas frecuentes

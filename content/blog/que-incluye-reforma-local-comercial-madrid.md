@@ -120,7 +120,7 @@ Esta guía es orientativa y no sustituye al criterio municipal. Confirma siempre
 
 ## Plazos orientativos por fase
 
-Los siguientes tiempos son orientativos, para un local de tamaño medio y sin intervención en estructura ni en fachada protegida. El plazo real depende de la superficie, la actividad y los trámites.
+Los siguientes tiempos son orientativos, para un local de tamaño medio y sin intervención en estructura ni en fachada protegida. El plazo real depende de la superficie, la actividad y los trámites. Si además vas a reformar una vivienda, la referencia equivalente está en la guía de [plazos de una reforma de vivienda en Madrid](/blog/plazos-reforma-vivienda-madrid).
 
 | Fase | Duración orientativa | Observaciones |
 |---|---|---|

@@ -105,7 +105,7 @@ No durante la mayor parte de la obra. Si la vivienda tiene un segundo baño, la 
 
 ### ¿Es obligatorio hacerlo todo de una vez?
 
-No, pero fraccionar una reforma completa suele salir menos rentable: cada intervención repite protecciones, desplazamientos y remates. Renovar instalaciones con el baño abierto evita volver a picar en pocos años.
+No, pero fraccionar una reforma completa suele salir menos rentable: cada intervención repite protecciones, desplazamientos y remates. Renovar instalaciones con el baño abierto evita volver a picar en pocos años. Si estás valorando hacer también la cocina, compara antes [qué incluye una reforma de cocina en Madrid](/blog/que-incluye-reforma-cocina-madrid) para agrupar las dos obras.
 
 ### ¿Cuánto cuesta una reforma de baño completa?
 

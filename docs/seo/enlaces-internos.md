@@ -19,6 +19,28 @@
 
 ---
 
+## Enlazado automático al final de cada artículo
+
+Además de los enlaces contextuales de la tabla, la plantilla del artículo
+(`src/app/blog/[slug]/page.tsx`) muestra un bloque **"Guías relacionadas"** con
+3 artículos, generado por `getRelatedPosts()` en `src/lib/posts.ts`.
+
+Prioridad de selección:
+
+1. Artículos del mismo `cluster`.
+2. Artículos con el mismo `servicio_asociado` (mismo pilar).
+3. Artículos listados en `enlaces_internos` del frontmatter (decisión editorial del calendario).
+4. Los más recientes, para que ningún artículo se quede sin salidas.
+
+Los enlaces editoriales van en tercer lugar a propósito: ya aparecen dentro del
+texto, así que el bloque final ofrece destinos nuevos en vez de repetirlos.
+
+Esto garantiza que todo artículo publicado reciba y emita enlaces internos sin
+trabajo manual. **No sustituye** a los enlaces contextuales dentro del texto:
+esos siguen siendo obligatorios según la tabla siguiente.
+
+---
+
 ## Tabla de conexiones
 
 | Artículo (slug) | Cluster | Página comercial (pilar) | Páginas secundarias recomendadas | Anchor text principal | Anchor text secundario | CTA |

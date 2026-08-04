@@ -5,7 +5,8 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, CalendarDays, ChevronRight, Clock3, MessageCircle } from "lucide-react";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-import { formatDate, getAllPosts, getPostBySlug } from "@/lib/posts";
+import { RelatedPosts } from "@/components/related-posts";
+import { categoryLabel, formatDate, getAllPosts, getPostBySlug } from "@/lib/posts";
 import styles from "../blog.module.css";
 
 type BlogPostPageProps = { params: Promise<{ slug: string }> };
@@ -49,13 +50,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const post = await getPostBySlug(slug);
   if (!post) notFound();
 
-  const categoryNames: Record<string, string> = {
-    presupuesto: "Precios y presupuestos",
-    educativo: "Guías y trámites",
-    comercial: "Servicios y proceso",
-    comparativo: "Comparativas y dudas",
-  };
-  const category = categoryNames[post.frontmatter.tipo_articulo ?? ""] ?? "Reformas";
+  const category = categoryLabel(post.frontmatter.tipo_articulo);
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -189,6 +184,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </Link>
           </div>
         </article>
+
+        <RelatedPosts post={post} />
       </main>
       <Footer />
     </>

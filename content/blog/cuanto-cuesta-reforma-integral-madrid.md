@@ -76,7 +76,7 @@ En viviendas antiguas puede ser recomendable renovar las [instalaciones eléctri
 
 ### Cocina, baños y acabados
 
-Mobiliario, encimeras, sanitarios, grifería, pavimentos, revestimientos, puertas, armarios y pintura pueden modificar de forma importante el total. Dentro de una misma estética existen diferencias considerables de precio por formato, resistencia, marca, fabricación a medida y dificultad de montaje.
+Mobiliario, encimeras, sanitarios, grifería, pavimentos, revestimientos, puertas, armarios y pintura pueden modificar de forma importante el total. Dentro de una misma estética existen diferencias considerables de precio por formato, resistencia, marca, fabricación a medida y dificultad de montaje. En el pavimento, por ejemplo, la diferencia entre [suelo laminado y parquet](/blog/suelo-laminado-parquet-madrid) se nota tanto en el material como en la mano de obra.
 
 ### Proyecto, licencias y coordinación
 

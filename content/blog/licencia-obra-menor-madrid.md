@@ -28,6 +28,8 @@ faqs:
     answer: "No. La autorización de la comunidad, cuando sea necesaria, no sustituye el trámite urbanístico; tampoco ocurre a la inversa."
   - question: "¿Quién puede ayudarme a identificar el procedimiento?"
     answer: "Puedes consultar los canales de información urbanística del Ayuntamiento de Madrid o acudir a un arquitecto, arquitecto técnico u otro profesional competente según la actuación."
+  - question: "¿Sirve el mismo trámite si la reforma es en un local comercial?"
+    answer: "No exactamente. Además del título habilitante de la obra, la actividad que se va a ejercer tiene su propio procedimiento, y ambos deben coordinarse antes de demoler."
 ---
 
 En Madrid, la llamada **licencia de obra menor** no es un trámite único. Según la actuación, puede corresponder una **declaración responsable urbanística**, una **licencia urbanística** o ninguno de esos medios de intervención. Las obras incluidas en el anexo I de la OLDRUAM requieren licencia; las demás deben clasificarse según su alcance y el inmueble.
@@ -65,7 +67,7 @@ Antes de reformar, describe exactamente la obra. Decir “renovar el piso” no 
 
 ### Redistribución interior
 
-Mover o demoler tabiques exige comprobar si son elementos estructurales y si la nueva distribución cumple las condiciones aplicables de habitabilidad, evacuación, ventilación y accesibilidad. Una [reforma integral en Madrid](/servicios/reformas-integrales) debe planificarse antes de iniciar demoliciones.
+Mover o demoler tabiques exige comprobar si son elementos estructurales y si la nueva distribución cumple las condiciones aplicables de habitabilidad, evacuación, ventilación y accesibilidad. Una [reforma integral en Madrid](/servicios/reformas-integrales) debe planificarse antes de iniciar demoliciones. Cuando la redistribución afecta a las condiciones mínimas de la vivienda, conviene revisar además qué exige la [cédula de habitabilidad en una reforma en Madrid](/blog/cedula-habitabilidad-reforma-madrid).
 
 ### Estructura, fachada o elementos comunes
 
@@ -147,6 +149,10 @@ No. La autorización de la comunidad, cuando sea necesaria, no sustituye el trá
 ### ¿Quién puede ayudarme a identificar el procedimiento?
 
 Puedes consultar los canales de información urbanística del Ayuntamiento de Madrid o acudir a un arquitecto, arquitecto técnico u otro profesional competente según la actuación.
+
+### ¿Sirve el mismo trámite si la reforma es en un local comercial?
+
+No exactamente. Además del título habilitante de la obra, la actividad que se va a ejercer tiene su propio procedimiento, y ambos deben coordinarse antes de demoler. Lo detallamos en la guía sobre [qué incluye una reforma de local comercial en Madrid](/blog/que-incluye-reforma-local-comercial-madrid).
 
 ## Planifica la reforma antes de empezar
 

@@ -102,7 +102,7 @@ Más allá de la propia ejecución, hay condicionantes locales que conviene anti
 
 ### El trámite municipal
 
-Presentar el título habilitante que corresponde y hacerlo con la documentación completa es determinante. Una memoria genérica o incompleta genera requerimientos y semanas de espera. Antes de fijar fecha de inicio, revisa qué procedimiento se aplica a tu caso en nuestra guía sobre la [licencia de obra menor en Madrid](/blog/licencia-obra-menor-madrid) y confírmalo con el Ayuntamiento o con un técnico competente.
+Presentar el título habilitante que corresponde y hacerlo con la documentación completa es determinante. Una memoria genérica o incompleta genera requerimientos y semanas de espera. Antes de fijar fecha de inicio, revisa qué procedimiento se aplica a tu caso en nuestra guía sobre la [licencia de obra menor en Madrid](/blog/licencia-obra-menor-madrid) y confírmalo con el Ayuntamiento o con un técnico competente. Si la obra cambia la distribución o el uso del inmueble, suma también los tiempos de la [cédula de habitabilidad en Madrid](/blog/cedula-habitabilidad-reforma-madrid).
 
 ### La comunidad de propietarios
 
@@ -110,7 +110,7 @@ Si la obra afecta a elementos comunes (bajantes, patios, fachada) puede requerir
 
 ### La logística en el centro de la ciudad
 
-Calles estrechas, zonas de bajas emisiones, aparcamiento complicado, portales sin espacio de acopio y permisos de ocupación de vía pública para contenedores o andamios. En distritos centrales, la logística puede pesar tanto como la obra.
+Calles estrechas, zonas de bajas emisiones, aparcamiento complicado, portales sin espacio de acopio y permisos de ocupación de vía pública para contenedores o andamios. En distritos centrales, la logística puede pesar tanto como la obra: lo vemos con detalle en las [reformas en Chamberí](/blog/reformas-chamberi-madrid), donde el parque de fincas antiguas condiciona los accesos.
 
 ### Los plazos de fabricación
 

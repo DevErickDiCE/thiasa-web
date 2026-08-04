@@ -115,6 +115,53 @@ export async function getPostsByCluster(cluster: string): Promise<Post[]> {
     return posts.filter((post) => post.frontmatter.cluster === cluster);
 }
 
+const categoryNames: Record<string, string> = {
+    presupuesto: "Precios y presupuestos",
+    educativo: "Guías y trámites",
+    comercial: "Servicios y proceso",
+    comparativo: "Comparativas y dudas",
+    local: "Zonas de Madrid",
+};
+
+export function categoryLabel(tipo?: string): string {
+    return categoryNames[tipo ?? ""] ?? "Reformas";
+}
+
+/**
+ * Selecciona los artículos relacionados siguiendo la prioridad de
+ * `docs/seo/enlaces-internos.md`: primero el mismo cluster, después el mismo
+ * pilar de servicio, después los enlaces editoriales del calendario y, por
+ * último, lo más reciente para no dejar ningún artículo sin salida.
+ *
+ * El cluster va por delante de los enlaces editoriales a propósito: esos ya
+ * aparecen dentro del texto, y así el bloque final aporta destinos nuevos en
+ * lugar de repetir los mismos artículos.
+ */
+export async function getRelatedPosts(post: Post, limit = 3): Promise<Post[]> {
+    const editorialSlugs = new Set(
+        (Array.isArray(post.frontmatter.enlaces_internos) ? post.frontmatter.enlaces_internos : [])
+            .filter((link): link is string => typeof link === "string" && link.startsWith("/blog/"))
+            .map((link) => link.replace("/blog/", "")),
+    );
+
+    const priority = (candidate: Post): number => {
+        if (candidate.frontmatter.cluster === post.frontmatter.cluster) return 0;
+        if (candidate.frontmatter.servicio_asociado === post.frontmatter.servicio_asociado) return 1;
+        if (editorialSlugs.has(candidate.slug)) return 2;
+        return 3;
+    };
+
+    const posts = await getAllPosts();
+    return posts
+        .filter((candidate) => candidate.slug !== post.slug)
+        .sort(
+            (a, b) =>
+                priority(a) - priority(b) ||
+                (b.frontmatter.fecha ?? "").localeCompare(a.frontmatter.fecha ?? ""),
+        )
+        .slice(0, limit);
+}
+
 export function formatDate(dateString: string): string {
     const date = new Date(dateString);
     return date.toLocaleDateString("es-ES", {
