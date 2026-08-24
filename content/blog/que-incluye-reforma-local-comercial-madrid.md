@@ -15,7 +15,7 @@ servicio_asociado: "reformas-locales-comerciales"
 enlaces_internos:
   - "/servicios/reformas-locales-comerciales"
   - "/blog/licencia-obra-menor-madrid"
-  - "/blog/contratar-empresa-reformas-madrid"
+  - "/blog/reforma-restaurante-madrid"
 cta: "¿Reformar tu local? Solicita presupuesto comercial."
 faqs:
   - question: "¿Puedo empezar la obra antes de tener resuelto el trámite de actividad?"
@@ -66,6 +66,8 @@ Acometidas, red de agua fría y caliente, evacuación, y aseos adaptados cuando 
 ### Climatización y ventilación
 
 Equipos de aire acondicionado, conductos y rejillas, extracción forzada y, en actividades de restauración, salida de humos con recorrido y altura que deben resolverse antes de proyectar el resto del local: es uno de los puntos donde más proyectos se atascan.
+
+Si el uso previsto es de hostelería, consulta la guía específica sobre [reforma de restaurante en Madrid](/blog/reforma-restaurante-madrid), donde se coordinan viabilidad, cocina, instalaciones y trámites.
 
 ### Protección contra incendios y accesibilidad
 

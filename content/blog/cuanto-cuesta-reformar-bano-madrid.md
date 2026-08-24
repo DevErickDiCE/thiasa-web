@@ -18,7 +18,7 @@ servicio_asociado: "reformas-banos-cocinas"
 enlaces_internos:
   - "/servicios/reformas-banos-cocinas"
   - "/blog/cuanto-cuesta-reforma-integral-madrid"
-  - "/blog/licencia-obra-menor-madrid"
+  - "/blog/errores-reforma-bano-madrid"
 cta: "¿Quieres un presupuesto real para tu baño? Escríbenos por WhatsApp."
 imagen: "/images/blog/reforma-bano-madrid.jpg"
 imagen_alt: "Baño en proceso de reforma con azulejo terracota e impermeabilización visible"
@@ -119,6 +119,8 @@ La altura de griferías, posición de enchufes, sentido de apertura de la mampar
 - Reserva una cantidad para imprevistos, especialmente en viviendas antiguas.
 
 Reducir coste no debería significar ocultar una instalación deteriorada o prescindir de una solución necesaria contra la humedad. Es más útil ajustar elementos decorativos o mobiliario que ahorrar en trabajos que después quedan debajo de los acabados.
+
+Antes de cerrar el alcance, revisa también los [errores frecuentes en una reforma de baño](/blog/errores-reforma-bano-madrid): muchos sobrecostes nacen de una distribución sin comprobar, compras incompatibles o decisiones tomadas cuando la obra ya está en marcha.
 
 ## Cómo pedir un presupuesto comparable
 
