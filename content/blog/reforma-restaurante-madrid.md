@@ -12,6 +12,8 @@ fecha: "2026-08-24"
 autor: "THIASA"
 estado: "publicado"
 servicio_asociado: "reformas-locales-comerciales"
+imagen: "/images/blog/reforma-restaurante-madrid.jpg"
+imagen_alt: "Comedor de restaurante reformado en Madrid con banco corrido, lámparas colgantes y barra de madera al fondo"
 enlaces_internos:
   - "/servicios/reformas-locales-comerciales"
   - "/blog/que-incluye-reforma-local-comercial-madrid"

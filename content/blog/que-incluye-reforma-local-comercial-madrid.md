@@ -12,6 +12,8 @@ fecha: "2026-08-03"
 autor: "THIASA"
 estado: "publicado"
 servicio_asociado: "reformas-locales-comerciales"
+imagen: "/images/blog/que-incluye-reforma-local-comercial-madrid.jpg"
+imagen_alt: "Local comercial reformado en Madrid con suelo continuo, instalaciones vistas ordenadas y escaparate a la calle"
 enlaces_internos:
   - "/servicios/reformas-locales-comerciales"
   - "/blog/licencia-obra-menor-madrid"
