@@ -5,7 +5,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Empresa de Reformas Integrales en Madrid | THIASA",
+  title: "Quiénes somos | THIASA - Reformas en Madrid",
   description:
     "Conoce THIASA, empresa de reformas integrales en Madrid. Viviendas, baños, cocinas, instalaciones, carpintería y acabados con trato directo.",
   alternates: {

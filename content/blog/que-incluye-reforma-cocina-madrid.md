@@ -1,7 +1,7 @@
 ---
 id: "8"
 slug: "que-incluye-reforma-cocina-madrid"
-title: "Qué incluye una reforma de cocina en Madrid: partidas y fases del proyecto"
+title: "Qué incluye una reforma de cocina en Madrid: partidas"
 description: "Descubre qué incluye una reforma de cocina en Madrid: partidas principales, fases de la obra, qué suele quedar fuera y cómo planificar los costes."
 keyword_principal: "qué incluye una reforma de cocina en Madrid"
 keywords_secundarias:

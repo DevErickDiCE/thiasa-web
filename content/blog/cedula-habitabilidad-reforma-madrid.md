@@ -1,7 +1,7 @@
 ---
 id: "9"
 slug: "cedula-habitabilidad-reforma-madrid"
-title: "Cédula de habitabilidad y reformas en Madrid: qué debes saber"
+title: "Cédula de habitabilidad y reformas en Madrid"
 description: "Descubre qué es la cédula de habitabilidad en Madrid, si es obligatoria en reformas, qué requisitos técnicos se exigen y cómo tramitarla."
 keyword_principal: "cédula habitabilidad reforma Madrid"
 keywords_secundarias:

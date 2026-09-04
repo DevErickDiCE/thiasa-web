@@ -1,7 +1,7 @@
 ---
 id: "2"
 slug: "cocina-abierta-vs-cerrada"
-title: "Cocina abierta o cerrada: qué conviene más en tu reforma en Madrid"
+title: "Cocina abierta o cerrada: qué conviene en tu reforma"
 description: "Comparamos cocina abierta y cerrada para tu reforma en Madrid: ventajas, inconvenientes, tabla comparativa y claves para decidir según tu vivienda."
 keyword_principal: "cocina abierta vs cerrada"
 keywords_secundarias:

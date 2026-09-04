@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata = {
+    robots: { index: false, follow: true },
     title: "Aviso Legal | THIASA - Reformas Integrales Madrid",
     description: "Aviso legal de THIASA - Diseños e Interiorismo. Información legal sobre el uso de la web de reformas integrales en Madrid.",
 };

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata = {
+    robots: { index: false, follow: true },
     title: "Política de Cookies | THIASA - Reformas Integrales Madrid",
     description: "Política de cookies de THIASA. Información sobre el uso de cookies en nuestro sitio web y cómo gestionarlas.",
 };

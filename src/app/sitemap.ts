@@ -19,6 +19,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             priority: 1,
         },
         {
+            url: `${baseUrl}/contacto`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
             url: `${baseUrl}/sobre-nosotros`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
@@ -67,23 +73,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             priority: 0.8,
         },
         ...posts,
-        {
-            url: `${baseUrl}/aviso-legal`,
-            lastModified: new Date(),
-            changeFrequency: 'yearly',
-            priority: 0.3,
-        },
-        {
-            url: `${baseUrl}/politica-privacidad`,
-            lastModified: new Date(),
-            changeFrequency: 'yearly',
-            priority: 0.3,
-        },
-        {
-            url: `${baseUrl}/politica-cookies`,
-            lastModified: new Date(),
-            changeFrequency: 'yearly',
-            priority: 0.3,
-        },
+        // Las páginas legales llevan robots:{ index: false }. Listarlas aquí
+        // enviaría a Google la señal contraria.
     ]
 }

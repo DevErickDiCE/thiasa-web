@@ -1,7 +1,7 @@
 ---
 id: "16"
 slug: "plato-ducha-vs-banera"
-title: "Plato de ducha o bañera: qué elegir en tu reforma de baño en Madrid"
+title: "Plato de ducha o bañera: qué elegir en tu reforma"
 description: "Plato de ducha o bañera: compara acceso, espacio, uso diario y alcance de obra para elegir bien en tu reforma de baño en Madrid con criterios prácticos."
 keyword_principal: "plato de ducha vs bañera"
 keywords_secundarias:

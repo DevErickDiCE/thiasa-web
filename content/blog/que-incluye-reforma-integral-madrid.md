@@ -1,7 +1,7 @@
 ---
 id: "20"
 slug: "que-incluye-reforma-integral-madrid"
-title: "Qué incluye una reforma integral en Madrid: partidas, gremios y proceso"
+title: "Qué incluye una reforma integral en Madrid: partidas"
 description: "Descubre qué incluye una reforma integral en Madrid: partidas de obra, gremios que intervienen, orden del proceso, qué queda fuera y qué documentación exigir."
 keyword_principal: "qué incluye una reforma integral en Madrid"
 keywords_secundarias:

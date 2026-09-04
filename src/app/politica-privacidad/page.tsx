@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata = {
+    robots: { index: false, follow: true },
     title: "Política de Privacidad | THIASA - Reformas Integrales Madrid",
     description: "Política de privacidad y protección de datos de THIASA. Información sobre cómo tratamos tus datos personales conforme al RGPD.",
 };

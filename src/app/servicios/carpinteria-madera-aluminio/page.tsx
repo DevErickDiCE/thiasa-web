@@ -4,8 +4,8 @@ import Link from "next/link";
 import { Hammer, CheckCircle2, Phone, ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Carpintería de Madera y Aluminio Madrid | THIASA - Puertas, Ventanas y Suelos",
-    description: "Carpintería de madera y aluminio en Madrid. Suelos flotantes, puertas, armarios, ventanas y puertas correderas de PVC. ✓ Medidas exactas ✓ Instalación profesional.",
+    title: "Carpintería de Madera y Aluminio en Madrid | THIASA",
+    description: "Carpintería de madera y aluminio en Madrid. Suelos, puertas, armarios, ventanas y correderas de PVC. ✓ Medidas exactas ✓ Instalación profesional.",
     keywords: "carpintería madera Madrid, carpintería aluminio PVC, suelos flotantes, puertas, armarios medida, ventanas aluminio, puertas correderas"
 };
 

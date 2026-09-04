@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "seo:index": "node scripts/generate-seo-registry.mjs"
+    "seo:index": "node scripts/generate-seo-registry.mjs",
+    "seo:check": "node scripts/seo-check.mjs",
+    "postbuild": "node scripts/seo-check.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

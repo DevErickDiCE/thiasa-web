@@ -31,6 +31,7 @@ export function Navbar() {
             <Link href="/#projects" className="text-gray-300 hover:text-white transition-colors text-sm font-bold uppercase tracking-wider">Proyectos</Link>
             <Link href="/sobre-nosotros" className="text-gray-300 hover:text-white transition-colors text-sm font-bold uppercase tracking-wider">Empresa</Link>
             <Link href="/blog" className="text-gray-300 hover:text-white transition-colors text-sm font-bold uppercase tracking-wider">Blog</Link>
+            <Link href="/contacto" className="text-gray-300 hover:text-white transition-colors text-sm font-bold uppercase tracking-wider">Contacto</Link>
             <a
               href={whatsappUrl}
               target="_blank"
@@ -62,6 +63,7 @@ export function Navbar() {
             <Link href="/#projects" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-bold text-gray-300 hover:text-white hover:bg-white/5">Proyectos</Link>
             <Link href="/sobre-nosotros" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-bold text-gray-300 hover:text-white hover:bg-white/5">Empresa</Link>
             <Link href="/blog" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-bold text-gray-300 hover:text-white hover:bg-white/5">Blog</Link>
+            <Link href="/contacto" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-bold text-gray-300 hover:text-white hover:bg-white/5">Contacto</Link>
             <a
               href={whatsappUrl}
               target="_blank"

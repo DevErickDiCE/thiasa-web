@@ -1,7 +1,7 @@
 ---
 id: "10"
 slug: "suelo-laminado-parquet-madrid"
-title: "Suelo laminado o parquet: qué elegir en una reforma en Madrid"
+title: "Suelo laminado o parquet: qué elegir en tu reforma"
 description: "Comparamos suelo laminado y parquet para tu reforma en Madrid: durabilidad, resistencia a humedad, mantenimiento, precios y qué opción conviene a tu hogar."
 keyword_principal: "suelo laminado vs parquet Madrid"
 keywords_secundarias:

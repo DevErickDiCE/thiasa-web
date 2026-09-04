@@ -1,7 +1,7 @@
 ---
 id: "15"
 slug: "reformar-antes-vender-alquilar-madrid"
-title: "Reformar antes de vender o alquilar en Madrid: ¿merece la pena?"
+title: "Reformar antes de vender o alquilar en Madrid"
 description: "Cómo decidir si conviene reformar antes de vender o alquilar una vivienda en Madrid según su estado, público objetivo, presupuesto y plazo disponible."
 keyword_principal: "reformar antes de vender Madrid"
 keywords_secundarias:

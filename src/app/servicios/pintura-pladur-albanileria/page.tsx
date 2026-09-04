@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Paintbrush, CheckCircle2, Phone, ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Pintura, Pladur y Albañilería Madrid | THIASA - Acabados Profesionales",
+    title: "Pintura, Pladur y Albañilería en Madrid | THIASA",
     description: "Servicios de pintura, instalación de Pladur y trabajos de albañilería en Madrid. Alicatados, solados, tabiques. ✓ Presupuesto gratis ✓ Acabados impecables.",
     keywords: "pintura Madrid, pladur Madrid, albañilería, alicatados, solados, tabiques, pintura interior exterior, alisado paredes"
 };

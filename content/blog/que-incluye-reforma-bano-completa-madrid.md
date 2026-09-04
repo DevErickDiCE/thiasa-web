@@ -1,7 +1,7 @@
 ---
 id: "2"
 slug: "que-incluye-reforma-bano-completa-madrid"
-title: "Qué incluye una reforma de baño completa en Madrid: fases y partidas"
+title: "Qué incluye una reforma de baño completa en Madrid"
 description: "Descubre qué incluye una reforma de baño completa en Madrid: fases de la obra en orden, partidas habituales, qué suele quedar fuera y cómo planificarla."
 keyword_principal: "qué incluye una reforma de baño completa"
 keywords_secundarias:

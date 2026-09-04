@@ -1,7 +1,7 @@
 ---
 id: "11"
 slug: "que-incluye-reforma-local-comercial-madrid"
-title: "Qué incluye una reforma de local comercial en Madrid: fases, licencias y plazos"
+title: "Qué incluye una reforma de local comercial en Madrid"
 description: "Descubre qué incluye una reforma de local comercial en Madrid: partidas de obra, fases en orden, licencias de actividad y plazos orientativos del proyecto."
 keyword_principal: "qué incluye una reforma de local comercial"
 keywords_secundarias:

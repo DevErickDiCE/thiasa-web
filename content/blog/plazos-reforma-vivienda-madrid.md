@@ -1,7 +1,7 @@
 ---
 id: "12"
 slug: "plazos-reforma-vivienda-madrid"
-title: "Plazos de una reforma de vivienda en Madrid: fases y tiempos reales"
+title: "Plazos de una reforma de vivienda en Madrid: fases"
 description: "Consulta los plazos reales de una reforma de vivienda en Madrid: duración por fases, tiempos según el tipo de obra y qué factores retrasan el calendario."
 keyword_principal: "plazos reforma vivienda Madrid"
 keywords_secundarias:

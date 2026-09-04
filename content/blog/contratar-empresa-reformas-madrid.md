@@ -1,7 +1,7 @@
 ---
 id: "2"
 slug: "contratar-empresa-reformas-madrid"
-title: "Cómo contratar una empresa de reformas en Madrid sin arriesgarte"
+title: "Cómo contratar una empresa de reformas en Madrid"
 description: "Aprende a contratar una empresa de reformas en Madrid con garantías: qué comprobar antes, señales de alarma y qué debe incluir un presupuesto serio."
 keyword_principal: "contratar empresa reformas Madrid"
 keywords_secundarias:

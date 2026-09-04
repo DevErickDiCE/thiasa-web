@@ -1,7 +1,7 @@
 ---
 id: "14"
 slug: "cambiar-instalacion-electrica-piso-antiguo-madrid"
-title: "Cambiar la instalación eléctrica de un piso antiguo en Madrid"
+title: "Cambiar la instalación eléctrica de un piso antiguo"
 description: "Cuándo revisar o cambiar la instalación eléctrica de un piso antiguo en Madrid, qué incluye la obra, qué es el boletín y cómo solicitar un presupuesto."
 keyword_principal: "cambiar instalación eléctrica piso antiguo Madrid"
 keywords_secundarias:
