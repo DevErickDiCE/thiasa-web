@@ -18,8 +18,9 @@ const CONFIG = {
   buildDirs: ['.next/server/app', 'dist'],
   // Ficheros de sitemap posibles, relativos a la raíz del proyecto.
   sitemaps: ['.next/server/app/sitemap.xml.body', 'public/sitemap.xml', 'dist/sitemap-0.xml'],
-  // Rutas que nunca deben indexarse ni aparecer en el sitemap.
-  legales: /(aviso-legal|avisos-legales|politica|privacidad|cookies)/,
+  // Rutas legales, solo en el primer nivel: un artículo del blog puede
+  // hablar de privacidad o de cookies sin ser una página legal.
+  legales: /^\/(aviso-legal|avisos-legales|politica[a-z-]*|privacidad|cookies)\/?$/,
   maxTitulo: 60,
   maxDescripcion: 160,
 };
