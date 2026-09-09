@@ -15,6 +15,7 @@ servicio_asociado: "reformas-banos-cocinas"
 enlaces_internos:
   - "/servicios/reformas-banos-cocinas"
   - "/blog/cocina-abierta-vs-cerrada"
+  - "/blog/cocinas-integrales-medida-madrid"
   - "/blog/que-incluye-reforma-bano-completa-madrid"
 cta: "¿Quieres reformar la cocina? Pide presupuesto a THIASA."
 imagen: "/images/blog/reforma-cocina-madrid.jpg"
@@ -53,7 +54,7 @@ Revisión y adaptación del tubo de extracción de la campana extractora hasta l
 Preparación de superficies mediante raseo de mortero y posterior colocación de suelos (cerámica, porcelánico) y revestimientos de pared. En los diseños actuales es muy frecuente alicatar únicamente la zona entre muebles bajos y altos (salpicadero) y pintar al plástico lavable el resto de las paredes.
 
 ### 6. Mobiliario de cocina y carpintería
-Fabricación y montaje de módulos bajos, muebles altos, columnas para horno/microondas y despenseros. Incluye herrajes de extracción total, bisagras con freno y sistemas de apertura sin tirador (gola o push-pull).
+Fabricación y montaje de módulos bajos, muebles altos, columnas para horno/microondas y despenseros. Incluye herrajes de extracción total, bisagras con freno y sistemas de apertura sin tirador (gola o push-pull). Si el mueble se fabrica ajustado al hueco real en lugar de comprarse por módulos de catálogo, repasa qué implica una [cocina integral a medida en Madrid](/blog/cocinas-integrales-medida-madrid) en diseño, materiales y plazos.
 
 ### 7. Encimera y copete
 Suministro y colocación de la encimera (cuarzo compacto, porcelánico o granito) con mecanizado de huecos para fregadero de encastre o bajo encimera y placa de cocción.
