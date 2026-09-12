@@ -62,6 +62,11 @@ Nada de este apartado puede impedir que una pieza del flujo diario se publique.
   ordenanza, organismo) dentro del texto, junto a la afirmación.
 - La aportación propia sale solo de lo que THIASA ha confirmado: no inventar obras,
   fotos, plazos, precios ni testimonios.
+- Las obras reales publicadas viven en `src/lib/proyectos.ts` y se muestran en
+  `/proyectos` (una ficha por obra, con ancla `#slug`). Cuando un artículo trate un
+  tema que coincida con una de ellas (cocina con barra, baño con espejo LED, salón con
+  LED perimetral…), enlázala como ejemplo real: `/proyectos#cocina-barra-americana`.
+  Nunca cites una obra que no esté en ese fichero.
 
 ## Git
 

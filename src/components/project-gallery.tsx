@@ -3,20 +3,13 @@
 import { useState, useEffect } from "react";
 import type { CSSProperties } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { X, ChevronLeft, ChevronRight, MessageCircle, ArrowRight, ZoomIn } from "lucide-react";
 
-interface Project {
-    id: number;
-    title: string;
-    category: string;
-    image: string;
-    gallery: string[];
-    description: string;
-    details: string[];
-}
+import { PROYECTOS, type Proyecto } from "@/lib/proyectos";
 
 export function ProjectGallery() {
-    const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+    const [selectedProject, setSelectedProject] = useState<Proyecto | null>(null);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     // Prevent body scroll when modal is open
@@ -28,114 +21,10 @@ export function ProjectGallery() {
         }
     }, [selectedProject]);
 
-    const projects: Project[] = [
-        {
-            id: 1,
-            title: "Reforma Integral Salón LED",
-            category: "Reforma Integral",
-            image: "/project-living-3.jpg",
-            gallery: ["/project-living-3.jpg", "/project-living-4.jpg", "/project-living-5.jpg"],
-            description: "Reforma integral de salón con iluminación LED perimetral indirecta. Suelo de madera natural, muebles a medida y distribución óptima del espacio.",
-            details: [
-                "Falso techo con iluminación LED perimetral",
-                "Instalación suelo tarima roble",
-                "Muebles blancos a medida",
-                "Climatización y domótica"
-            ]
-        },
-        {
-            id: 2,
-            title: "Cocina con Barra Americana",
-            category: "Cocina",
-            image: "/project-kitchen-3.jpg",
-            gallery: ["/project-kitchen-3.jpg", "/project-kitchen-4.jpg", "/project-kitchen-5.jpg"],
-            description: "Cocina moderna con barra americana y pared de ladrillo visto original. Muebles en blanco mate, encimera de cuarzo y electrodomésticos integrados.",
-            details: [
-                "Pared de ladrillo caravista restaurada",
-                "Barra americana con iluminación colgante",
-                "Encimera cuarzo blanco nieves",
-                "Alicatado gris perla satinado"
-            ]
-        },
-        {
-            id: 3,
-            title: "Baño con Espejo LED",
-            category: "Baño",
-            image: "/project-bathroom-2.jpg",
-            gallery: ["/project-bathroom-2.jpg", "/project-bathroom-1.jpg"],
-            description: "Baño moderno con espejo circular retroiluminado LED. Suelo hidráulico geométrico, radiador toallero blanco y acabados premium.",
-            details: [
-                "Espejo LED circular de diseño",
-                "Suelo hidráulico decorativo",
-                "Radiador toallero moderno",
-                "Mueble suspendido con cajones"
-            ]
-        },
-        {
-            id: 4,
-            title: "Dormitorio con Papel Pintado",
-            category: "Reforma Integral",
-            image: "/project-bedroom-2.jpg",
-            gallery: ["/project-bedroom-2.jpg", "/project-bedroom-1.jpg"],
-            description: "Habitación elegante con papel pintado decorativo en cabecero. Lámpara de diseño, suelo de madera y ambiente acogedor.",
-            details: [
-                "Papel pintado vinílico de diseño",
-                "Lámpara colgante de diseño moderno",
-                "Suelo laminado tono natural",
-                "Molduras decorativas en techo"
-            ]
-        },
-        {
-            id: 5,
-            title: "Pasillo con Iluminación LED",
-            category: "Reforma Integral",
-            image: "/project-hallway-1.jpg",
-            gallery: ["/project-hallway-1.jpg"],
-            description: "Distribuidor empapelado y reforma completa con LED integrado en techo. Aprovechamiento máximo del espacio con muebles a medida.",
-            details: [
-                "Falso techo con ranuras LED",
-                "Papel decorativo en paredes",
-                "Suelo continuo de madera",
-                "Muebles TV suspendidos"
-            ]
-        },
-        {
-            id: 6,
-            title: "Cocina con Papel Decorativo",
-            category: "Cocina",
-            image: "/project-kitchen-4.jpg",
-            gallery: ["/project-kitchen-4.jpg", "/project-kitchen-5.jpg"],
-            description: "Diseño único con barra y papel pintado decorativo floral. Combinación de ladrillo visto con elementos modernos y funcionales.",
-            details: [
-                "Papel pintado vinílico lavable",
-                "Barra lacada blanco brillo",
-                "Pared ladrillo caravista",
-                "Lámparas colgantes de diseño"
-            ]
-        },
-        {
-            id: 7,
-            title: "Cocina Blanca y Madera",
-            category: "Cocina",
-            image: "/project-kitchen-new-1.jpg",
-            gallery: [
-                "/project-kitchen-new-1.jpg",
-                "/project-kitchen-new-2.jpg",
-                "/project-kitchen-new-3.jpg",
-                "/project-kitchen-new-4.jpg",
-                "/project-kitchen-new-5.jpg"
-            ],
-            description: "Reforma de cocina luminosa combinando mobiliario blanco con encimera y frente de madera. Contrastes elegantes con grifería y fregadero en negro mate.",
-            details: [
-                "Mobiliario blanco mate minimalista",
-                "Encimera y frontal acabado madera",
-                "Grifería y fregadero negro mate",
-                "Iluminación LED bajo muebles altos"
-            ]
-        }
-    ];
+    // Los datos viven en src/lib/proyectos.ts, compartidos con /proyectos.
+    const projects = PROYECTOS;
 
-    const openModal = (project: Project) => {
+    const openModal = (project: Proyecto) => {
         setSelectedProject(project);
         setCurrentImageIndex(0);
     };
@@ -211,6 +100,14 @@ export function ProjectGallery() {
                 </div>
 
 
+
+                {/* Ficha de cada obra, con texto indexable, en /proyectos */}
+                <div className="mt-10 text-center">
+                    <Link href="/proyectos" className="inline-flex items-center font-bold text-primary hover:text-accent transition-colors">
+                        Ver la ficha de cada proyecto
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
+                </div>
 
                 {/* Section CTA */}
                 <div className="mt-16 text-center">
