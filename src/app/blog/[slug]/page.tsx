@@ -61,8 +61,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     datePublished: post.frontmatter.fecha,
     dateModified: post.frontmatter.fecha_modificacion ?? post.frontmatter.fecha,
     mainEntityOfPage: `https://www.thiasa.es/blog/${post.slug}`,
-    author: { "@type": "Organization", name: "THIASA", url: "https://www.thiasa.es" },
-    publisher: { "@type": "Organization", name: "THIASA", url: "https://www.thiasa.es" },
+    // Firma el equipo: mismo @id que el LocalBusiness del layout, una sola entidad.
+    author: { "@type": "Organization", "@id": "https://www.thiasa.es/#organization", name: "THIASA", url: "https://www.thiasa.es" },
+    publisher: { "@type": "Organization", "@id": "https://www.thiasa.es/#organization", name: "THIASA", url: "https://www.thiasa.es" },
   };
 
   const breadcrumbJsonLd = {

@@ -52,6 +52,17 @@ No basta con que compile. Tras cambiar cualquier página:
 - Mantener el SEO existente: metadata, canonical, OpenGraph y JSON-LD
   (Article + BreadcrumbList) en las páginas del blog.
 
+### Firma y visibilidad en IA (decisión de Erick, 2026-09-12)
+
+Nada de este apartado puede impedir que una pieza del flujo diario se publique.
+
+- Firma siempre el equipo: `autor: "THIASA"`. No se atribuye ningún artículo ni ninguna
+  revisión a una persona con nombre.
+- Responde en las primeras frases de cada bloque y enlaza la fuente primaria (normativa,
+  ordenanza, organismo) dentro del texto, junto a la afirmación.
+- La aportación propia sale solo de lo que THIASA ha confirmado: no inventar obras,
+  fotos, plazos, precios ni testimonios.
+
 ## Git
 
 - Mensajes de commit en español, estilo convencional (`fix:`, `feat:`, `docs:`).
