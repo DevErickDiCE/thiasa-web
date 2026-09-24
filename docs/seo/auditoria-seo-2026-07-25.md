@@ -122,7 +122,7 @@ Siguiente evolución:
 - conectar/importar GSC;
 - conectar/importar GA4;
 - verificar GBP exacto;
-- registrar baseline en Airtable.
+- registrar baseline en `clients/thiasa/estado.json` (`snapshots`) de `potencia-seo`, con fuente y fecha (hasta el 23/09/2026 iba a Airtable).
 
 ### P1 — entidad + local
 
