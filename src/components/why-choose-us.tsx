@@ -56,11 +56,11 @@ export function WhyChooseUs() {
                     <div data-reveal="right" className="flex-1 order-1 lg:order-2 w-full">
                         <div className="relative h-[380px] lg:h-[540px] w-full rounded-2xl overflow-hidden shadow-2xl shadow-black/20">
                             <Image
-                                src="/consultation.png"
-                                alt="Reunión de obra con clientes"
+                                src="/images/compromiso-thiasa.jpg"
+                                alt="Encargado de obra explicando un plano de distribución a una pareja en una vivienda en reforma de Madrid, con muestras de suelo y una cinta métrica sobre la mesa"
                                 fill
                                 sizes="(max-width: 1023px) 100vw, 50vw"
-                                className="object-cover"
+                                className="object-cover object-[center_30%]"
                             />
                             <div className="absolute bottom-5 left-5 bg-white/95 backdrop-blur rounded-xl px-5 py-4 shadow-lg">
                                 <p className="text-2xl font-extrabold text-primary leading-none mb-1">THIASA</p>
