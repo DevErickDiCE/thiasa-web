@@ -18,7 +18,7 @@
 | Año de fundación | 2010 |
 | Experiencia declarada | +15 años |
 | Teléfono | +34 604 154 746 |
-| Email | info@thiasa.es |
+| Email | thiasamadrid@gmail.com |
 | WhatsApp | https://wa.me/34604154746 |
 | Google Business Profile | (validar/enlazar perfil real — ver estrategia-seo.md) |
 | Rango de precios | $$ (medio-alto, acabados profesionales) |
@@ -141,7 +141,7 @@ KPIs detallados en `estrategia-seo.md`.
   - Texto sugerido: "Pide tu presupuesto gratis por WhatsApp"
 - **CTA secundario (teléfono):** `tel:+34604154746`
 - **CTA terciario (formulario):** sección de contacto de la home (`/#contacto` o la sección `Contact`).
-- **Email:** info@thiasa.es
+- **Email:** thiasamadrid@gmail.com
 
 Mensaje de WhatsApp pre-rellenado (ejemplo, adaptable al artículo):
 `https://wa.me/34604154746?text=Hola,%20me%20interesa%20solicitar%20un%20presupuesto%20de%20reforma.`

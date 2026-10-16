@@ -43,7 +43,7 @@ export default function PoliticaPrivacidad() {
                                 <li><strong>Identidad:</strong> DISEÑOS E INTERIORISMO THIASA SL</li>
                                 <li><strong>NIF:</strong> B22502082</li>
                                 <li><strong>Dirección postal:</strong> Avenida De Los Apóstoles 53ºA, 28011 Madrid, España</li>
-                                <li><strong>Correo electrónico:</strong> info@thiasa.es</li>
+                                <li><strong>Correo electrónico:</strong> thiasamadrid@gmail.com</li>
                                 <li><strong>Teléfono:</strong> +34 604 15 47 46</li>
                             </ul>
                         </section>
@@ -134,7 +134,7 @@ export default function PoliticaPrivacidad() {
                                 <li><strong>Retirar consentimiento:</strong> En cualquier momento</li>
                             </ul>
                             <p className="text-slate-700 leading-relaxed mt-4">
-                                Para ejercer estos derechos, contacta con nosotros en: <strong>info@thiasa.es</strong>
+                                Para ejercer estos derechos, contacta con nosotros en: <strong>thiasamadrid@gmail.com</strong>
                                 o en nuestra dirección postal, adjuntando copia de tu DNI.
                             </p>
                             <p className="text-slate-700 leading-relaxed mt-4">

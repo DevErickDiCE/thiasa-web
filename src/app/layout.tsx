@@ -85,7 +85,7 @@ export default function RootLayout({
     "@id": "https://www.thiasa.es/#organization",
     url: "https://www.thiasa.es",
     telephone: "+34604154746",
-    email: "info@thiasa.es",
+    email: "thiasamadrid@gmail.com",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Avenida de los Apóstoles 5, 3ºA",

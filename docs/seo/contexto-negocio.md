@@ -11,7 +11,7 @@ Este documento es la base de contexto para cualquier tarea SEO, GEO, contenido o
 - NIF publicado: B22502082.
 - Dominio: https://www.thiasa.es/
 - Teléfono: +34 604 15 47 46.
-- Email comercial: info@thiasa.es.
+- Email comercial: thiasamadrid@gmail.com.
 - Mercado principal: Madrid y alrededores.
 - BORME: la sociedad DISEÑOS E INTERIORISMO THIASA SL figura con comienzo de operaciones el 19/06/2025 y domicilio AVDA DE LOS APOSTOLES 5 - 3ºA (MADRID).
 

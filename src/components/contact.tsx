@@ -112,8 +112,8 @@ export function Contact({ showHeader = true }: { showHeader?: boolean }) {
                                     </div>
                                     <div>
                                         <span className="block text-sm font-semibold uppercase tracking-widest text-white/60 mb-1">Email</span>
-                                        <a href="mailto:info@thiasa.es" data-ga-location="contact_section" className="text-lg text-white font-medium hover:text-accent transition-colors">
-                                            info@thiasa.es
+                                        <a href="mailto:thiasamadrid@gmail.com" data-ga-location="contact_section" className="text-lg text-white font-medium hover:text-accent transition-colors">
+                                            thiasamadrid@gmail.com
                                         </a>
                                     </div>
                                 </div>

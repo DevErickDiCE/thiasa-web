@@ -57,7 +57,7 @@ export default function ReformasLocalesComerciales() {
             "@type": "LocalBusiness",
             name: "THIASA",
             telephone: "+34604154746",
-            email: "info@thiasa.es",
+            email: "thiasamadrid@gmail.com",
             address: {
                 "@type": "PostalAddress",
                 addressLocality: "Madrid",

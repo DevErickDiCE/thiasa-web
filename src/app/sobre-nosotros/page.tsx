@@ -43,7 +43,7 @@ export default function SobreNosotrosPage() {
       legalName: "DISEÑOS E INTERIORISMO THIASA SL",
       url: "https://www.thiasa.es",
       telephone: "+34604154746",
-      email: "info@thiasa.es",
+      email: "thiasamadrid@gmail.com",
       areaServed: "Madrid y alrededores",
     },
   };
