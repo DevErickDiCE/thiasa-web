@@ -34,7 +34,7 @@ export async function POST(req: Request) {
 
         const { data, error } = await resend.emails.send({
             from: "THIASA <noreply@thiasa.es>",
-            to: ["info@thiasa.es"],
+            to: ["thiasamadrid@gmail.com"],
             replyTo: email,
             subject: `Nuevo mensaje de contacto – ${name}`,
             html: `
