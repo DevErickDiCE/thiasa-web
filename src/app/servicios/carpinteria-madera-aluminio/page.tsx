@@ -73,10 +73,10 @@ export default function Carpinteria() {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
             />
             <main>
-            <section className="relative bg-[#1D1D1D] min-h-[550px] flex items-center pt-32 pb-20 overflow-hidden">
+            <section className="relative bg-[#0D1117] min-h-[480px] flex items-center py-20 overflow-hidden">
                 <div className="absolute inset-0">
-                    <Image src="/project-living-1.jpg" alt="Carpintería de madera y aluminio Madrid - THIASA" fill className="object-cover opacity-40" priority sizes="100vw" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#1D1D1D]/90 via-[#1D1D1D]/75 to-[#1D1D1D]/60" />
+                    <Image src="/project-living-1.jpg" alt="Carpintería de madera y aluminio Madrid - THIASA" fill className="object-cover" priority sizes="100vw" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0D1117] via-[#0D1117]/75 to-[#0D1117]/45 sm:bg-gradient-to-r sm:from-[#0D1117]/95 sm:via-[#0D1117]/75 sm:to-[#0D1117]/20" />
                 </div>
 
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">

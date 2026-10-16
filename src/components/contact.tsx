@@ -5,7 +5,8 @@ import { useState } from "react";
 import { trackGenerateLead } from "@/lib/analytics";
 import { useCookieConsent } from "@/components/analytics/cookie-consent-context";
 
-export function Contact() {
+// showHeader: en /contacto la página ya tiene su propio H1, así que se oculta la cabecera de la sección
+export function Contact({ showHeader = true }: { showHeader?: boolean }) {
     const { consent } = useCookieConsent();
     const [formData, setFormData] = useState({
         name: "",
@@ -71,19 +72,21 @@ export function Contact() {
     };
 
     return (
-        <section id="contact" className="py-24 bg-[#0D1117]">
+        <section id="contact" className={`bg-[#0D1117] ${showHeader ? "py-20 sm:py-24" : "pt-10 pb-20 sm:pb-24"}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div data-reveal className="text-center mb-16">
-                    <span className="inline-block text-accent text-xs font-bold uppercase tracking-[0.25em] mb-4">
-                        Hablemos de tu proyecto
-                    </span>
-                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-                        Contacta con Nosotros
-                    </h2>
-                    <p className="text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-                        Estamos listos para escuchar tu proyecto. Pide presupuesto sin compromiso o consúltanos cualquier duda.
-                    </p>
-                </div>
+                {showHeader && (
+                    <div data-reveal className="text-center mb-16">
+                        <span className="inline-block text-accent text-xs font-bold uppercase tracking-[0.25em] mb-4">
+                            Hablemos de tu proyecto
+                        </span>
+                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+                            Contacta con Nosotros
+                        </h2>
+                        <p className="text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+                            Estamos listos para escuchar tu proyecto. Pide presupuesto sin compromiso o consúltanos cualquier duda.
+                        </p>
+                    </div>
+                )}
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
                     {/* Contact Info & WhatsApp */}

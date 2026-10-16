@@ -55,6 +55,13 @@ body {
   button:active {
     transform: scale(0.97);
   }
+
+  /* Foco visible y coherente con la marca para teclado */
+  :where(a, button, summary, input, textarea, select):focus-visible {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 3px;
+    border-radius: 0.5rem;
+  }
 }
 
 /* Scroll reveal: sections/cards fade and settle into place once as they

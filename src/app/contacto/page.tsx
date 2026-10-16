@@ -76,7 +76,7 @@ export default function ContactoPage() {
     return (
         <>
             <Navbar />
-            <main className="min-h-screen bg-white pt-28">
+            <main className="min-h-screen bg-white">
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
@@ -86,7 +86,7 @@ export default function ContactoPage() {
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
                 />
 
-                <section className="bg-[#0D1117] pt-20 pb-4 sm:pt-28">
+                <section className="bg-[#0D1117] pt-16 pb-4 sm:pt-20">
                     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                         <span className="text-accent text-xs font-bold uppercase tracking-[0.25em]">
                             THIASA · Madrid
@@ -100,7 +100,7 @@ export default function ContactoPage() {
                     </div>
                 </section>
 
-                <Contact />
+                <Contact showHeader={false} />
             </main>
             <Footer />
         </>

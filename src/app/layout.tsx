@@ -163,7 +163,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="es" className="scroll-smooth scroll-pt-28">
+    <html lang="es" className="scroll-smooth scroll-pt-24">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-50 text-slate-900`}
       >

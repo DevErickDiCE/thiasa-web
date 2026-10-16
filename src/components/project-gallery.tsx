@@ -46,7 +46,7 @@ export function ProjectGallery() {
     };
 
     return (
-        <section id="projects" className="py-24 bg-white">
+        <section id="projects" className="py-20 sm:py-24 bg-background">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div data-reveal className="text-center mb-16">
                     <span className="inline-block text-primary text-xs font-bold uppercase tracking-[0.25em] mb-4">
@@ -60,21 +60,22 @@ export function ProjectGallery() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {projects.map((project, index) => (
                         <div
                             key={project.id}
                             onClick={() => openModal(project)}
                             data-reveal
                             style={{ "--reveal-delay": Math.min(index, 5) } as CSSProperties}
-                            className="group relative rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-2xl hover:shadow-black/25 transition-all duration-500 hover:-translate-y-1"
+                            className={`group relative rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-2xl hover:shadow-black/25 transition-all duration-500 hover:-translate-y-1 ${projects.length === 7 && index === 0 ? "md:col-span-2" : ""} ${projects.length === 7 && index === 3 ? "lg:col-span-2" : ""}`}
                         >
-                            <div className="relative h-80 w-full overflow-hidden">
+                            <div className="relative h-72 sm:h-80 w-full overflow-hidden">
                                 <Image
                                     src={project.image}
                                     alt={project.title}
                                     fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                    sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
                                 {/* Overlay with Zoom Icon */}
                                 <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/40 transition-colors duration-300 flex items-center justify-center">
@@ -103,18 +104,18 @@ export function ProjectGallery() {
 
                 {/* Ficha de cada obra, con texto indexable, en /proyectos */}
                 <div className="mt-10 text-center">
-                    <Link href="/proyectos" className="inline-flex items-center font-bold text-primary hover:text-accent transition-colors">
+                    <Link href="/proyectos" className="group inline-flex items-center px-6 py-3 rounded-full bg-white border border-black/10 font-bold text-primary hover:border-accent hover:text-accent shadow-sm transition-all">
                         Ver la ficha de cada proyecto
-                        <ArrowRight className="w-4 h-4 ml-2" />
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Link>
                 </div>
 
                 {/* Section CTA */}
                 <div className="mt-16 text-center">
-                    <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+                    <h3 className="text-2xl md:text-3xl font-bold text-[#1D1D1D] mb-4">
                         ¿Tu hogar merece esta calidad?
                     </h3>
-                    <p className="text-slate-600 mb-8 max-w-2xl mx-auto">
+                    <p className="text-foreground/70 mb-8 max-w-2xl mx-auto">
                         Cada reforma es única. Cuéntanos tu idea y te asesoramos sin compromiso sobre las mejores opciones para tu proyecto.
                     </p>
                     <a
