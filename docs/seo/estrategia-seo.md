@@ -73,6 +73,8 @@ Los 14 clusters:
 
 3 artículos por semana durante 12 semanas = 36 artículos.
 
+**Desde el 19/10/2026, 1 artículo por semana, los lunes.** Las filas pendientes del calendario se reprogramaron en el mismo orden, una por lunes, y `numero_semana` pasó a ser la semana de cada una. La tabla de abajo sigue valiendo como categoría editorial (`dia_semana`), no como día de publicación.
+
 | Día | Tipo editorial | Tipos de artículo permitidos |
 |---|---|---|
 | Lunes | Comercial | `comercial`, `presupuesto` |

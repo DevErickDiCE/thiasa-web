@@ -76,7 +76,7 @@ Para optimizar el uso de contexto y agilizar el trabajo del agente, el flujo edi
 
 ## Ritmo editorial
 
-- **3 artículos por semana.**
+- **1 artículo por semana, los lunes** (desde el 19/10/2026; antes eran 3). Los días de abajo son ahora la categoría editorial de `dia_semana`, que se va alternando.
 - **Lunes:** comercial o presupuesto.
 - **Miércoles:** educativo o errores frecuentes.
 - **Viernes:** local, servicio específico o comparativo.
